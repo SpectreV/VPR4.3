@@ -1,0 +1,149 @@
+
+# NB:  The timing numbers in this architecture file have been modified
+# to comply with our NDA with the foundry providing us with process 
+# information.  The critical path delay output by VPR WILL NOT be accurate,
+# as we have intentionally altered the delays to introduce inaccuracy.
+# The numbers are still reasonable enough to allow CAD experimentation,
+# though.  If you want real timing numbers, you'll have to insert your own
+# process data for the various, R, C, and Tdel entries.
+
+# Architecture with two types of routing segment.  The routing is 
+# fully-populated.  One length of segment is buffered, the other uses pass
+# transistors.
+
+# Uniform channels.  Each pin appears on only one side.
+io_rat 20
+stage_io_rat 4 
+chan_width_io 1
+chan_width_x uniform 1 
+chan_width_y uniform 1
+
+# Cluster of size 1, with 4 logic inputs, 4 outputs.
+inpin class: 0 left 
+inpin class: 0 left
+inpin class: 0 left
+inpin class: 0 left
+inpin class: 0 right 
+inpin class: 0 right
+inpin class: 0 right
+inpin class: 0 right
+inpin class: 0 bottom 
+inpin class: 0 bottom
+inpin class: 0 bottom
+inpin class: 0 bottom
+inpin class: 0 top 
+inpin class: 0 top
+inpin class: 0 top
+inpin class: 0 top
+outpin class: 1 left
+outpin class: 1 left
+outpin class: 1 left
+outpin class: 1 left
+outpin class: 1 right
+outpin class: 1 right
+outpin class: 1 right
+outpin class: 1 right
+outpin class: 1 bottom
+outpin class: 1 bottom
+outpin class: 1 bottom
+outpin class: 1 bottom
+outpin class: 1 top
+outpin class: 1 top
+outpin class: 1 top
+outpin class: 1 top
+inpin class: 2 global top   # Clock, global -> routed on a special resource.
+
+dsp_inpin class: 0 num: 22 left 
+dsp_inpin class: 0 num: 22 top 
+dsp_inpin class: 0 num: 22 right 
+dsp_inpin class: 0 num: 23 bottom 
+dsp_outpin class: 1 num: 16 left 
+dsp_outpin class: 1 num: 17 top 
+dsp_outpin class: 1 num: 16 right 
+dsp_outpin class: 1 num: 16 bottom 
+dsp_inpin class: 2 num: 1 global left  # Clock;
+dsp_inpin class: 2 num: 1 global right # Reset;
+
+dsp_width	5
+dsp_height	5
+dsp_fc		1
+dsp_loc_start	1
+dsp_loc_repeat	15
+
+# Class 0 -> logic cluster inputs, Class 1 -> Outputs, Class 2 -> clock.
+
+subblocks_per_clb 1
+subblock_lut_size 4
+subblock_ff_size 4 
+mem_density_x 2
+mem_density_y 2
+mem_addr_width 12
+mem_data_width 32
+num_clock 1
+LE_size 4
+
+
+#parameters needed only for detailed routing.
+switch_block_type subset
+Fc_type fractional
+Fc_output 1 
+Fc_input 1 
+Fc_pad 1
+Fc_direct 0.25
+
+# All comments about metal spacing, etc. assumed have been deleted
+# to protect our foundry.  Again, the R, C and Tdel values have been
+# altered from their real values.
+# 5lamda for metal, 7703*2lamda long per block
+# 10lamda for pass transistor
+
+segment direct: Track: 4 opin_switch: 0 Rmetal: 20 Cmetal: 6e-15
+
+segment frequency: 0.5 length: 2 wire_switch: 2 opin_switch: 0 Frac_cb: 0.5 \
+         Frac_sb: 0.5 Rmetal: 29 Cmetal: 8.5e-15
+
+segment frequency: 0.5 length: 4 wire_switch: 2 opin_switch: 0 Frac_cb: 0.25 \
+         Frac_sb: 0.33 Rmetal: 29 Cmetal: 8.5e-15
+
+# Outputs connect to direct links directly
+
+switch 1  buffered: yes  R: 0 Cin: 0  Cout: 0 Tdel: 0
+
+# Logic block output buffer used to drive pass transistor switched wires.
+
+switch 0  buffered: yes  R: 1839 Cin: 2.15e-15  Cout: 3.22e-15 \
+       Tdel: 20e-12
+
+# Switch used as a tri-state buffer within the routing, and also as the
+# output buffer used to drive tri-state buffer switched wires.
+
+switch 2  buffered: yes  R: 1839 Cin: 2.15e-15  Cout: 3.22e-15 \
+       Tdel: 20e-12
+
+# The 17-to-1 MUX from IPIN to OPIN
+switch 3  buffered: yes  R: 900 Cin: 1.15e-15  Cout: 1.6e-15 \
+       Tdel: 160e-12
+
+# Used only by the area model.
+
+R_minW_nmos 20222
+R_minW_pmos 40444
+
+# Timing info below.  See manual for details.
+
+C_ipin_cblock 1.08e-15
+T_ipin_cblock 70e-12
+
+T_ipad 70e-12   # MUX
+T_opad 70e-12   # MUX
+T_sblk_opin_to_sblk_ipin 0
+T_clb_ipin_to_sblk_ipin 0
+T_sblk_opin_to_clb_opin 160e-12
+T_LE_opin_to_LE_ipin 0
+T_mem_out 500e-12
+T_mem_in 20e-12
+
+# Delays for each of the four sequential and combinational elements
+# in our logic block.  In this case they're all the same.
+
+T_subblock T_comb: 315e-12 T_seq_in: 315e-12 T_seq_out: 0

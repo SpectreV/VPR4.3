@@ -1,0 +1,4364 @@
+Array size: 8 x 8 logic blocks.
+
+Routing:The folding stage: 1
+
+Net 0 (clk): global net connecting:
+
+Block clk (#0) at (7, 0), Pin class -1.
+Block Block_24 (#1) at (6, 4), Pin class 2.
+Block Block_25 (#2) at (3, 7), Pin class 2.
+Block Block_1 (#3) at (7, 5), Pin class 2.
+Block Block_3 (#4) at (7, 4), Pin class 2.
+Block Block_2 (#5) at (7, 6), Pin class 2.
+Block Block_4 (#6) at (5, 8), Pin class 2.
+Block Block_5 (#7) at (7, 8), Pin class 2.
+Block Block_6 (#8) at (7, 2), Pin class 2.
+Block Block_7 (#9) at (8, 3), Pin class 2.
+Block Block_8 (#10) at (8, 7), Pin class 2.
+Block Block_9 (#11) at (6, 6), Pin class 2.
+Block Block_10 (#12) at (5, 6), Pin class 2.
+Block Block_11 (#13) at (5, 7), Pin class 2.
+Block Block_12 (#14) at (8, 6), Pin class 2.
+Block Block_13 (#15) at (8, 2), Pin class 2.
+Block Block_14 (#16) at (6, 2), Pin class 2.
+Block Block_15 (#17) at (2, 7), Pin class 2.
+Block Block_16 (#18) at (6, 8), Pin class 2.
+Block Block_17 (#19) at (4, 8), Pin class 2.
+Block Block_18 (#20) at (6, 5), Pin class 2.
+Block Block_19 (#21) at (6, 1), Pin class 2.
+Block Block_20 (#22) at (6, 3), Pin class 2.
+Block Block_21 (#23) at (2, 6), Pin class 2.
+Block Block_22 (#24) at (7, 7), Pin class 2.
+Block Block_23 (#25) at (4, 6), Pin class 2.
+Block Block_26 (#26) at (3, 6), Pin class 2.
+Block Block_27 (#27) at (8, 8), Pin class 2.
+Block Block_28 (#28) at (8, 4), Pin class 2.
+Block Block_29 (#29) at (7, 3), Pin class 2.
+Block Block_30 (#30) at (6, 7), Pin class 2.
+Block Block_31 (#31) at (8, 5), Pin class 2.
+Block Block_32 (#32) at (4, 7), Pin class 2.
+Block Block_33 (#33) at (3, 8), Pin class 2.
+
+
+Net 1 (PO[0])
+
+SOURCE (3,7)  Class: 1  
+  OPIN (3,7)  Pin: 20  
+ DIREX (3,7)  Track: 0  
+  IPIN (4,7)  Pin: 0  
+  OPIN (4,7)  Pin: 20  
+ DIREX (4,7)  Track: 0  
+  IPIN (5,7)  Pin: 32  
+  OPIN (5,7)  Pin: 24  
+ DIREY (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 12  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 32  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 32  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  SINK (7,4)  Class: 0  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  SINK (7,5)  Class: 0  
+SOURCE (3,7)  Class: 1  
+  OPIN (3,7)  Pin: 24  
+ CHANX (3,6) to (6,6)  Track: 3  
+ CHANY (6,3) to (6,6)  Track: 3  
+  IPIN (6,3)  Pin: 4  
+  OPIN (6,3)  Pin: 28  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,4)  Pin: 8  
+  SINK (6,4)  Class: 0  
+
+
+Net 2 (regy_out[0])
+
+SOURCE (6,4)  Class: 1  
+  OPIN (6,4)  Pin: 28  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,5)  Pin: 8  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  OPIN (5,6)  Pin: 16  
+ DIREX (4,6)  Track: 0  
+  IPIN (4,6)  Pin: 4  
+  OPIN (4,6)  Pin: 16  
+ DIREX (3,6)  Track: 0  
+  IPIN (3,6)  Pin: 4  
+  OPIN (3,6)  Pin: 28  
+ DIREY (3,6)  Track: 0  
+  IPIN (3,7)  Pin: 8  
+  SINK (3,7)  Class: 0  
+SOURCE (6,4)  Class: 1  
+  OPIN (6,4)  Pin: 20  
+ DIREX (6,4)  Track: 0  
+  IPIN (7,4)  Pin: 32  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  SINK (7,5)  Class: 0  
+ DIREX (6,4)  Track: 0  
+  IPIN (7,4)  Pin: 0  
+  SINK (7,4)  Class: 0  
+The folding stage: 2
+
+Net 3 (clk): global net connecting:
+
+Block clk (#34) at (7, 0), Pin class -1.
+Block Block_17 (#35) at (4, 8), Pin class 2.
+Block Block_32 (#36) at (4, 7), Pin class 2.
+Block Block_3 (#37) at (7, 4), Pin class 2.
+Block Block_2 (#38) at (7, 6), Pin class 2.
+Block Block_1 (#39) at (7, 5), Pin class 2.
+Block Block_4 (#40) at (5, 8), Pin class 2.
+Block Block_5 (#41) at (7, 8), Pin class 2.
+Block Block_6 (#42) at (7, 2), Pin class 2.
+Block Block_7 (#43) at (8, 3), Pin class 2.
+Block Block_8 (#44) at (8, 7), Pin class 2.
+Block Block_9 (#45) at (6, 6), Pin class 2.
+Block Block_10 (#46) at (5, 6), Pin class 2.
+Block Block_11 (#47) at (5, 7), Pin class 2.
+Block Block_12 (#48) at (8, 6), Pin class 2.
+Block Block_13 (#49) at (8, 2), Pin class 2.
+Block Block_14 (#50) at (6, 2), Pin class 2.
+Block Block_15 (#51) at (2, 7), Pin class 2.
+Block Block_16 (#52) at (6, 8), Pin class 2.
+Block Block_18 (#53) at (6, 5), Pin class 2.
+Block Block_19 (#54) at (6, 1), Pin class 2.
+Block Block_20 (#55) at (6, 3), Pin class 2.
+Block Block_21 (#56) at (2, 6), Pin class 2.
+Block Block_22 (#57) at (7, 7), Pin class 2.
+Block Block_23 (#58) at (4, 6), Pin class 2.
+Block Block_24 (#59) at (6, 4), Pin class 2.
+Block Block_25 (#60) at (3, 7), Pin class 2.
+Block Block_26 (#61) at (3, 6), Pin class 2.
+Block Block_27 (#62) at (8, 8), Pin class 2.
+Block Block_28 (#63) at (8, 4), Pin class 2.
+Block Block_29 (#64) at (7, 3), Pin class 2.
+Block Block_30 (#65) at (6, 7), Pin class 2.
+Block Block_31 (#66) at (8, 5), Pin class 2.
+Block Block_33 (#67) at (3, 8), Pin class 2.
+
+
+Net 4 (PO[1])
+
+SOURCE (4,7)  Class: 1  
+  OPIN (4,7)  Pin: 24  
+ DIREY (4,6)  Track: 0  
+  IPIN (4,6)  Pin: 12  
+  OPIN (4,6)  Pin: 20  
+ DIREX (4,6)  Track: 0  
+  IPIN (5,6)  Pin: 0  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 32  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 32  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  SINK (7,4)  Class: 0  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+SOURCE (4,7)  Class: 1  
+  OPIN (4,7)  Pin: 28  
+ DIREY (4,7)  Track: 0  
+  IPIN (4,8)  Pin: 8  
+  SINK (4,8)  Class: 0  
+
+
+Net 5 (data_sub_t_1)
+
+SOURCE (3,7)  Class: 1  
+  OPIN (3,7)  Pin: 28  
+ DIREY (3,7)  Track: 0  
+  IPIN (3,8)  Pin: 8  
+  OPIN (3,8)  Pin: 20  
+ DIREX (3,8)  Track: 0  
+  IPIN (4,8)  Pin: 0  
+  SINK (4,8)  Class: 0  
+SOURCE (3,7)  Class: 1  
+  OPIN (3,7)  Pin: 20  
+ DIREX (3,7)  Track: 0  
+  IPIN (4,7)  Pin: 0  
+  SINK (4,7)  Class: 0  
+
+
+Net 6 (regy_out[1])
+
+SOURCE (4,8)  Class: 1  
+  OPIN (4,8)  Pin: 24  
+ CHANX (4,7) to (7,7)  Track: 4  
+ CHANY (7,4) to (7,7)  Track: 4  
+  IPIN (7,4)  Pin: 4  
+  SINK (7,4)  Class: 0  
+SOURCE (4,8)  Class: 1  
+  OPIN (4,8)  Pin: 20  
+ DIREX (4,8)  Track: 0  
+  IPIN (5,8)  Pin: 32  
+  OPIN (5,8)  Pin: 24  
+ DIREY (5,7)  Track: 0  
+  IPIN (5,7)  Pin: 12  
+  OPIN (5,7)  Pin: 20  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 32  
+  OPIN (6,7)  Pin: 20  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 32  
+  OPIN (7,7)  Pin: 24  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 12  
+  SINK (7,6)  Class: 0  
+  OPIN (4,8)  Pin: 24  
+ DIREY (4,7)  Track: 0  
+  IPIN (4,7)  Pin: 12  
+  SINK (4,7)  Class: 0  
+
+
+Net 7 (data_cmp1_t_1)
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+The folding stage: 3
+
+Net 8 (clk): global net connecting:
+
+Block clk (#68) at (7, 0), Pin class -1.
+Block Block_18 (#69) at (6, 5), Pin class 2.
+Block Block_31 (#70) at (8, 5), Pin class 2.
+Block Block_2 (#71) at (7, 6), Pin class 2.
+Block Block_1 (#72) at (7, 5), Pin class 2.
+Block Block_3 (#73) at (7, 4), Pin class 2.
+Block Block_4 (#74) at (5, 8), Pin class 2.
+Block Block_5 (#75) at (7, 8), Pin class 2.
+Block Block_6 (#76) at (7, 2), Pin class 2.
+Block Block_7 (#77) at (8, 3), Pin class 2.
+Block Block_8 (#78) at (8, 7), Pin class 2.
+Block Block_9 (#79) at (6, 6), Pin class 2.
+Block Block_10 (#80) at (5, 6), Pin class 2.
+Block Block_11 (#81) at (5, 7), Pin class 2.
+Block Block_12 (#82) at (8, 6), Pin class 2.
+Block Block_13 (#83) at (8, 2), Pin class 2.
+Block Block_14 (#84) at (6, 2), Pin class 2.
+Block Block_15 (#85) at (2, 7), Pin class 2.
+Block Block_16 (#86) at (6, 8), Pin class 2.
+Block Block_17 (#87) at (4, 8), Pin class 2.
+Block Block_19 (#88) at (6, 1), Pin class 2.
+Block Block_20 (#89) at (6, 3), Pin class 2.
+Block Block_21 (#90) at (2, 6), Pin class 2.
+Block Block_22 (#91) at (7, 7), Pin class 2.
+Block Block_23 (#92) at (4, 6), Pin class 2.
+Block Block_24 (#93) at (6, 4), Pin class 2.
+Block Block_25 (#94) at (3, 7), Pin class 2.
+Block Block_26 (#95) at (3, 6), Pin class 2.
+Block Block_27 (#96) at (8, 8), Pin class 2.
+Block Block_28 (#97) at (8, 4), Pin class 2.
+Block Block_29 (#98) at (7, 3), Pin class 2.
+Block Block_30 (#99) at (6, 7), Pin class 2.
+Block Block_32 (#100) at (4, 7), Pin class 2.
+Block Block_33 (#101) at (3, 8), Pin class 2.
+
+
+Net 9 (PO[2])
+
+SOURCE (8,5)  Class: 1  
+  OPIN (8,5)  Pin: 16  
+ DIREX (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 4  
+  SINK (7,5)  Class: 0  
+SOURCE (8,5)  Class: 1  
+  OPIN (8,5)  Pin: 28  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,6)  Pin: 8  
+  OPIN (8,6)  Pin: 16  
+ DIREX (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 4  
+  SINK (7,6)  Class: 0  
+SOURCE (8,5)  Class: 1  
+  OPIN (8,5)  Pin: 24  
+ CHANX (8,4)  Track: 1  
+ CHANX (6,4) to (7,4)  Track: 1  
+  IPIN (6,5)  Pin: 8  
+  SINK (6,5)  Class: 0  
+
+
+Net 10 (data_sub_t_2)
+
+SOURCE (4,7)  Class: 1  
+  OPIN (4,7)  Pin: 20  
+ DIREX (4,7)  Track: 0  
+  IPIN (5,7)  Pin: 32  
+  OPIN (5,7)  Pin: 24  
+ DIREY (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 12  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 32  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 32  
+  OPIN (7,6)  Pin: 20  
+ DIREX (7,6)  Track: 0  
+  IPIN (8,6)  Pin: 32  
+  OPIN (8,6)  Pin: 24  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 12  
+  SINK (8,5)  Class: 0  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  SINK (6,5)  Class: 0  
+
+
+Net 11 (regy_out[2])
+
+SOURCE (6,5)  Class: 1  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  SINK (7,5)  Class: 0  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 32  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+SOURCE (6,5)  Class: 1  
+  OPIN (6,5)  Pin: 24  
+ CHANX (6,4) to (7,4)  Track: 2  
+ CHANX (8,4)  Track: 2  
+  IPIN (8,5)  Pin: 8  
+  SINK (8,5)  Class: 0  
+
+
+Net 12 (data_cmp1_t_2)
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+The folding stage: 4
+
+Net 13 (clk): global net connecting:
+
+Block clk (#102) at (7, 0), Pin class -1.
+Block Block_19 (#103) at (6, 1), Pin class 2.
+Block Block_30 (#104) at (6, 7), Pin class 2.
+Block Block_1 (#105) at (7, 5), Pin class 2.
+Block Block_2 (#106) at (7, 6), Pin class 2.
+Block Block_3 (#107) at (7, 4), Pin class 2.
+Block Block_4 (#108) at (5, 8), Pin class 2.
+Block Block_5 (#109) at (7, 8), Pin class 2.
+Block Block_6 (#110) at (7, 2), Pin class 2.
+Block Block_7 (#111) at (8, 3), Pin class 2.
+Block Block_8 (#112) at (8, 7), Pin class 2.
+Block Block_9 (#113) at (6, 6), Pin class 2.
+Block Block_10 (#114) at (5, 6), Pin class 2.
+Block Block_11 (#115) at (5, 7), Pin class 2.
+Block Block_12 (#116) at (8, 6), Pin class 2.
+Block Block_13 (#117) at (8, 2), Pin class 2.
+Block Block_14 (#118) at (6, 2), Pin class 2.
+Block Block_15 (#119) at (2, 7), Pin class 2.
+Block Block_16 (#120) at (6, 8), Pin class 2.
+Block Block_17 (#121) at (4, 8), Pin class 2.
+Block Block_18 (#122) at (6, 5), Pin class 2.
+Block Block_20 (#123) at (6, 3), Pin class 2.
+Block Block_21 (#124) at (2, 6), Pin class 2.
+Block Block_22 (#125) at (7, 7), Pin class 2.
+Block Block_23 (#126) at (4, 6), Pin class 2.
+Block Block_24 (#127) at (6, 4), Pin class 2.
+Block Block_25 (#128) at (3, 7), Pin class 2.
+Block Block_26 (#129) at (3, 6), Pin class 2.
+Block Block_27 (#130) at (8, 8), Pin class 2.
+Block Block_28 (#131) at (8, 4), Pin class 2.
+Block Block_29 (#132) at (7, 3), Pin class 2.
+Block Block_31 (#133) at (8, 5), Pin class 2.
+Block Block_32 (#134) at (4, 7), Pin class 2.
+Block Block_33 (#135) at (3, 8), Pin class 2.
+
+
+Net 14 (PO[3])
+
+SOURCE (6,7)  Class: 1  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 24  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,4)  Pin: 12  
+  OPIN (6,4)  Pin: 24  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,3)  Pin: 12  
+  OPIN (6,3)  Pin: 24  
+ DIREY (6,2)  Track: 0  
+  IPIN (6,2)  Pin: 12  
+  OPIN (6,2)  Pin: 24  
+ DIREY (6,1)  Track: 0  
+  IPIN (6,1)  Pin: 12  
+  SINK (6,1)  Class: 0  
+SOURCE (6,7)  Class: 1  
+  OPIN (6,7)  Pin: 20  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 0  
+  OPIN (7,7)  Pin: 24  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 12  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+SOURCE (6,7)  Class: 1  
+  OPIN (6,7)  Pin: 28  
+ CHANX (6,7) to (7,7)  Track: 0  
+ CHANY (7,6) to (7,7)  Track: 0  
+  IPIN (7,6)  Pin: 4  
+  SINK (7,6)  Class: 0  
+
+
+Net 15 (data_sub_t_3)
+
+SOURCE (8,5)  Class: 1  
+  OPIN (8,5)  Pin: 16  
+ DIREX (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 4  
+  OPIN (7,5)  Pin: 24  
+ CHANX (7,4) to (8,4)  Track: 4  
+ CHANY (6,1) to (6,4)  Track: 4  
+  IPIN (6,1)  Pin: 4  
+  SINK (6,1)  Class: 0  
+SOURCE (8,5)  Class: 1  
+  OPIN (8,5)  Pin: 28  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,6)  Pin: 8  
+  OPIN (8,6)  Pin: 28  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,7)  Pin: 8  
+  OPIN (8,7)  Pin: 16  
+ DIREX (7,7)  Track: 0  
+  IPIN (7,7)  Pin: 4  
+  OPIN (7,7)  Pin: 16  
+ DIREX (6,7)  Track: 0  
+  IPIN (6,7)  Pin: 4  
+  SINK (6,7)  Class: 0  
+
+
+Net 16 (regy_out[3])
+
+SOURCE (6,1)  Class: 1  
+  OPIN (6,1)  Pin: 28  
+ DIREY (6,1)  Track: 0  
+  IPIN (6,2)  Pin: 8  
+  OPIN (6,2)  Pin: 28  
+ DIREY (6,2)  Track: 0  
+  IPIN (6,3)  Pin: 8  
+  OPIN (6,3)  Pin: 28  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,4)  Pin: 8  
+  OPIN (6,4)  Pin: 28  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,5)  Pin: 8  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  OPIN (6,6)  Pin: 28  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,7)  Pin: 8  
+  SINK (6,7)  Class: 0  
+  OPIN (6,1)  Pin: 28  
+ CHANX (6,1) to (8,1)  Track: 4  
+ CHANY (5,2) to (5,5)  Track: 4  
+ CHANY (5,6) to (5,8)  Track: 4  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+SOURCE (6,1)  Class: 1  
+  OPIN (6,1)  Pin: 20  
+ DIREX (6,1)  Track: 0  
+  IPIN (7,1)  Pin: 32  
+  OPIN (7,1)  Pin: 28  
+ DIREY (7,1)  Track: 0  
+  IPIN (7,2)  Pin: 8  
+  OPIN (7,2)  Pin: 28  
+ DIREY (7,2)  Track: 0  
+  IPIN (7,3)  Pin: 8  
+  OPIN (7,3)  Pin: 28  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,4)  Pin: 8  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  SINK (7,5)  Class: 0  
+
+
+Net 17 (data_cmp1_t_3)
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+The folding stage: 5
+
+Net 18 (clk): global net connecting:
+
+Block clk (#136) at (7, 0), Pin class -1.
+Block Block_20 (#137) at (6, 3), Pin class 2.
+Block Block_29 (#138) at (7, 3), Pin class 2.
+Block Block_2 (#139) at (7, 6), Pin class 2.
+Block Block_3 (#140) at (7, 4), Pin class 2.
+Block Block_1 (#141) at (7, 5), Pin class 2.
+Block Block_4 (#142) at (5, 8), Pin class 2.
+Block Block_5 (#143) at (7, 8), Pin class 2.
+Block Block_6 (#144) at (7, 2), Pin class 2.
+Block Block_7 (#145) at (8, 3), Pin class 2.
+Block Block_8 (#146) at (8, 7), Pin class 2.
+Block Block_9 (#147) at (6, 6), Pin class 2.
+Block Block_10 (#148) at (5, 6), Pin class 2.
+Block Block_11 (#149) at (5, 7), Pin class 2.
+Block Block_12 (#150) at (8, 6), Pin class 2.
+Block Block_13 (#151) at (8, 2), Pin class 2.
+Block Block_14 (#152) at (6, 2), Pin class 2.
+Block Block_15 (#153) at (2, 7), Pin class 2.
+Block Block_16 (#154) at (6, 8), Pin class 2.
+Block Block_17 (#155) at (4, 8), Pin class 2.
+Block Block_18 (#156) at (6, 5), Pin class 2.
+Block Block_19 (#157) at (6, 1), Pin class 2.
+Block Block_21 (#158) at (2, 6), Pin class 2.
+Block Block_22 (#159) at (7, 7), Pin class 2.
+Block Block_23 (#160) at (4, 6), Pin class 2.
+Block Block_24 (#161) at (6, 4), Pin class 2.
+Block Block_25 (#162) at (3, 7), Pin class 2.
+Block Block_26 (#163) at (3, 6), Pin class 2.
+Block Block_27 (#164) at (8, 8), Pin class 2.
+Block Block_28 (#165) at (8, 4), Pin class 2.
+Block Block_30 (#166) at (6, 7), Pin class 2.
+Block Block_31 (#167) at (8, 5), Pin class 2.
+Block Block_32 (#168) at (4, 7), Pin class 2.
+Block Block_33 (#169) at (3, 8), Pin class 2.
+
+
+Net 19 (PO[4])
+
+SOURCE (7,3)  Class: 1  
+  OPIN (7,3)  Pin: 28  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,4)  Pin: 8  
+  SINK (7,4)  Class: 0  
+SOURCE (7,3)  Class: 1  
+  OPIN (7,3)  Pin: 16  
+ CHANY (6,3) to (6,4)  Track: 0  
+ CHANY (6,5) to (6,6)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+SOURCE (7,3)  Class: 1  
+  OPIN (7,3)  Pin: 24  
+ DIREY (7,2)  Track: 0  
+  IPIN (7,2)  Pin: 12  
+  OPIN (7,2)  Pin: 16  
+ DIREX (6,2)  Track: 0  
+  IPIN (6,2)  Pin: 4  
+  OPIN (6,2)  Pin: 28  
+ DIREY (6,2)  Track: 0  
+  IPIN (6,3)  Pin: 8  
+  SINK (6,3)  Class: 0  
+
+
+Net 20 (data_sub_t_4)
+
+SOURCE (6,7)  Class: 1  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 24  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,4)  Pin: 12  
+  OPIN (6,4)  Pin: 24  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,3)  Pin: 12  
+  SINK (6,3)  Class: 0  
+SOURCE (6,7)  Class: 1  
+  OPIN (6,7)  Pin: 20  
+ CHANY (6,7) to (6,8)  Track: 3  
+ CHANY (6,3) to (6,6)  Track: 3  
+  IPIN (7,3)  Pin: 0  
+  SINK (7,3)  Class: 0  
+
+
+Net 21 (regy_out[4])
+
+SOURCE (6,3)  Class: 1  
+  OPIN (6,3)  Pin: 28  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,4)  Pin: 8  
+  OPIN (6,4)  Pin: 20  
+ DIREX (6,4)  Track: 0  
+  IPIN (7,4)  Pin: 0  
+  SINK (7,4)  Class: 0  
+  OPIN (6,4)  Pin: 20  
+ CHANY (6,4) to (6,5)  Track: 2  
+ CHANY (6,6) to (6,7)  Track: 2  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+ DIREX (6,4)  Track: 0  
+  IPIN (7,4)  Pin: 32  
+  OPIN (7,4)  Pin: 24  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 12  
+  SINK (7,3)  Class: 0  
+
+
+Net 22 (data_cmp1_t_4)
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 20  
+ DIREX (7,6)  Track: 0  
+  IPIN (8,6)  Pin: 32  
+  OPIN (8,6)  Pin: 24  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 12  
+  OPIN (8,5)  Pin: 24  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 12  
+  OPIN (8,4)  Pin: 16  
+ DIREX (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 4  
+  SINK (7,4)  Class: 0  
+
+
+Net 23 (data_cmp1_c[2])
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+
+
+Net 24 (data_cmp1_c[1])
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  SINK (7,5)  Class: 0  
+The folding stage: 6
+
+Net 25 (clk): global net connecting:
+
+Block clk (#170) at (7, 0), Pin class -1.
+Block Block_21 (#171) at (2, 6), Pin class 2.
+Block Block_28 (#172) at (8, 4), Pin class 2.
+Block Block_3 (#173) at (7, 4), Pin class 2.
+Block Block_2 (#174) at (7, 6), Pin class 2.
+Block Block_1 (#175) at (7, 5), Pin class 2.
+Block Block_4 (#176) at (5, 8), Pin class 2.
+Block Block_5 (#177) at (7, 8), Pin class 2.
+Block Block_6 (#178) at (7, 2), Pin class 2.
+Block Block_7 (#179) at (8, 3), Pin class 2.
+Block Block_8 (#180) at (8, 7), Pin class 2.
+Block Block_9 (#181) at (6, 6), Pin class 2.
+Block Block_10 (#182) at (5, 6), Pin class 2.
+Block Block_11 (#183) at (5, 7), Pin class 2.
+Block Block_12 (#184) at (8, 6), Pin class 2.
+Block Block_13 (#185) at (8, 2), Pin class 2.
+Block Block_14 (#186) at (6, 2), Pin class 2.
+Block Block_15 (#187) at (2, 7), Pin class 2.
+Block Block_16 (#188) at (6, 8), Pin class 2.
+Block Block_17 (#189) at (4, 8), Pin class 2.
+Block Block_18 (#190) at (6, 5), Pin class 2.
+Block Block_19 (#191) at (6, 1), Pin class 2.
+Block Block_20 (#192) at (6, 3), Pin class 2.
+Block Block_22 (#193) at (7, 7), Pin class 2.
+Block Block_23 (#194) at (4, 6), Pin class 2.
+Block Block_24 (#195) at (6, 4), Pin class 2.
+Block Block_25 (#196) at (3, 7), Pin class 2.
+Block Block_26 (#197) at (3, 6), Pin class 2.
+Block Block_27 (#198) at (8, 8), Pin class 2.
+Block Block_29 (#199) at (7, 3), Pin class 2.
+Block Block_30 (#200) at (6, 7), Pin class 2.
+Block Block_31 (#201) at (8, 5), Pin class 2.
+Block Block_32 (#202) at (4, 7), Pin class 2.
+Block Block_33 (#203) at (3, 8), Pin class 2.
+
+
+Net 26 (PO[5])
+
+SOURCE (8,4)  Class: 1  
+  OPIN (8,4)  Pin: 16  
+ DIREX (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 4  
+  OPIN (7,4)  Pin: 16  
+ DIREX (6,4)  Track: 0  
+  IPIN (6,4)  Pin: 4  
+  OPIN (6,4)  Pin: 28  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,5)  Pin: 8  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  OPIN (5,6)  Pin: 16  
+ DIREX (4,6)  Track: 0  
+  IPIN (4,6)  Pin: 4  
+  OPIN (4,6)  Pin: 16  
+ DIREX (3,6)  Track: 0  
+  IPIN (3,6)  Pin: 4  
+  OPIN (3,6)  Pin: 16  
+ DIREX (2,6)  Track: 0  
+  IPIN (2,6)  Pin: 4  
+  SINK (2,6)  Class: 0  
+SOURCE (8,4)  Class: 1  
+  OPIN (8,4)  Pin: 28  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,5)  Pin: 8  
+  OPIN (8,5)  Pin: 28  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,6)  Pin: 8  
+  OPIN (8,6)  Pin: 16  
+ DIREX (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 4  
+  SINK (7,6)  Class: 0  
+  OPIN (7,4)  Pin: 16  
+ CHANY (6,4) to (6,5)  Track: 1  
+  IPIN (7,4)  Pin: 0  
+  SINK (7,4)  Class: 0  
+
+
+Net 27 (data_sub_t_5)
+
+SOURCE (7,3)  Class: 1  
+  OPIN (7,3)  Pin: 16  
+ DIREX (6,3)  Track: 0  
+  IPIN (6,3)  Pin: 4  
+  OPIN (6,3)  Pin: 24  
+ DIREY (6,2)  Track: 0  
+  IPIN (6,2)  Pin: 12  
+  OPIN (6,2)  Pin: 16  
+ CHANY (5,2) to (5,5)  Track: 4  
+ CHANX (2,5) to (5,5)  Track: 4  
+  IPIN (2,6)  Pin: 8  
+  SINK (2,6)  Class: 0  
+SOURCE (7,3)  Class: 1  
+  OPIN (7,3)  Pin: 20  
+ DIREX (7,3)  Track: 0  
+  IPIN (8,3)  Pin: 32  
+  OPIN (8,3)  Pin: 28  
+ DIREY (8,3)  Track: 0  
+  IPIN (8,4)  Pin: 8  
+  SINK (8,4)  Class: 0  
+
+
+Net 28 (regy_out[5])
+
+SOURCE (2,6)  Class: 1  
+  OPIN (2,6)  Pin: 20  
+ DIREX (2,6)  Track: 0  
+  IPIN (3,6)  Pin: 0  
+  OPIN (3,6)  Pin: 20  
+ DIREX (3,6)  Track: 0  
+  IPIN (4,6)  Pin: 32  
+  OPIN (4,6)  Pin: 20  
+ DIREX (4,6)  Track: 0  
+  IPIN (5,6)  Pin: 32  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 32  
+  OPIN (7,5)  Pin: 20  
+ DIREX (7,5)  Track: 0  
+  IPIN (8,5)  Pin: 32  
+  OPIN (8,5)  Pin: 24  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 12  
+  SINK (8,4)  Class: 0  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  SINK (7,4)  Class: 0  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 32  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+
+
+Net 29 (data_cmp1_t_5)
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+The folding stage: 7
+
+Net 30 (clk): global net connecting:
+
+Block clk (#204) at (7, 0), Pin class -1.
+Block Block_22 (#205) at (7, 7), Pin class 2.
+Block Block_27 (#206) at (8, 8), Pin class 2.
+Block Block_2 (#207) at (7, 6), Pin class 2.
+Block Block_1 (#208) at (7, 5), Pin class 2.
+Block Block_3 (#209) at (7, 4), Pin class 2.
+Block Block_4 (#210) at (5, 8), Pin class 2.
+Block Block_5 (#211) at (7, 8), Pin class 2.
+Block Block_6 (#212) at (7, 2), Pin class 2.
+Block Block_7 (#213) at (8, 3), Pin class 2.
+Block Block_8 (#214) at (8, 7), Pin class 2.
+Block Block_9 (#215) at (6, 6), Pin class 2.
+Block Block_10 (#216) at (5, 6), Pin class 2.
+Block Block_11 (#217) at (5, 7), Pin class 2.
+Block Block_12 (#218) at (8, 6), Pin class 2.
+Block Block_13 (#219) at (8, 2), Pin class 2.
+Block Block_14 (#220) at (6, 2), Pin class 2.
+Block Block_15 (#221) at (2, 7), Pin class 2.
+Block Block_16 (#222) at (6, 8), Pin class 2.
+Block Block_17 (#223) at (4, 8), Pin class 2.
+Block Block_18 (#224) at (6, 5), Pin class 2.
+Block Block_19 (#225) at (6, 1), Pin class 2.
+Block Block_20 (#226) at (6, 3), Pin class 2.
+Block Block_21 (#227) at (2, 6), Pin class 2.
+Block Block_23 (#228) at (4, 6), Pin class 2.
+Block Block_24 (#229) at (6, 4), Pin class 2.
+Block Block_25 (#230) at (3, 7), Pin class 2.
+Block Block_26 (#231) at (3, 6), Pin class 2.
+Block Block_28 (#232) at (8, 4), Pin class 2.
+Block Block_29 (#233) at (7, 3), Pin class 2.
+Block Block_30 (#234) at (6, 7), Pin class 2.
+Block Block_31 (#235) at (8, 5), Pin class 2.
+Block Block_32 (#236) at (4, 7), Pin class 2.
+Block Block_33 (#237) at (3, 8), Pin class 2.
+
+
+Net 31 (PO[6])
+
+SOURCE (8,8)  Class: 1  
+  OPIN (8,8)  Pin: 24  
+ DIREY (8,7)  Track: 0  
+  IPIN (8,7)  Pin: 12  
+  OPIN (8,7)  Pin: 24  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,6)  Pin: 12  
+  OPIN (8,6)  Pin: 24  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 12  
+  OPIN (8,5)  Pin: 16  
+ DIREX (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 4  
+  SINK (7,5)  Class: 0  
+  OPIN (8,8)  Pin: 24  
+ CHANX (8,7)  Track: 0  
+ CHANY (7,6) to (7,7)  Track: 0  
+  IPIN (7,6)  Pin: 4  
+  SINK (7,6)  Class: 0  
+SOURCE (8,8)  Class: 1  
+  OPIN (8,8)  Pin: 16  
+ DIREX (7,8)  Track: 0  
+  IPIN (7,8)  Pin: 4  
+  OPIN (7,8)  Pin: 24  
+ DIREY (7,7)  Track: 0  
+  IPIN (7,7)  Pin: 12  
+  SINK (7,7)  Class: 0  
+
+
+Net 32 (data_sub_t_6)
+
+SOURCE (8,4)  Class: 1  
+  OPIN (8,4)  Pin: 28  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,5)  Pin: 8  
+  OPIN (8,5)  Pin: 28  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,6)  Pin: 8  
+  OPIN (8,6)  Pin: 28  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,7)  Pin: 8  
+  OPIN (8,7)  Pin: 28  
+ DIREY (8,7)  Track: 0  
+  IPIN (8,8)  Pin: 8  
+  SINK (8,8)  Class: 0  
+SOURCE (8,4)  Class: 1  
+  OPIN (8,4)  Pin: 16  
+ DIREX (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 4  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  OPIN (7,6)  Pin: 28  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,7)  Pin: 8  
+  SINK (7,7)  Class: 0  
+
+
+Net 33 (regy_out[6])
+
+SOURCE (7,7)  Class: 1  
+  OPIN (7,7)  Pin: 24  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 12  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+SOURCE (7,7)  Class: 1  
+  OPIN (7,7)  Pin: 28  
+ DIREY (7,7)  Track: 0  
+  IPIN (7,8)  Pin: 8  
+  OPIN (7,8)  Pin: 20  
+ DIREX (7,8)  Track: 0  
+  IPIN (8,8)  Pin: 0  
+  SINK (8,8)  Class: 0  
+SOURCE (7,7)  Class: 1  
+  OPIN (7,7)  Pin: 16  
+ DIREX (6,7)  Track: 0  
+  IPIN (6,7)  Pin: 4  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+
+
+Net 34 (data_cmp1_t_6)
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 16  
+ DIREX (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 4  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  SINK (7,5)  Class: 0  
+The folding stage: 8
+
+Net 35 (clk): global net connecting:
+
+Block clk (#238) at (7, 0), Pin class -1.
+Block Block_23 (#239) at (4, 6), Pin class 2.
+Block Block_26 (#240) at (3, 6), Pin class 2.
+Block Block_1 (#241) at (7, 5), Pin class 2.
+Block Block_2 (#242) at (7, 6), Pin class 2.
+Block Block_3 (#243) at (7, 4), Pin class 2.
+Block Block_4 (#244) at (5, 8), Pin class 2.
+Block Block_5 (#245) at (7, 8), Pin class 2.
+Block Block_6 (#246) at (7, 2), Pin class 2.
+Block Block_7 (#247) at (8, 3), Pin class 2.
+Block Block_8 (#248) at (8, 7), Pin class 2.
+Block Block_9 (#249) at (6, 6), Pin class 2.
+Block Block_10 (#250) at (5, 6), Pin class 2.
+Block Block_11 (#251) at (5, 7), Pin class 2.
+Block Block_12 (#252) at (8, 6), Pin class 2.
+Block Block_13 (#253) at (8, 2), Pin class 2.
+Block Block_14 (#254) at (6, 2), Pin class 2.
+Block Block_15 (#255) at (2, 7), Pin class 2.
+Block Block_16 (#256) at (6, 8), Pin class 2.
+Block Block_17 (#257) at (4, 8), Pin class 2.
+Block Block_18 (#258) at (6, 5), Pin class 2.
+Block Block_19 (#259) at (6, 1), Pin class 2.
+Block Block_20 (#260) at (6, 3), Pin class 2.
+Block Block_21 (#261) at (2, 6), Pin class 2.
+Block Block_22 (#262) at (7, 7), Pin class 2.
+Block Block_24 (#263) at (6, 4), Pin class 2.
+Block Block_25 (#264) at (3, 7), Pin class 2.
+Block Block_27 (#265) at (8, 8), Pin class 2.
+Block Block_28 (#266) at (8, 4), Pin class 2.
+Block Block_29 (#267) at (7, 3), Pin class 2.
+Block Block_30 (#268) at (6, 7), Pin class 2.
+Block Block_31 (#269) at (8, 5), Pin class 2.
+Block Block_32 (#270) at (4, 7), Pin class 2.
+Block Block_33 (#271) at (3, 8), Pin class 2.
+
+
+Net 36 (PO[7])
+
+SOURCE (3,6)  Class: 1  
+  OPIN (3,6)  Pin: 24  
+ CHANX (3,5) to (4,5)  Track: 2  
+ CHANX (5,5) to (6,5)  Track: 2  
+ CHANX (7,5) to (8,5)  Track: 2  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+SOURCE (3,6)  Class: 1  
+  OPIN (3,6)  Pin: 28  
+ CHANX (3,6) to (6,6)  Track: 3  
+ CHANX (7,6) to (8,6)  Track: 3  
+  IPIN (7,6)  Pin: 12  
+  SINK (7,6)  Class: 0  
+SOURCE (3,6)  Class: 1  
+  OPIN (3,6)  Pin: 20  
+ DIREX (3,6)  Track: 0  
+  IPIN (4,6)  Pin: 0  
+  SINK (4,6)  Class: 0  
+
+
+Net 37 (data_sub_t_7)
+
+SOURCE (8,8)  Class: 1  
+  OPIN (8,8)  Pin: 16  
+ DIREX (7,8)  Track: 0  
+  IPIN (7,8)  Pin: 4  
+  OPIN (7,8)  Pin: 16  
+ DIREX (6,8)  Track: 0  
+  IPIN (6,8)  Pin: 4  
+  OPIN (6,8)  Pin: 16  
+ DIREX (5,8)  Track: 0  
+  IPIN (5,8)  Pin: 4  
+  OPIN (5,8)  Pin: 16  
+ DIREX (4,8)  Track: 0  
+  IPIN (4,8)  Pin: 4  
+  OPIN (4,8)  Pin: 16  
+ DIREX (3,8)  Track: 0  
+  IPIN (3,8)  Pin: 4  
+  OPIN (3,8)  Pin: 24  
+ DIREY (3,7)  Track: 0  
+  IPIN (3,7)  Pin: 12  
+  OPIN (3,7)  Pin: 24  
+ DIREY (3,6)  Track: 0  
+  IPIN (3,6)  Pin: 12  
+  SINK (3,6)  Class: 0  
+SOURCE (8,8)  Class: 1  
+  OPIN (8,8)  Pin: 24  
+ DIREY (8,7)  Track: 0  
+  IPIN (8,7)  Pin: 12  
+  OPIN (8,7)  Pin: 16  
+ DIREX (7,7)  Track: 0  
+  IPIN (7,7)  Pin: 4  
+  OPIN (7,7)  Pin: 16  
+ DIREX (6,7)  Track: 0  
+  IPIN (6,7)  Pin: 4  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  OPIN (5,6)  Pin: 16  
+ DIREX (4,6)  Track: 0  
+  IPIN (4,6)  Pin: 4  
+  SINK (4,6)  Class: 0  
+
+
+Net 38 (regy_out[7])
+
+SOURCE (4,6)  Class: 1  
+  OPIN (4,6)  Pin: 20  
+ DIREX (4,6)  Track: 0  
+  IPIN (5,6)  Pin: 32  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 32  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  SINK (7,5)  Class: 0  
+SOURCE (4,6)  Class: 1  
+  OPIN (4,6)  Pin: 16  
+ DIREX (3,6)  Track: 0  
+  IPIN (3,6)  Pin: 4  
+  SINK (3,6)  Class: 0  
+
+
+Net 39 (data_cmp1_t_7)
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+The folding stage: 9
+
+Net 40 (clk): global net connecting:
+
+Block clk (#272) at (7, 0), Pin class -1.
+Block Block_3 (#273) at (7, 4), Pin class 2.
+Block Block_1 (#274) at (7, 5), Pin class 2.
+Block Block_2 (#275) at (7, 6), Pin class 2.
+Block Block_4 (#276) at (5, 8), Pin class 2.
+Block Block_5 (#277) at (7, 8), Pin class 2.
+Block Block_6 (#278) at (7, 2), Pin class 2.
+Block Block_7 (#279) at (8, 3), Pin class 2.
+Block Block_8 (#280) at (8, 7), Pin class 2.
+Block Block_9 (#281) at (6, 6), Pin class 2.
+Block Block_10 (#282) at (5, 6), Pin class 2.
+Block Block_11 (#283) at (5, 7), Pin class 2.
+Block Block_12 (#284) at (8, 6), Pin class 2.
+Block Block_13 (#285) at (8, 2), Pin class 2.
+Block Block_14 (#286) at (6, 2), Pin class 2.
+Block Block_15 (#287) at (2, 7), Pin class 2.
+Block Block_16 (#288) at (6, 8), Pin class 2.
+Block Block_17 (#289) at (4, 8), Pin class 2.
+Block Block_18 (#290) at (6, 5), Pin class 2.
+Block Block_19 (#291) at (6, 1), Pin class 2.
+Block Block_20 (#292) at (6, 3), Pin class 2.
+Block Block_21 (#293) at (2, 6), Pin class 2.
+Block Block_22 (#294) at (7, 7), Pin class 2.
+Block Block_23 (#295) at (4, 6), Pin class 2.
+Block Block_24 (#296) at (6, 4), Pin class 2.
+Block Block_25 (#297) at (3, 7), Pin class 2.
+Block Block_26 (#298) at (3, 6), Pin class 2.
+Block Block_27 (#299) at (8, 8), Pin class 2.
+Block Block_28 (#300) at (8, 4), Pin class 2.
+Block Block_29 (#301) at (7, 3), Pin class 2.
+Block Block_30 (#302) at (6, 7), Pin class 2.
+Block Block_31 (#303) at (8, 5), Pin class 2.
+Block Block_32 (#304) at (4, 7), Pin class 2.
+Block Block_33 (#305) at (3, 8), Pin class 2.
+
+
+Net 41 (PO[8])
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  SINK (7,4)  Class: 0  
+
+
+Net 42 (data_cmp1_t_8)
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 16  
+ DIREX (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 4  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 24  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,4)  Pin: 12  
+  OPIN (6,4)  Pin: 20  
+ DIREX (6,4)  Track: 0  
+  IPIN (7,4)  Pin: 0  
+  SINK (7,4)  Class: 0  
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+
+
+Net 43 (regy_out[8])
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  SINK (7,5)  Class: 0  
+
+
+Net 44 (data_cmp1_c[5])
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 20  
+ DIREX (7,4)  Track: 0  
+  IPIN (8,4)  Pin: 32  
+  OPIN (8,4)  Pin: 28  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,5)  Pin: 8  
+  OPIN (8,5)  Pin: 28  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,6)  Pin: 8  
+  OPIN (8,6)  Pin: 16  
+ DIREX (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 4  
+  SINK (7,6)  Class: 0  
+
+
+Net 45 (data_cmp1_c[7])
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+The folding stage: 10
+
+Net 46 (clk): global net connecting:
+
+Block clk (#306) at (7, 0), Pin class -1.
+Block Block_3 (#307) at (7, 4), Pin class 2.
+Block Block_1 (#308) at (7, 5), Pin class 2.
+Block Block_9 (#309) at (6, 6), Pin class 2.
+Block Block_11 (#310) at (5, 7), Pin class 2.
+Block Block_2 (#311) at (7, 6), Pin class 2.
+Block Block_4 (#312) at (5, 8), Pin class 2.
+Block Block_5 (#313) at (7, 8), Pin class 2.
+Block Block_6 (#314) at (7, 2), Pin class 2.
+Block Block_7 (#315) at (8, 3), Pin class 2.
+Block Block_8 (#316) at (8, 7), Pin class 2.
+Block Block_10 (#317) at (5, 6), Pin class 2.
+Block Block_12 (#318) at (8, 6), Pin class 2.
+Block Block_13 (#319) at (8, 2), Pin class 2.
+Block Block_14 (#320) at (6, 2), Pin class 2.
+Block Block_15 (#321) at (2, 7), Pin class 2.
+Block Block_16 (#322) at (6, 8), Pin class 2.
+Block Block_17 (#323) at (4, 8), Pin class 2.
+Block Block_18 (#324) at (6, 5), Pin class 2.
+Block Block_19 (#325) at (6, 1), Pin class 2.
+Block Block_20 (#326) at (6, 3), Pin class 2.
+Block Block_21 (#327) at (2, 6), Pin class 2.
+Block Block_22 (#328) at (7, 7), Pin class 2.
+Block Block_23 (#329) at (4, 6), Pin class 2.
+Block Block_24 (#330) at (6, 4), Pin class 2.
+Block Block_25 (#331) at (3, 7), Pin class 2.
+Block Block_26 (#332) at (3, 6), Pin class 2.
+Block Block_27 (#333) at (8, 8), Pin class 2.
+Block Block_28 (#334) at (8, 4), Pin class 2.
+Block Block_29 (#335) at (7, 3), Pin class 2.
+Block Block_30 (#336) at (6, 7), Pin class 2.
+Block Block_31 (#337) at (8, 5), Pin class 2.
+Block Block_32 (#338) at (4, 7), Pin class 2.
+Block Block_33 (#339) at (3, 8), Pin class 2.
+
+
+Net 47 (PO[8])
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  SINK (7,4)  Class: 0  
+
+
+Net 48 (data_sub_t_8)
+
+SOURCE (3,6)  Class: 1  
+  OPIN (3,6)  Pin: 20  
+ DIREX (3,6)  Track: 0  
+  IPIN (4,6)  Pin: 0  
+  OPIN (4,6)  Pin: 20  
+ DIREX (4,6)  Track: 0  
+  IPIN (5,6)  Pin: 32  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 32  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 24  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,4)  Pin: 12  
+  OPIN (6,4)  Pin: 20  
+ DIREX (6,4)  Track: 0  
+  IPIN (7,4)  Pin: 0  
+  SINK (7,4)  Class: 0  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 32  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+
+
+Net 49 (regy_out[8])
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  SINK (7,5)  Class: 0  
+
+
+Net 50 (data_cmp1_t_9)
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  OPIN (7,6)  Pin: 28  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,7)  Pin: 8  
+  OPIN (7,7)  Pin: 16  
+ DIREX (6,7)  Track: 0  
+  IPIN (6,7)  Pin: 4  
+  OPIN (6,7)  Pin: 16  
+ DIREX (5,7)  Track: 0  
+  IPIN (5,7)  Pin: 4  
+  SINK (5,7)  Class: 0  
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 16  
+ DIREX (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 4  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  SINK (6,6)  Class: 0  
+
+
+Net 51 (PO[9])
+
+SOURCE (5,7)  Class: 1  
+  OPIN (5,7)  Pin: 20  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 32  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  SINK (6,6)  Class: 0  
+
+
+Net 52 (regy_out[9])
+
+SOURCE (6,6)  Class: 1  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  OPIN (5,6)  Pin: 28  
+ DIREY (5,6)  Track: 0  
+  IPIN (5,7)  Pin: 8  
+  SINK (5,7)  Class: 0  
+The folding stage: 11
+
+Net 53 (clk): global net connecting:
+
+Block clk (#340) at (7, 0), Pin class -1.
+Block Block_9 (#341) at (6, 6), Pin class 2.
+Block Block_11 (#342) at (5, 7), Pin class 2.
+Block Block_8 (#343) at (8, 7), Pin class 2.
+Block Block_12 (#344) at (8, 6), Pin class 2.
+Block Block_1 (#345) at (7, 5), Pin class 2.
+Block Block_2 (#346) at (7, 6), Pin class 2.
+Block Block_3 (#347) at (7, 4), Pin class 2.
+Block Block_4 (#348) at (5, 8), Pin class 2.
+Block Block_5 (#349) at (7, 8), Pin class 2.
+Block Block_6 (#350) at (7, 2), Pin class 2.
+Block Block_7 (#351) at (8, 3), Pin class 2.
+Block Block_10 (#352) at (5, 6), Pin class 2.
+Block Block_13 (#353) at (8, 2), Pin class 2.
+Block Block_14 (#354) at (6, 2), Pin class 2.
+Block Block_15 (#355) at (2, 7), Pin class 2.
+Block Block_16 (#356) at (6, 8), Pin class 2.
+Block Block_17 (#357) at (4, 8), Pin class 2.
+Block Block_18 (#358) at (6, 5), Pin class 2.
+Block Block_19 (#359) at (6, 1), Pin class 2.
+Block Block_20 (#360) at (6, 3), Pin class 2.
+Block Block_21 (#361) at (2, 6), Pin class 2.
+Block Block_22 (#362) at (7, 7), Pin class 2.
+Block Block_23 (#363) at (4, 6), Pin class 2.
+Block Block_24 (#364) at (6, 4), Pin class 2.
+Block Block_25 (#365) at (3, 7), Pin class 2.
+Block Block_26 (#366) at (3, 6), Pin class 2.
+Block Block_27 (#367) at (8, 8), Pin class 2.
+Block Block_28 (#368) at (8, 4), Pin class 2.
+Block Block_29 (#369) at (7, 3), Pin class 2.
+Block Block_30 (#370) at (6, 7), Pin class 2.
+Block Block_31 (#371) at (8, 5), Pin class 2.
+Block Block_32 (#372) at (4, 7), Pin class 2.
+Block Block_33 (#373) at (3, 8), Pin class 2.
+
+
+Net 54 (PO[9])
+
+SOURCE (5,7)  Class: 1  
+  OPIN (5,7)  Pin: 24  
+ DIREY (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 12  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  SINK (6,6)  Class: 0  
+
+
+Net 55 (data_sub_t_9)
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  OPIN (7,6)  Pin: 16  
+ DIREX (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 4  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  OPIN (5,6)  Pin: 28  
+ DIREY (5,6)  Track: 0  
+  IPIN (5,7)  Pin: 8  
+  SINK (5,7)  Class: 0  
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 16  
+ DIREX (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 4  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  SINK (6,6)  Class: 0  
+
+
+Net 56 (regy_out[9])
+
+SOURCE (6,6)  Class: 1  
+  OPIN (6,6)  Pin: 28  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,7)  Pin: 8  
+  OPIN (6,7)  Pin: 16  
+ DIREX (5,7)  Track: 0  
+  IPIN (5,7)  Pin: 4  
+  SINK (5,7)  Class: 0  
+
+
+Net 57 (data_cmp1_t_10)
+
+SOURCE (5,7)  Class: 1  
+  OPIN (5,7)  Pin: 20  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 0  
+  OPIN (6,7)  Pin: 20  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 0  
+  OPIN (7,7)  Pin: 24  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 12  
+  OPIN (7,6)  Pin: 20  
+ DIREX (7,6)  Track: 0  
+  IPIN (8,6)  Pin: 0  
+  SINK (8,6)  Class: 0  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 32  
+  OPIN (7,7)  Pin: 20  
+ DIREX (7,7)  Track: 0  
+  IPIN (8,7)  Pin: 0  
+  SINK (8,7)  Class: 0  
+
+
+Net 58 (PO[10])
+
+SOURCE (8,6)  Class: 1  
+  OPIN (8,6)  Pin: 28  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,7)  Pin: 8  
+  SINK (8,7)  Class: 0  
+
+
+Net 59 (regy_out[10])
+
+SOURCE (8,7)  Class: 1  
+  OPIN (8,7)  Pin: 24  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,6)  Pin: 12  
+  SINK (8,6)  Class: 0  
+The folding stage: 12
+
+Net 60 (clk): global net connecting:
+
+Block clk (#374) at (7, 0), Pin class -1.
+Block Block_8 (#375) at (8, 7), Pin class 2.
+Block Block_12 (#376) at (8, 6), Pin class 2.
+Block Block_7 (#377) at (8, 3), Pin class 2.
+Block Block_13 (#378) at (8, 2), Pin class 2.
+Block Block_1 (#379) at (7, 5), Pin class 2.
+Block Block_2 (#380) at (7, 6), Pin class 2.
+Block Block_3 (#381) at (7, 4), Pin class 2.
+Block Block_4 (#382) at (5, 8), Pin class 2.
+Block Block_5 (#383) at (7, 8), Pin class 2.
+Block Block_6 (#384) at (7, 2), Pin class 2.
+Block Block_9 (#385) at (6, 6), Pin class 2.
+Block Block_10 (#386) at (5, 6), Pin class 2.
+Block Block_11 (#387) at (5, 7), Pin class 2.
+Block Block_14 (#388) at (6, 2), Pin class 2.
+Block Block_15 (#389) at (2, 7), Pin class 2.
+Block Block_16 (#390) at (6, 8), Pin class 2.
+Block Block_17 (#391) at (4, 8), Pin class 2.
+Block Block_18 (#392) at (6, 5), Pin class 2.
+Block Block_19 (#393) at (6, 1), Pin class 2.
+Block Block_20 (#394) at (6, 3), Pin class 2.
+Block Block_21 (#395) at (2, 6), Pin class 2.
+Block Block_22 (#396) at (7, 7), Pin class 2.
+Block Block_23 (#397) at (4, 6), Pin class 2.
+Block Block_24 (#398) at (6, 4), Pin class 2.
+Block Block_25 (#399) at (3, 7), Pin class 2.
+Block Block_26 (#400) at (3, 6), Pin class 2.
+Block Block_27 (#401) at (8, 8), Pin class 2.
+Block Block_28 (#402) at (8, 4), Pin class 2.
+Block Block_29 (#403) at (7, 3), Pin class 2.
+Block Block_30 (#404) at (6, 7), Pin class 2.
+Block Block_31 (#405) at (8, 5), Pin class 2.
+Block Block_32 (#406) at (4, 7), Pin class 2.
+Block Block_33 (#407) at (3, 8), Pin class 2.
+
+
+Net 61 (PO[10])
+
+SOURCE (8,6)  Class: 1  
+  OPIN (8,6)  Pin: 28  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,7)  Pin: 8  
+  SINK (8,7)  Class: 0  
+
+
+Net 62 (data_sub_t_10)
+
+SOURCE (5,7)  Class: 1  
+  OPIN (5,7)  Pin: 20  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 0  
+  OPIN (6,7)  Pin: 20  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 32  
+  OPIN (7,7)  Pin: 24  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 12  
+  OPIN (7,6)  Pin: 20  
+ DIREX (7,6)  Track: 0  
+  IPIN (8,6)  Pin: 0  
+  SINK (8,6)  Class: 0  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 0  
+  OPIN (7,7)  Pin: 20  
+ DIREX (7,7)  Track: 0  
+  IPIN (8,7)  Pin: 0  
+  SINK (8,7)  Class: 0  
+
+
+Net 63 (regy_out[10])
+
+SOURCE (8,7)  Class: 1  
+  OPIN (8,7)  Pin: 24  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,6)  Pin: 12  
+  SINK (8,6)  Class: 0  
+
+
+Net 64 (data_cmp1_t_11)
+
+SOURCE (8,6)  Class: 1  
+  OPIN (8,6)  Pin: 24  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 12  
+  OPIN (8,5)  Pin: 24  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 12  
+  OPIN (8,4)  Pin: 24  
+ DIREY (8,3)  Track: 0  
+  IPIN (8,3)  Pin: 12  
+  OPIN (8,3)  Pin: 24  
+ DIREY (8,2)  Track: 0  
+  IPIN (8,2)  Pin: 12  
+  SINK (8,2)  Class: 0  
+SOURCE (8,6)  Class: 1  
+  OPIN (8,6)  Pin: 16  
+ DIREX (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 4  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  OPIN (7,4)  Pin: 24  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 12  
+  OPIN (7,3)  Pin: 20  
+ DIREX (7,3)  Track: 0  
+  IPIN (8,3)  Pin: 0  
+  SINK (8,3)  Class: 0  
+
+
+Net 65 (PO[11])
+
+SOURCE (8,2)  Class: 1  
+  OPIN (8,2)  Pin: 28  
+ DIREY (8,2)  Track: 0  
+  IPIN (8,3)  Pin: 8  
+  SINK (8,3)  Class: 0  
+
+
+Net 66 (regy_out[11])
+
+SOURCE (8,3)  Class: 1  
+  OPIN (8,3)  Pin: 16  
+ DIREX (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 4  
+  OPIN (7,3)  Pin: 24  
+ DIREY (7,2)  Track: 0  
+  IPIN (7,2)  Pin: 12  
+  OPIN (7,2)  Pin: 20  
+ DIREX (7,2)  Track: 0  
+  IPIN (8,2)  Pin: 0  
+  SINK (8,2)  Class: 0  
+The folding stage: 13
+
+Net 67 (clk): global net connecting:
+
+Block clk (#408) at (7, 0), Pin class -1.
+Block Block_6 (#409) at (7, 2), Pin class 2.
+Block Block_14 (#410) at (6, 2), Pin class 2.
+Block Block_3 (#411) at (7, 4), Pin class 2.
+Block Block_1 (#412) at (7, 5), Pin class 2.
+Block Block_2 (#413) at (7, 6), Pin class 2.
+Block Block_4 (#414) at (5, 8), Pin class 2.
+Block Block_5 (#415) at (7, 8), Pin class 2.
+Block Block_7 (#416) at (8, 3), Pin class 2.
+Block Block_8 (#417) at (8, 7), Pin class 2.
+Block Block_9 (#418) at (6, 6), Pin class 2.
+Block Block_10 (#419) at (5, 6), Pin class 2.
+Block Block_11 (#420) at (5, 7), Pin class 2.
+Block Block_12 (#421) at (8, 6), Pin class 2.
+Block Block_13 (#422) at (8, 2), Pin class 2.
+Block Block_15 (#423) at (2, 7), Pin class 2.
+Block Block_16 (#424) at (6, 8), Pin class 2.
+Block Block_17 (#425) at (4, 8), Pin class 2.
+Block Block_18 (#426) at (6, 5), Pin class 2.
+Block Block_19 (#427) at (6, 1), Pin class 2.
+Block Block_20 (#428) at (6, 3), Pin class 2.
+Block Block_21 (#429) at (2, 6), Pin class 2.
+Block Block_22 (#430) at (7, 7), Pin class 2.
+Block Block_23 (#431) at (4, 6), Pin class 2.
+Block Block_24 (#432) at (6, 4), Pin class 2.
+Block Block_25 (#433) at (3, 7), Pin class 2.
+Block Block_26 (#434) at (3, 6), Pin class 2.
+Block Block_27 (#435) at (8, 8), Pin class 2.
+Block Block_28 (#436) at (8, 4), Pin class 2.
+Block Block_29 (#437) at (7, 3), Pin class 2.
+Block Block_30 (#438) at (6, 7), Pin class 2.
+Block Block_31 (#439) at (8, 5), Pin class 2.
+Block Block_32 (#440) at (4, 7), Pin class 2.
+Block Block_33 (#441) at (3, 8), Pin class 2.
+
+
+Net 68 (PO[12])
+
+SOURCE (6,2)  Class: 1  
+  OPIN (6,2)  Pin: 20  
+ DIREX (6,2)  Track: 0  
+  IPIN (7,2)  Pin: 0  
+  SINK (7,2)  Class: 0  
+
+
+Net 69 (data_cmp1_t_12)
+
+SOURCE (8,2)  Class: 1  
+  OPIN (8,2)  Pin: 28  
+ CHANX (8,2)  Track: 1  
+ CHANX (6,2) to (7,2)  Track: 1  
+  IPIN (6,2)  Pin: 12  
+  SINK (6,2)  Class: 0  
+SOURCE (8,2)  Class: 1  
+  OPIN (8,2)  Pin: 16  
+ DIREX (7,2)  Track: 0  
+  IPIN (7,2)  Pin: 4  
+  SINK (7,2)  Class: 0  
+
+
+Net 70 (regy_out[12])
+
+SOURCE (7,2)  Class: 1  
+  OPIN (7,2)  Pin: 16  
+ DIREX (6,2)  Track: 0  
+  IPIN (6,2)  Pin: 4  
+  SINK (6,2)  Class: 0  
+
+
+Net 71 (data_cmp1_c[9])
+
+SOURCE (6,6)  Class: 1  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 32  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  SINK (7,4)  Class: 0  
+
+
+Net 72 (data_cmp1_c[10])
+
+SOURCE (8,7)  Class: 1  
+  OPIN (8,7)  Pin: 24  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,6)  Pin: 12  
+  OPIN (8,6)  Pin: 24  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 12  
+  OPIN (8,5)  Pin: 24  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 12  
+  OPIN (8,4)  Pin: 16  
+ DIREX (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 4  
+  SINK (7,4)  Class: 0  
+
+
+Net 73 (data_cmp1_c[11])
+
+SOURCE (8,3)  Class: 1  
+  OPIN (8,3)  Pin: 16  
+ DIREX (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 4  
+  OPIN (7,3)  Pin: 28  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,4)  Pin: 8  
+  SINK (7,4)  Class: 0  
+The folding stage: 14
+
+Net 74 (rst)
+
+SOURCE (9,5)  Pad: 4  
+  OPIN (9,5)  Pad: 4  
+ DIREX (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 4  
+  OPIN (8,5)  Pin: 16  
+ DIREX (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 4  
+  OPIN (7,5)  Pin: 16  
+ DIREX (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 4  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  SINK (5,6)  Class: 0  
+
+
+Net 75 (clk): global net connecting:
+
+Block clk (#443) at (7, 0), Pin class -1.
+Block Block_10 (#444) at (5, 6), Pin class 2.
+Block Block_2 (#445) at (7, 6), Pin class 2.
+Block Block_15 (#446) at (2, 7), Pin class 2.
+Block Block_1 (#447) at (7, 5), Pin class 2.
+Block Block_3 (#448) at (7, 4), Pin class 2.
+Block Block_4 (#449) at (5, 8), Pin class 2.
+Block Block_5 (#450) at (7, 8), Pin class 2.
+Block Block_6 (#451) at (7, 2), Pin class 2.
+Block Block_7 (#452) at (8, 3), Pin class 2.
+Block Block_8 (#453) at (8, 7), Pin class 2.
+Block Block_9 (#454) at (6, 6), Pin class 2.
+Block Block_11 (#455) at (5, 7), Pin class 2.
+Block Block_12 (#456) at (8, 6), Pin class 2.
+Block Block_13 (#457) at (8, 2), Pin class 2.
+Block Block_14 (#458) at (6, 2), Pin class 2.
+Block Block_16 (#459) at (6, 8), Pin class 2.
+Block Block_17 (#460) at (4, 8), Pin class 2.
+Block Block_18 (#461) at (6, 5), Pin class 2.
+Block Block_19 (#462) at (6, 1), Pin class 2.
+Block Block_20 (#463) at (6, 3), Pin class 2.
+Block Block_21 (#464) at (2, 6), Pin class 2.
+Block Block_22 (#465) at (7, 7), Pin class 2.
+Block Block_23 (#466) at (4, 6), Pin class 2.
+Block Block_24 (#467) at (6, 4), Pin class 2.
+Block Block_25 (#468) at (3, 7), Pin class 2.
+Block Block_26 (#469) at (3, 6), Pin class 2.
+Block Block_27 (#470) at (8, 8), Pin class 2.
+Block Block_28 (#471) at (8, 4), Pin class 2.
+Block Block_29 (#472) at (7, 3), Pin class 2.
+Block Block_30 (#473) at (6, 7), Pin class 2.
+Block Block_31 (#474) at (8, 5), Pin class 2.
+Block Block_32 (#475) at (4, 7), Pin class 2.
+Block Block_33 (#476) at (3, 8), Pin class 2.
+
+
+Net 76 (PO[13])
+
+SOURCE (2,7)  Class: 1  
+  OPIN (2,7)  Pin: 20  
+ DIREX (2,7)  Track: 0  
+  IPIN (3,7)  Pin: 0  
+  OPIN (3,7)  Pin: 20  
+ DIREX (3,7)  Track: 0  
+  IPIN (4,7)  Pin: 32  
+  OPIN (4,7)  Pin: 20  
+ DIREX (4,7)  Track: 0  
+  IPIN (5,7)  Pin: 0  
+  OPIN (5,7)  Pin: 20  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 32  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+
+
+Net 77 (data_cmp1_t_13)
+
+SOURCE (6,2)  Class: 1  
+  OPIN (6,2)  Pin: 16  
+ CHANY (5,2) to (5,5)  Track: 4  
+ CHANX (2,5) to (5,5)  Track: 4  
+  IPIN (2,6)  Pin: 8  
+  OPIN (2,6)  Pin: 28  
+ DIREY (2,6)  Track: 0  
+  IPIN (2,7)  Pin: 8  
+  SINK (2,7)  Class: 0  
+SOURCE (6,2)  Class: 1  
+  OPIN (6,2)  Pin: 28  
+ DIREY (6,2)  Track: 0  
+  IPIN (6,3)  Pin: 8  
+  OPIN (6,3)  Pin: 28  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,4)  Pin: 8  
+  OPIN (6,4)  Pin: 28  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,5)  Pin: 8  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 32  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+
+
+Net 78 (regy_out[13])
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 16  
+ DIREX (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 4  
+  OPIN (6,6)  Pin: 28  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,7)  Pin: 8  
+  OPIN (6,7)  Pin: 16  
+ DIREX (5,7)  Track: 0  
+  IPIN (5,7)  Pin: 4  
+  OPIN (5,7)  Pin: 16  
+ DIREX (4,7)  Track: 0  
+  IPIN (4,7)  Pin: 4  
+  OPIN (4,7)  Pin: 16  
+ DIREX (3,7)  Track: 0  
+  IPIN (3,7)  Pin: 4  
+  OPIN (3,7)  Pin: 16  
+ DIREX (2,7)  Track: 0  
+  IPIN (2,7)  Pin: 4  
+  SINK (2,7)  Class: 0  
+The folding stage: 15
+
+Net 79 (rst)
+
+SOURCE (9,5)  Pad: 4  
+  OPIN (9,5)  Pad: 4  
+ CHANY (8,5) to (8,6)  Track: 0  
+ CHANX (7,6) to (8,6)  Track: 0  
+ CHANX (5,6) to (6,6)  Track: 0  
+  IPIN (5,6)  Pin: 12  
+  SINK (5,6)  Class: 0  
+
+
+Net 80 (clk): global net connecting:
+
+Block clk (#478) at (7, 0), Pin class -1.
+Block Block_10 (#479) at (5, 6), Pin class 2.
+Block Block_5 (#480) at (7, 8), Pin class 2.
+Block Block_16 (#481) at (6, 8), Pin class 2.
+Block Block_1 (#482) at (7, 5), Pin class 2.
+Block Block_2 (#483) at (7, 6), Pin class 2.
+Block Block_3 (#484) at (7, 4), Pin class 2.
+Block Block_4 (#485) at (5, 8), Pin class 2.
+Block Block_6 (#486) at (7, 2), Pin class 2.
+Block Block_7 (#487) at (8, 3), Pin class 2.
+Block Block_8 (#488) at (8, 7), Pin class 2.
+Block Block_9 (#489) at (6, 6), Pin class 2.
+Block Block_11 (#490) at (5, 7), Pin class 2.
+Block Block_12 (#491) at (8, 6), Pin class 2.
+Block Block_13 (#492) at (8, 2), Pin class 2.
+Block Block_14 (#493) at (6, 2), Pin class 2.
+Block Block_15 (#494) at (2, 7), Pin class 2.
+Block Block_17 (#495) at (4, 8), Pin class 2.
+Block Block_18 (#496) at (6, 5), Pin class 2.
+Block Block_19 (#497) at (6, 1), Pin class 2.
+Block Block_20 (#498) at (6, 3), Pin class 2.
+Block Block_21 (#499) at (2, 6), Pin class 2.
+Block Block_22 (#500) at (7, 7), Pin class 2.
+Block Block_23 (#501) at (4, 6), Pin class 2.
+Block Block_24 (#502) at (6, 4), Pin class 2.
+Block Block_25 (#503) at (3, 7), Pin class 2.
+Block Block_26 (#504) at (3, 6), Pin class 2.
+Block Block_27 (#505) at (8, 8), Pin class 2.
+Block Block_28 (#506) at (8, 4), Pin class 2.
+Block Block_29 (#507) at (7, 3), Pin class 2.
+Block Block_30 (#508) at (6, 7), Pin class 2.
+Block Block_31 (#509) at (8, 5), Pin class 2.
+Block Block_32 (#510) at (4, 7), Pin class 2.
+Block Block_33 (#511) at (3, 8), Pin class 2.
+
+
+Net 81 (PO[14])
+
+SOURCE (6,8)  Class: 1  
+  OPIN (6,8)  Pin: 20  
+ DIREX (6,8)  Track: 0  
+  IPIN (7,8)  Pin: 0  
+  SINK (7,8)  Class: 0  
+
+
+Net 82 (data_cmp1_t_14)
+
+SOURCE (2,7)  Class: 1  
+  OPIN (2,7)  Pin: 20  
+ DIREX (2,7)  Track: 0  
+  IPIN (3,7)  Pin: 0  
+  OPIN (3,7)  Pin: 20  
+ DIREX (3,7)  Track: 0  
+  IPIN (4,7)  Pin: 32  
+  OPIN (4,7)  Pin: 20  
+ DIREX (4,7)  Track: 0  
+  IPIN (5,7)  Pin: 32  
+  OPIN (5,7)  Pin: 20  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 32  
+  OPIN (6,7)  Pin: 20  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 32  
+  OPIN (7,7)  Pin: 28  
+ DIREY (7,7)  Track: 0  
+  IPIN (7,8)  Pin: 8  
+  SINK (7,8)  Class: 0  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 0  
+  OPIN (6,7)  Pin: 28  
+ DIREY (6,7)  Track: 0  
+  IPIN (6,8)  Pin: 8  
+  SINK (6,8)  Class: 0  
+
+
+Net 83 (regy_out[14])
+
+SOURCE (7,8)  Class: 1  
+  OPIN (7,8)  Pin: 16  
+ DIREX (6,8)  Track: 0  
+  IPIN (6,8)  Pin: 4  
+  SINK (6,8)  Class: 0  
+The folding stage: 16
+
+Net 84 (clk): global net connecting:
+
+Block clk (#512) at (7, 0), Pin class -1.
+Block Block_7 (#513) at (8, 3), Pin class 2.
+Block Block_13 (#514) at (8, 2), Pin class 2.
+Block Block_4 (#515) at (5, 8), Pin class 2.
+Block Block_1 (#516) at (7, 5), Pin class 2.
+Block Block_2 (#517) at (7, 6), Pin class 2.
+Block Block_3 (#518) at (7, 4), Pin class 2.
+Block Block_5 (#519) at (7, 8), Pin class 2.
+Block Block_6 (#520) at (7, 2), Pin class 2.
+Block Block_8 (#521) at (8, 7), Pin class 2.
+Block Block_9 (#522) at (6, 6), Pin class 2.
+Block Block_10 (#523) at (5, 6), Pin class 2.
+Block Block_11 (#524) at (5, 7), Pin class 2.
+Block Block_12 (#525) at (8, 6), Pin class 2.
+Block Block_14 (#526) at (6, 2), Pin class 2.
+Block Block_15 (#527) at (2, 7), Pin class 2.
+Block Block_16 (#528) at (6, 8), Pin class 2.
+Block Block_17 (#529) at (4, 8), Pin class 2.
+Block Block_18 (#530) at (6, 5), Pin class 2.
+Block Block_19 (#531) at (6, 1), Pin class 2.
+Block Block_20 (#532) at (6, 3), Pin class 2.
+Block Block_21 (#533) at (2, 6), Pin class 2.
+Block Block_22 (#534) at (7, 7), Pin class 2.
+Block Block_23 (#535) at (4, 6), Pin class 2.
+Block Block_24 (#536) at (6, 4), Pin class 2.
+Block Block_25 (#537) at (3, 7), Pin class 2.
+Block Block_26 (#538) at (3, 6), Pin class 2.
+Block Block_27 (#539) at (8, 8), Pin class 2.
+Block Block_28 (#540) at (8, 4), Pin class 2.
+Block Block_29 (#541) at (7, 3), Pin class 2.
+Block Block_30 (#542) at (6, 7), Pin class 2.
+Block Block_31 (#543) at (8, 5), Pin class 2.
+Block Block_32 (#544) at (4, 7), Pin class 2.
+Block Block_33 (#545) at (3, 8), Pin class 2.
+
+
+Net 85 (PO[11])
+
+SOURCE (8,2)  Class: 1  
+  OPIN (8,2)  Pin: 28  
+ DIREY (8,2)  Track: 0  
+  IPIN (8,3)  Pin: 8  
+  SINK (8,3)  Class: 0  
+
+
+Net 86 (data_sub_t_11)
+
+SOURCE (8,6)  Class: 1  
+  OPIN (8,6)  Pin: 24  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 12  
+  OPIN (8,5)  Pin: 24  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 12  
+  OPIN (8,4)  Pin: 24  
+ DIREY (8,3)  Track: 0  
+  IPIN (8,3)  Pin: 12  
+  OPIN (8,3)  Pin: 24  
+ DIREY (8,2)  Track: 0  
+  IPIN (8,2)  Pin: 12  
+  SINK (8,2)  Class: 0  
+SOURCE (8,6)  Class: 1  
+  OPIN (8,6)  Pin: 16  
+ DIREX (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 4  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  OPIN (7,4)  Pin: 24  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 12  
+  OPIN (7,3)  Pin: 20  
+ DIREX (7,3)  Track: 0  
+  IPIN (8,3)  Pin: 0  
+  SINK (8,3)  Class: 0  
+
+
+Net 87 (regy_out[11])
+
+SOURCE (8,3)  Class: 1  
+  OPIN (8,3)  Pin: 16  
+ DIREX (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 4  
+  OPIN (7,3)  Pin: 24  
+ DIREY (7,2)  Track: 0  
+  IPIN (7,2)  Pin: 12  
+  OPIN (7,2)  Pin: 20  
+ DIREX (7,2)  Track: 0  
+  IPIN (8,2)  Pin: 0  
+  SINK (8,2)  Class: 0  
+
+
+Net 88 (PO[15])
+
+SOURCE (3,8)  Class: 1  
+  OPIN (3,8)  Pin: 20  
+ DIREX (3,8)  Track: 0  
+  IPIN (4,8)  Pin: 32  
+  OPIN (4,8)  Pin: 20  
+ DIREX (4,8)  Track: 0  
+  IPIN (5,8)  Pin: 0  
+  SINK (5,8)  Class: 0  
+
+
+Net 89 (data_cmp1_t_15)
+
+SOURCE (6,8)  Class: 1  
+  OPIN (6,8)  Pin: 16  
+ DIREX (5,8)  Track: 0  
+  IPIN (5,8)  Pin: 4  
+  SINK (5,8)  Class: 0  
+The folding stage: 17
+
+Net 90 (clk): global net connecting:
+
+Block clk (#546) at (7, 0), Pin class -1.
+Block Block_6 (#547) at (7, 2), Pin class 2.
+Block Block_14 (#548) at (6, 2), Pin class 2.
+Block Block_2 (#549) at (7, 6), Pin class 2.
+Block Block_1 (#550) at (7, 5), Pin class 2.
+Block Block_3 (#551) at (7, 4), Pin class 2.
+Block Block_4 (#552) at (5, 8), Pin class 2.
+Block Block_5 (#553) at (7, 8), Pin class 2.
+Block Block_7 (#554) at (8, 3), Pin class 2.
+Block Block_8 (#555) at (8, 7), Pin class 2.
+Block Block_9 (#556) at (6, 6), Pin class 2.
+Block Block_10 (#557) at (5, 6), Pin class 2.
+Block Block_11 (#558) at (5, 7), Pin class 2.
+Block Block_12 (#559) at (8, 6), Pin class 2.
+Block Block_13 (#560) at (8, 2), Pin class 2.
+Block Block_15 (#561) at (2, 7), Pin class 2.
+Block Block_16 (#562) at (6, 8), Pin class 2.
+Block Block_17 (#563) at (4, 8), Pin class 2.
+Block Block_18 (#564) at (6, 5), Pin class 2.
+Block Block_19 (#565) at (6, 1), Pin class 2.
+Block Block_20 (#566) at (6, 3), Pin class 2.
+Block Block_21 (#567) at (2, 6), Pin class 2.
+Block Block_22 (#568) at (7, 7), Pin class 2.
+Block Block_23 (#569) at (4, 6), Pin class 2.
+Block Block_24 (#570) at (6, 4), Pin class 2.
+Block Block_25 (#571) at (3, 7), Pin class 2.
+Block Block_26 (#572) at (3, 6), Pin class 2.
+Block Block_27 (#573) at (8, 8), Pin class 2.
+Block Block_28 (#574) at (8, 4), Pin class 2.
+Block Block_29 (#575) at (7, 3), Pin class 2.
+Block Block_30 (#576) at (6, 7), Pin class 2.
+Block Block_31 (#577) at (8, 5), Pin class 2.
+Block Block_32 (#578) at (4, 7), Pin class 2.
+Block Block_33 (#579) at (3, 8), Pin class 2.
+
+
+Net 91 (PO[12])
+
+SOURCE (6,2)  Class: 1  
+  OPIN (6,2)  Pin: 20  
+ DIREX (6,2)  Track: 0  
+  IPIN (7,2)  Pin: 0  
+  SINK (7,2)  Class: 0  
+
+
+Net 92 (data_sub_t_12)
+
+SOURCE (8,2)  Class: 1  
+  OPIN (8,2)  Pin: 28  
+ CHANX (8,2)  Track: 1  
+ CHANX (6,2) to (7,2)  Track: 1  
+  IPIN (6,2)  Pin: 12  
+  SINK (6,2)  Class: 0  
+SOURCE (8,2)  Class: 1  
+  OPIN (8,2)  Pin: 16  
+ DIREX (7,2)  Track: 0  
+  IPIN (7,2)  Pin: 4  
+  SINK (7,2)  Class: 0  
+
+
+Net 93 (regy_out[12])
+
+SOURCE (7,2)  Class: 1  
+  OPIN (7,2)  Pin: 16  
+ DIREX (6,2)  Track: 0  
+  IPIN (6,2)  Pin: 4  
+  SINK (6,2)  Class: 0  
+
+
+Net 94 (data_cmp1_c[12])
+
+SOURCE (7,2)  Class: 1  
+  OPIN (7,2)  Pin: 28  
+ DIREY (7,2)  Track: 0  
+  IPIN (7,3)  Pin: 8  
+  OPIN (7,3)  Pin: 28  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,4)  Pin: 8  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+
+
+Net 95 (data_cmp1_c[14])
+
+SOURCE (7,8)  Class: 1  
+  OPIN (7,8)  Pin: 24  
+ DIREY (7,7)  Track: 0  
+  IPIN (7,7)  Pin: 12  
+  OPIN (7,7)  Pin: 24  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 12  
+  SINK (7,6)  Class: 0  
+
+
+Net 96 (data_cmp1_c[15])
+
+SOURCE (5,8)  Class: 1  
+  OPIN (5,8)  Pin: 20  
+ DIREX (5,8)  Track: 0  
+  IPIN (6,8)  Pin: 32  
+  OPIN (6,8)  Pin: 24  
+ DIREY (6,7)  Track: 0  
+  IPIN (6,7)  Pin: 12  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+The folding stage: 18
+
+Net 97 (clk): global net connecting:
+
+Block clk (#580) at (7, 0), Pin class -1.
+Block Block_2 (#581) at (7, 6), Pin class 2.
+Block Block_15 (#582) at (2, 7), Pin class 2.
+Block Block_1 (#583) at (7, 5), Pin class 2.
+Block Block_3 (#584) at (7, 4), Pin class 2.
+Block Block_4 (#585) at (5, 8), Pin class 2.
+Block Block_5 (#586) at (7, 8), Pin class 2.
+Block Block_6 (#587) at (7, 2), Pin class 2.
+Block Block_7 (#588) at (8, 3), Pin class 2.
+Block Block_8 (#589) at (8, 7), Pin class 2.
+Block Block_9 (#590) at (6, 6), Pin class 2.
+Block Block_10 (#591) at (5, 6), Pin class 2.
+Block Block_11 (#592) at (5, 7), Pin class 2.
+Block Block_12 (#593) at (8, 6), Pin class 2.
+Block Block_13 (#594) at (8, 2), Pin class 2.
+Block Block_14 (#595) at (6, 2), Pin class 2.
+Block Block_16 (#596) at (6, 8), Pin class 2.
+Block Block_17 (#597) at (4, 8), Pin class 2.
+Block Block_18 (#598) at (6, 5), Pin class 2.
+Block Block_19 (#599) at (6, 1), Pin class 2.
+Block Block_20 (#600) at (6, 3), Pin class 2.
+Block Block_21 (#601) at (2, 6), Pin class 2.
+Block Block_22 (#602) at (7, 7), Pin class 2.
+Block Block_23 (#603) at (4, 6), Pin class 2.
+Block Block_24 (#604) at (6, 4), Pin class 2.
+Block Block_25 (#605) at (3, 7), Pin class 2.
+Block Block_26 (#606) at (3, 6), Pin class 2.
+Block Block_27 (#607) at (8, 8), Pin class 2.
+Block Block_28 (#608) at (8, 4), Pin class 2.
+Block Block_29 (#609) at (7, 3), Pin class 2.
+Block Block_30 (#610) at (6, 7), Pin class 2.
+Block Block_31 (#611) at (8, 5), Pin class 2.
+Block Block_32 (#612) at (4, 7), Pin class 2.
+Block Block_33 (#613) at (3, 8), Pin class 2.
+
+
+Net 98 (PO[13])
+
+SOURCE (2,7)  Class: 1  
+  OPIN (2,7)  Pin: 20  
+ DIREX (2,7)  Track: 0  
+  IPIN (3,7)  Pin: 0  
+  OPIN (3,7)  Pin: 20  
+ DIREX (3,7)  Track: 0  
+  IPIN (4,7)  Pin: 32  
+  OPIN (4,7)  Pin: 20  
+ DIREX (4,7)  Track: 0  
+  IPIN (5,7)  Pin: 32  
+  OPIN (5,7)  Pin: 20  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 32  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+
+
+Net 99 (data_sub_t_13)
+
+SOURCE (6,2)  Class: 1  
+  OPIN (6,2)  Pin: 16  
+ CHANY (5,2) to (5,5)  Track: 4  
+ CHANX (2,5) to (5,5)  Track: 4  
+  IPIN (2,6)  Pin: 8  
+  OPIN (2,6)  Pin: 28  
+ DIREY (2,6)  Track: 0  
+  IPIN (2,7)  Pin: 8  
+  SINK (2,7)  Class: 0  
+SOURCE (6,2)  Class: 1  
+  OPIN (6,2)  Pin: 28  
+ DIREY (6,2)  Track: 0  
+  IPIN (6,3)  Pin: 8  
+  OPIN (6,3)  Pin: 28  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,4)  Pin: 8  
+  OPIN (6,4)  Pin: 28  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,5)  Pin: 8  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 32  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+
+
+Net 100 (regy_out[13])
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 16  
+ DIREX (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 4  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  OPIN (5,6)  Pin: 16  
+ DIREX (4,6)  Track: 0  
+  IPIN (4,6)  Pin: 4  
+  OPIN (4,6)  Pin: 16  
+ DIREX (3,6)  Track: 0  
+  IPIN (3,6)  Pin: 4  
+  OPIN (3,6)  Pin: 28  
+ DIREY (3,6)  Track: 0  
+  IPIN (3,7)  Pin: 8  
+  OPIN (3,7)  Pin: 16  
+ DIREX (2,7)  Track: 0  
+  IPIN (2,7)  Pin: 4  
+  SINK (2,7)  Class: 0  
+
+
+Net 101 (data_cmp1_d_4)
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 20  
+ DIREX (7,6)  Track: 0  
+  IPIN (8,6)  Pin: 32  
+  OPIN (8,6)  Pin: 24  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 12  
+  OPIN (8,5)  Pin: 16  
+ DIREX (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 4  
+  SINK (7,5)  Class: 0  
+
+
+Net 102 (data_cmp1_d_2)
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+
+
+Net 103 (data_cmp1_d_3)
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  SINK (7,5)  Class: 0  
+The folding stage: 19
+
+Net 104 (clk): global net connecting:
+
+Block clk (#614) at (7, 0), Pin class -1.
+Block Block_5 (#615) at (7, 8), Pin class 2.
+Block Block_16 (#616) at (6, 8), Pin class 2.
+Block Block_1 (#617) at (7, 5), Pin class 2.
+Block Block_2 (#618) at (7, 6), Pin class 2.
+Block Block_3 (#619) at (7, 4), Pin class 2.
+Block Block_4 (#620) at (5, 8), Pin class 2.
+Block Block_6 (#621) at (7, 2), Pin class 2.
+Block Block_7 (#622) at (8, 3), Pin class 2.
+Block Block_8 (#623) at (8, 7), Pin class 2.
+Block Block_9 (#624) at (6, 6), Pin class 2.
+Block Block_10 (#625) at (5, 6), Pin class 2.
+Block Block_11 (#626) at (5, 7), Pin class 2.
+Block Block_12 (#627) at (8, 6), Pin class 2.
+Block Block_13 (#628) at (8, 2), Pin class 2.
+Block Block_14 (#629) at (6, 2), Pin class 2.
+Block Block_15 (#630) at (2, 7), Pin class 2.
+Block Block_17 (#631) at (4, 8), Pin class 2.
+Block Block_18 (#632) at (6, 5), Pin class 2.
+Block Block_19 (#633) at (6, 1), Pin class 2.
+Block Block_20 (#634) at (6, 3), Pin class 2.
+Block Block_21 (#635) at (2, 6), Pin class 2.
+Block Block_22 (#636) at (7, 7), Pin class 2.
+Block Block_23 (#637) at (4, 6), Pin class 2.
+Block Block_24 (#638) at (6, 4), Pin class 2.
+Block Block_25 (#639) at (3, 7), Pin class 2.
+Block Block_26 (#640) at (3, 6), Pin class 2.
+Block Block_27 (#641) at (8, 8), Pin class 2.
+Block Block_28 (#642) at (8, 4), Pin class 2.
+Block Block_29 (#643) at (7, 3), Pin class 2.
+Block Block_30 (#644) at (6, 7), Pin class 2.
+Block Block_31 (#645) at (8, 5), Pin class 2.
+Block Block_32 (#646) at (4, 7), Pin class 2.
+Block Block_33 (#647) at (3, 8), Pin class 2.
+
+
+Net 105 (PO[14])
+
+SOURCE (6,8)  Class: 1  
+  OPIN (6,8)  Pin: 20  
+ DIREX (6,8)  Track: 0  
+  IPIN (7,8)  Pin: 0  
+  SINK (7,8)  Class: 0  
+
+
+Net 106 (data_sub_t_14)
+
+SOURCE (2,7)  Class: 1  
+  OPIN (2,7)  Pin: 20  
+ DIREX (2,7)  Track: 0  
+  IPIN (3,7)  Pin: 0  
+  OPIN (3,7)  Pin: 20  
+ DIREX (3,7)  Track: 0  
+  IPIN (4,7)  Pin: 32  
+  OPIN (4,7)  Pin: 20  
+ DIREX (4,7)  Track: 0  
+  IPIN (5,7)  Pin: 32  
+  OPIN (5,7)  Pin: 20  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 32  
+  OPIN (6,7)  Pin: 20  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 32  
+  OPIN (7,7)  Pin: 28  
+ DIREY (7,7)  Track: 0  
+  IPIN (7,8)  Pin: 8  
+  SINK (7,8)  Class: 0  
+ DIREX (5,7)  Track: 0  
+  IPIN (6,7)  Pin: 0  
+  OPIN (6,7)  Pin: 28  
+ DIREY (6,7)  Track: 0  
+  IPIN (6,8)  Pin: 8  
+  SINK (6,8)  Class: 0  
+
+
+Net 107 (regy_out[14])
+
+SOURCE (7,8)  Class: 1  
+  OPIN (7,8)  Pin: 16  
+ DIREX (6,8)  Track: 0  
+  IPIN (6,8)  Pin: 4  
+  SINK (6,8)  Class: 0  
+
+
+Net 108 (data_cmp1_c[15])
+
+SOURCE (5,8)  Class: 1  
+  OPIN (5,8)  Pin: 20  
+ DIREX (5,8)  Track: 0  
+  IPIN (6,8)  Pin: 32  
+  OPIN (6,8)  Pin: 24  
+ DIREY (6,7)  Track: 0  
+  IPIN (6,7)  Pin: 12  
+  OPIN (6,7)  Pin: 24  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 12  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  SINK (7,5)  Class: 0  
+The folding stage: 20
+
+Net 109 (rst)
+
+SOURCE (9,5)  Pad: 4  
+  OPIN (9,5)  Pad: 4  
+ DIREX (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 4  
+  OPIN (8,5)  Pin: 24  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 12  
+  OPIN (8,4)  Pin: 16  
+ DIREX (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 4  
+  OPIN (7,4)  Pin: 16  
+ DIREX (6,4)  Track: 0  
+  IPIN (6,4)  Pin: 4  
+  SINK (6,4)  Class: 0  
+  OPIN (8,4)  Pin: 16  
+ CHANY (7,4) to (7,7)  Track: 4  
+ CHANX (4,7) to (7,7)  Track: 4  
+  IPIN (4,7)  Pin: 15  
+  OPIN (4,7)  Pin: 19  
+ DIREX (3,7)  Track: 3  
+  IPIN (3,7)  Pin: 7  
+  OPIN (3,7)  Pin: 19  
+ CHANY (2,7) to (2,8)  Track: 3  
+  IPIN (3,7)  Pin: 0  
+  SINK (3,7)  Class: 0  
+
+
+Net 110 (clk): global net connecting:
+
+Block clk (#649) at (7, 0), Pin class -1.
+Block Block_10 (#650) at (5, 6), Pin class 2.
+Block Block_1 (#651) at (7, 5), Pin class 2.
+Block Block_25 (#652) at (3, 7), Pin class 2.
+Block Block_24 (#653) at (6, 4), Pin class 2.
+Block Block_4 (#654) at (5, 8), Pin class 2.
+Block Block_2 (#655) at (7, 6), Pin class 2.
+Block Block_3 (#656) at (7, 4), Pin class 2.
+Block Block_5 (#657) at (7, 8), Pin class 2.
+Block Block_6 (#658) at (7, 2), Pin class 2.
+Block Block_7 (#659) at (8, 3), Pin class 2.
+Block Block_8 (#660) at (8, 7), Pin class 2.
+Block Block_9 (#661) at (6, 6), Pin class 2.
+Block Block_11 (#662) at (5, 7), Pin class 2.
+Block Block_12 (#663) at (8, 6), Pin class 2.
+Block Block_13 (#664) at (8, 2), Pin class 2.
+Block Block_14 (#665) at (6, 2), Pin class 2.
+Block Block_15 (#666) at (2, 7), Pin class 2.
+Block Block_16 (#667) at (6, 8), Pin class 2.
+Block Block_17 (#668) at (4, 8), Pin class 2.
+Block Block_18 (#669) at (6, 5), Pin class 2.
+Block Block_19 (#670) at (6, 1), Pin class 2.
+Block Block_20 (#671) at (6, 3), Pin class 2.
+Block Block_21 (#672) at (2, 6), Pin class 2.
+Block Block_22 (#673) at (7, 7), Pin class 2.
+Block Block_23 (#674) at (4, 6), Pin class 2.
+Block Block_26 (#675) at (3, 6), Pin class 2.
+Block Block_27 (#676) at (8, 8), Pin class 2.
+Block Block_28 (#677) at (8, 4), Pin class 2.
+Block Block_29 (#678) at (7, 3), Pin class 2.
+Block Block_30 (#679) at (6, 7), Pin class 2.
+Block Block_31 (#680) at (8, 5), Pin class 2.
+Block Block_32 (#681) at (4, 7), Pin class 2.
+Block Block_33 (#682) at (3, 8), Pin class 2.
+
+
+Net 111 (gt)
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  OPIN (7,6)  Pin: 28  
+ CHANX (7,6) to (8,6)  Track: 3  
+ CHANX (3,6) to (6,6)  Track: 3  
+  IPIN (3,7)  Pin: 8  
+  SINK (3,7)  Class: 0  
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  OPIN (7,4)  Pin: 24  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 12  
+  OPIN (7,3)  Pin: 16  
+ DIREX (6,3)  Track: 0  
+  IPIN (6,3)  Pin: 4  
+  OPIN (6,3)  Pin: 28  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,4)  Pin: 8  
+  SINK (6,4)  Class: 0  
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 16  
+ DIREX (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 4  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  SINK (5,6)  Class: 0  
+
+
+Net 112 (ctrl_STATE[1])
+
+SOURCE (5,6)  Class: 1  
+  OPIN (5,6)  Pin: 16  
+ CHANY (4,6) to (4,7)  Track: 1  
+ CHANX (3,7) to (4,7)  Track: 1  
+  IPIN (3,7)  Pin: 12  
+  SINK (3,7)  Class: 0  
+SOURCE (5,6)  Class: 1  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 32  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  OPIN (6,5)  Pin: 24  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,4)  Pin: 12  
+  SINK (6,4)  Class: 0  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 32  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+
+
+Net 113 (ctrl_STATE[0])
+
+SOURCE (5,6)  Class: 1  
+  OPIN (5,6)  Pin: 28  
+ CHANX (5,6) to (6,6)  Track: 0  
+ CHANY (6,5) to (6,6)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  SINK (7,5)  Class: 0  
+  OPIN (5,6)  Pin: 28  
+ DIREY (5,6)  Track: 0  
+  IPIN (5,7)  Pin: 8  
+  OPIN (5,7)  Pin: 16  
+ DIREX (4,7)  Track: 0  
+  IPIN (4,7)  Pin: 4  
+  OPIN (4,7)  Pin: 16  
+ DIREX (3,7)  Track: 0  
+  IPIN (3,7)  Pin: 4  
+  SINK (3,7)  Class: 0  
+
+
+Net 114 (PO[15])
+
+SOURCE (3,8)  Class: 1  
+  OPIN (3,8)  Pin: 20  
+ DIREX (3,8)  Track: 0  
+  IPIN (4,8)  Pin: 32  
+  OPIN (4,8)  Pin: 20  
+ DIREX (4,8)  Track: 0  
+  IPIN (5,8)  Pin: 0  
+  SINK (5,8)  Class: 0  
+
+
+Net 115 (data_sub_t_15)
+
+SOURCE (6,8)  Class: 1  
+  OPIN (6,8)  Pin: 16  
+ DIREX (5,8)  Track: 0  
+  IPIN (5,8)  Pin: 4  
+  SINK (5,8)  Class: 0  
+The folding stage: 21
+
+Net 116 (x[0])
+
+SOURCE (6,9)  Pad: 0  
+  OPIN (6,9)  Pad: 0  
+ DIREY (6,8)  Track: 0  
+  IPIN (6,8)  Pin: 7  
+  OPIN (6,8)  Pin: 19  
+ DIREX (5,8)  Track: 3  
+  IPIN (5,8)  Pin: 7  
+  OPIN (5,8)  Pin: 19  
+ CHANY (4,8)  Track: 2  
+ CHANY (4,6) to (4,7)  Track: 2  
+  IPIN (5,6)  Pin: 0  
+  SINK (5,6)  Class: 0  
+
+
+Net 117 (x[1])
+
+SOURCE (0,7)  Pad: 1  
+  OPIN (0,7)  Pad: 1  
+ DIREX (0,7)  Track: 1  
+  IPIN (1,7)  Pin: 5  
+  OPIN (1,7)  Pin: 21  
+ DIREX (1,7)  Track: 1  
+  IPIN (2,7)  Pin: 1  
+  OPIN (2,7)  Pin: 29  
+ CHANX (2,7) to (3,7)  Track: 0  
+ CHANY (3,8)  Track: 0  
+  IPIN (4,8)  Pin: 0  
+  SINK (4,8)  Class: 0  
+
+
+Net 118 (x[2])
+
+SOURCE (0,4)  Pad: 0  
+  OPIN (0,4)  Pad: 0  
+ CHANY (0,4) to (0,5)  Track: 2  
+ CHANX (1,5) to (2,5)  Track: 2  
+ CHANX (3,5) to (4,5)  Track: 2  
+  IPIN (3,6)  Pin: 11  
+  OPIN (3,6)  Pin: 23  
+ DIREX (3,6)  Track: 3  
+  IPIN (4,6)  Pin: 3  
+  OPIN (4,6)  Pin: 31  
+ CHANX (4,6) to (5,6)  Track: 2  
+ CHANY (5,5) to (5,6)  Track: 2  
+  IPIN (6,5)  Pin: 0  
+  SINK (6,5)  Class: 0  
+
+
+Net 119 (x[3])
+
+SOURCE (6,0)  Pad: 2  
+  OPIN (6,0)  Pad: 2  
+ DIREY (6,0)  Track: 2  
+  IPIN (6,1)  Pin: 0  
+  SINK (6,1)  Class: 0  
+
+
+Net 120 (x[4])
+
+SOURCE (9,6)  Pad: 2  
+  OPIN (9,6)  Pad: 2  
+ DIREX (8,6)  Track: 2  
+  IPIN (8,6)  Pin: 15  
+  OPIN (8,6)  Pin: 27  
+ DIREY (8,5)  Track: 3  
+  IPIN (8,5)  Pin: 15  
+  OPIN (8,5)  Pin: 19  
+ CHANY (7,5) to (7,6)  Track: 2  
+ CHANX (6,4) to (7,4)  Track: 2  
+ CHANY (5,3) to (5,4)  Track: 2  
+  IPIN (6,3)  Pin: 0  
+  SINK (6,3)  Class: 0  
+
+
+Net 121 (x[5])
+
+SOURCE (6,0)  Pad: 0  
+  OPIN (6,0)  Pad: 0  
+ DIREY (6,0)  Track: 0  
+  IPIN (6,1)  Pin: 32  
+  OPIN (6,1)  Pin: 16  
+ CHANY (5,1) to (5,2)  Track: 2  
+ CHANX (4,2) to (5,2)  Track: 2  
+ CHANY (3,3) to (3,4)  Track: 2  
+ CHANY (3,5) to (3,6)  Track: 2  
+ CHANX (2,6) to (3,6)  Track: 2  
+  IPIN (2,6)  Pin: 12  
+  SINK (2,6)  Class: 0  
+
+
+Net 122 (x[6])
+
+SOURCE (7,9)  Pad: 0  
+  OPIN (7,9)  Pad: 0  
+ DIREY (7,8)  Track: 0  
+  IPIN (7,8)  Pin: 4  
+  OPIN (7,8)  Pin: 24  
+ DIREY (7,7)  Track: 0  
+  IPIN (7,7)  Pin: 12  
+  SINK (7,7)  Class: 0  
+
+
+Net 123 (x[7])
+
+SOURCE (9,5)  Pad: 3  
+  OPIN (9,5)  Pad: 3  
+ DIREX (8,5)  Track: 3  
+  IPIN (8,5)  Pin: 11  
+  OPIN (8,5)  Pin: 31  
+ CHANX (8,5)  Track: 3  
+ CHANX (4,5) to (7,5)  Track: 3  
+  IPIN (4,6)  Pin: 8  
+  SINK (4,6)  Class: 0  
+
+
+Net 124 (x[8])
+
+SOURCE (5,0)  Pad: 0  
+  OPIN (5,0)  Pad: 0  
+ CHANX (5,0) to (6,0)  Track: 0  
+ CHANY (6,1) to (6,2)  Track: 0  
+ CHANX (7,2) to (8,2)  Track: 0  
+  IPIN (7,3)  Pin: 9  
+  OPIN (7,3)  Pin: 29  
+ CHANX (7,3) to (8,3)  Track: 2  
+  IPIN (7,4)  Pin: 8  
+  SINK (7,4)  Class: 0  
+
+
+Net 125 (x[9])
+
+SOURCE (6,9)  Pad: 2  
+  OPIN (6,9)  Pad: 2  
+ DIREY (6,8)  Track: 2  
+  IPIN (6,8)  Pin: 1  
+  OPIN (6,8)  Pin: 25  
+ DIREY (6,7)  Track: 1  
+  IPIN (6,7)  Pin: 13  
+  OPIN (6,7)  Pin: 25  
+ CHANX (6,6) to (7,6)  Track: 2  
+  IPIN (6,6)  Pin: 12  
+  SINK (6,6)  Class: 0  
+
+
+Net 126 (x[10])
+
+SOURCE (9,7)  Pad: 2  
+  OPIN (9,7)  Pad: 2  
+ DIREX (8,7)  Track: 2  
+  IPIN (8,7)  Pin: 0  
+  SINK (8,7)  Class: 0  
+
+
+Net 127 (x[11])
+
+SOURCE (4,0)  Pad: 0  
+  OPIN (4,0)  Pad: 0  
+ CHANX (4,0) to (5,0)  Track: 1  
+ CHANY (5,1) to (5,2)  Track: 1  
+ CHANX (6,2) to (7,2)  Track: 1  
+ CHANX (8,2)  Track: 1  
+  IPIN (8,3)  Pin: 8  
+  SINK (8,3)  Class: 0  
+
+
+Net 128 (x[12])
+
+SOURCE (7,0)  Pad: 0  
+  OPIN (7,0)  Pad: 0  
+ DIREY (7,0)  Track: 0  
+  IPIN (7,1)  Pin: 4  
+  OPIN (7,1)  Pin: 28  
+ DIREY (7,1)  Track: 0  
+  IPIN (7,2)  Pin: 8  
+  SINK (7,2)  Class: 0  
+
+
+Net 129 (x[13])
+
+SOURCE (5,9)  Pad: 1  
+  OPIN (5,9)  Pad: 1  
+ CHANX (5,8) to (6,8)  Track: 0  
+ CHANY (6,7) to (6,8)  Track: 0  
+ CHANX (7,6) to (8,6)  Track: 0  
+  IPIN (7,6)  Pin: 12  
+  SINK (7,6)  Class: 0  
+
+
+Net 130 (x[14])
+
+SOURCE (7,0)  Pad: 2  
+  OPIN (7,0)  Pad: 2  
+ DIREY (7,0)  Track: 2  
+  IPIN (7,1)  Pin: 0  
+  OPIN (7,1)  Pin: 16  
+ CHANY (6,1) to (6,4)  Track: 4  
+ CHANY (6,5) to (6,8)  Track: 4  
+ CHANX (7,8) to (8,8)  Track: 4  
+  IPIN (7,8)  Pin: 12  
+  SINK (7,8)  Class: 0  
+
+
+Net 131 (x[15])
+
+SOURCE (4,9)  Pad: 0  
+  OPIN (4,9)  Pad: 0  
+ DIREY (4,8)  Track: 0  
+  IPIN (4,8)  Pin: 1  
+  OPIN (4,8)  Pin: 21  
+ DIREX (4,8)  Track: 1  
+  IPIN (5,8)  Pin: 1  
+  OPIN (5,8)  Pin: 21  
+ CHANY (5,8)  Track: 0  
+  IPIN (5,8)  Pin: 4  
+  SINK (5,8)  Class: 0  
+
+
+Net 132 (y[0])
+
+SOURCE (7,9)  Pad: 1  
+  OPIN (7,9)  Pad: 1  
+ DIREY (7,8)  Track: 1  
+  IPIN (7,8)  Pin: 15  
+  OPIN (7,8)  Pin: 27  
+ DIREY (7,7)  Track: 3  
+  IPIN (7,7)  Pin: 15  
+  OPIN (7,7)  Pin: 27  
+ DIREY (7,6)  Track: 3  
+  IPIN (7,6)  Pin: 15  
+  OPIN (7,6)  Pin: 27  
+ CHANX (7,5) to (8,5)  Track: 1  
+  IPIN (7,5)  Pin: 12  
+  SINK (7,5)  Class: 0  
+
+
+Net 133 (y[1])
+
+SOURCE (9,7)  Pad: 3  
+  OPIN (9,7)  Pad: 3  
+ DIREX (8,7)  Track: 3  
+  IPIN (8,7)  Pin: 15  
+  OPIN (8,7)  Pin: 19  
+ DIREX (7,7)  Track: 3  
+  IPIN (7,7)  Pin: 7  
+  OPIN (7,7)  Pin: 19  
+ DIREX (6,7)  Track: 3  
+  IPIN (6,7)  Pin: 7  
+  OPIN (6,7)  Pin: 19  
+ CHANY (5,7) to (5,8)  Track: 2  
+  IPIN (5,7)  Pin: 4  
+  SINK (5,7)  Class: 0  
+
+
+Net 134 (y[2])
+
+SOURCE (7,0)  Pad: 1  
+  OPIN (7,0)  Pad: 1  
+ DIREY (7,0)  Track: 1  
+  IPIN (7,1)  Pin: 2  
+  OPIN (7,1)  Pin: 30  
+ DIREY (7,1)  Track: 2  
+  IPIN (7,2)  Pin: 10  
+  OPIN (7,2)  Pin: 22  
+ CHANY (7,2) to (7,5)  Track: 3  
+ CHANY (7,6) to (7,8)  Track: 3  
+  IPIN (8,6)  Pin: 0  
+  SINK (8,6)  Class: 0  
+
+
+Net 135 (y[3])
+
+SOURCE (9,2)  Pad: 0  
+  OPIN (9,2)  Pad: 0  
+ DIREX (8,2)  Track: 0  
+  IPIN (8,2)  Pin: 4  
+  SINK (8,2)  Class: 0  
+
+
+Net 136 (y[4])
+
+SOURCE (9,4)  Pad: 0  
+  OPIN (9,4)  Pad: 0  
+ DIREX (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 2  
+  OPIN (8,4)  Pin: 26  
+ CHANX (8,3)  Track: 0  
+ CHANX (6,3) to (7,3)  Track: 0  
+ CHANY (5,2) to (5,3)  Track: 0  
+ CHANX (6,1) to (7,1)  Track: 0  
+  IPIN (6,2)  Pin: 8  
+  SINK (6,2)  Class: 0  
+
+
+Net 137 (y[5])
+
+SOURCE (0,7)  Pad: 0  
+  OPIN (0,7)  Pad: 0  
+ DIREX (0,7)  Track: 0  
+  IPIN (1,7)  Pin: 4  
+  OPIN (1,7)  Pin: 20  
+ DIREX (1,7)  Track: 0  
+  IPIN (2,7)  Pin: 0  
+  SINK (2,7)  Class: 0  
+
+
+Net 138 (y[6])
+
+SOURCE (9,8)  Pad: 0  
+  OPIN (9,8)  Pad: 0  
+ DIREX (8,8)  Track: 0  
+  IPIN (8,8)  Pin: 1  
+  OPIN (8,8)  Pin: 17  
+ DIREX (7,8)  Track: 1  
+  IPIN (7,8)  Pin: 5  
+  OPIN (7,8)  Pin: 17  
+ DIREX (6,8)  Track: 1  
+  IPIN (6,8)  Pin: 5  
+  OPIN (6,8)  Pin: 17  
+ CHANY (5,8)  Track: 3  
+  IPIN (6,8)  Pin: 0  
+  SINK (6,8)  Class: 0  
+
+
+Net 139 (y[7])
+
+SOURCE (6,0)  Pad: 3  
+  OPIN (6,0)  Pad: 3  
+ DIREY (6,0)  Track: 3  
+  IPIN (6,1)  Pin: 3  
+  OPIN (6,1)  Pin: 31  
+ DIREY (6,1)  Track: 3  
+  IPIN (6,2)  Pin: 11  
+  OPIN (6,2)  Pin: 31  
+ DIREY (6,2)  Track: 3  
+  IPIN (6,3)  Pin: 11  
+  OPIN (6,3)  Pin: 31  
+ CHANX (6,3) to (8,3)  Track: 3  
+  IPIN (6,4)  Pin: 8  
+  SINK (6,4)  Class: 0  
+
+
+Net 140 (y[8])
+
+SOURCE (9,5)  Pad: 2  
+  OPIN (9,5)  Pad: 2  
+ DIREX (8,5)  Track: 2  
+  IPIN (8,5)  Pin: 6  
+  OPIN (8,5)  Pin: 18  
+ DIREX (7,5)  Track: 2  
+  IPIN (7,5)  Pin: 6  
+  OPIN (7,5)  Pin: 30  
+ DIREY (7,5)  Track: 2  
+  IPIN (7,6)  Pin: 10  
+  OPIN (7,6)  Pin: 18  
+ CHANY (6,6) to (6,7)  Track: 2  
+ CHANX (5,7) to (6,7)  Track: 2  
+ CHANX (3,7) to (4,7)  Track: 2  
+  IPIN (3,7)  Pin: 12  
+  SINK (3,7)  Class: 0  
+
+
+Net 141 (y[9])
+
+SOURCE (0,6)  Pad: 2  
+  OPIN (0,6)  Pad: 2  
+ DIREX (0,6)  Track: 2  
+  IPIN (1,6)  Pin: 4  
+  OPIN (1,6)  Pin: 20  
+ DIREX (1,6)  Track: 0  
+  IPIN (2,6)  Pin: 0  
+  OPIN (2,6)  Pin: 20  
+ DIREX (2,6)  Track: 0  
+  IPIN (3,6)  Pin: 0  
+  SINK (3,6)  Class: 0  
+
+
+Net 142 (y[10])
+
+SOURCE (9,6)  Pad: 1  
+  OPIN (9,6)  Pad: 1  
+ CHANY (8,6) to (8,7)  Track: 2  
+ CHANY (8,8)  Track: 2  
+  IPIN (8,8)  Pin: 4  
+  SINK (8,8)  Class: 0  
+
+
+Net 143 (y[11])
+
+SOURCE (8,0)  Pad: 0  
+  OPIN (8,0)  Pad: 0  
+ DIREY (8,0)  Track: 0  
+  IPIN (8,1)  Pin: 15  
+  OPIN (8,1)  Pin: 31  
+ CHANX (8,1)  Track: 0  
+ CHANY (7,2) to (7,3)  Track: 0  
+ CHANY (7,4) to (7,5)  Track: 0  
+  IPIN (8,4)  Pin: 0  
+  SINK (8,4)  Class: 0  
+
+
+Net 144 (y[12])
+
+SOURCE (9,3)  Pad: 0  
+  OPIN (9,3)  Pad: 0  
+ DIREX (8,3)  Track: 0  
+  IPIN (8,3)  Pin: 15  
+  OPIN (8,3)  Pin: 19  
+ DIREX (7,3)  Track: 3  
+  IPIN (7,3)  Pin: 7  
+  OPIN (7,3)  Pin: 19  
+ CHANY (6,3) to (6,4)  Track: 0  
+  IPIN (7,3)  Pin: 0  
+  SINK (7,3)  Class: 0  
+
+
+Net 145 (y[13])
+
+SOURCE (0,6)  Pad: 1  
+  OPIN (0,6)  Pad: 1  
+ DIREX (0,6)  Track: 1  
+  IPIN (1,6)  Pin: 3  
+  OPIN (1,6)  Pin: 31  
+ CHANX (1,6) to (4,6)  Track: 4  
+ CHANY (4,7) to (4,8)  Track: 4  
+  IPIN (5,7)  Pin: 3  
+  OPIN (5,7)  Pin: 23  
+ CHANY (5,7) to (5,8)  Track: 1  
+  IPIN (6,7)  Pin: 0  
+  SINK (6,7)  Class: 0  
+
+
+Net 146 (y[14])
+
+SOURCE (9,6)  Pad: 3  
+  OPIN (9,6)  Pad: 3  
+ DIREX (8,6)  Track: 3  
+  IPIN (8,6)  Pin: 2  
+  OPIN (8,6)  Pin: 26  
+ DIREY (8,5)  Track: 2  
+  IPIN (8,5)  Pin: 14  
+  OPIN (8,5)  Pin: 26  
+ CHANX (8,4)  Track: 2  
+  IPIN (8,5)  Pin: 8  
+  SINK (8,5)  Class: 0  
+
+
+Net 147 (y[15])
+
+SOURCE (2,9)  Pad: 0  
+  OPIN (2,9)  Pad: 0  
+ CHANX (2,8) to (3,8)  Track: 1  
+ CHANY (3,7) to (3,8)  Track: 1  
+  IPIN (4,7)  Pin: 0  
+  SINK (4,7)  Class: 0  
+
+
+Net 148 (clk): global net connecting:
+
+Block clk (#715) at (7, 0), Pin class -1.
+Block Block_10 (#716) at (5, 6), Pin class 2.
+Block Block_17 (#717) at (4, 8), Pin class 2.
+Block Block_18 (#718) at (6, 5), Pin class 2.
+Block Block_19 (#719) at (6, 1), Pin class 2.
+Block Block_20 (#720) at (6, 3), Pin class 2.
+Block Block_21 (#721) at (2, 6), Pin class 2.
+Block Block_22 (#722) at (7, 7), Pin class 2.
+Block Block_23 (#723) at (4, 6), Pin class 2.
+Block Block_3 (#724) at (7, 4), Pin class 2.
+Block Block_9 (#725) at (6, 6), Pin class 2.
+Block Block_8 (#726) at (8, 7), Pin class 2.
+Block Block_7 (#727) at (8, 3), Pin class 2.
+Block Block_6 (#728) at (7, 2), Pin class 2.
+Block Block_2 (#729) at (7, 6), Pin class 2.
+Block Block_5 (#730) at (7, 8), Pin class 2.
+Block Block_4 (#731) at (5, 8), Pin class 2.
+Block Block_1 (#732) at (7, 5), Pin class 2.
+Block Block_11 (#733) at (5, 7), Pin class 2.
+Block Block_12 (#734) at (8, 6), Pin class 2.
+Block Block_13 (#735) at (8, 2), Pin class 2.
+Block Block_14 (#736) at (6, 2), Pin class 2.
+Block Block_15 (#737) at (2, 7), Pin class 2.
+Block Block_16 (#738) at (6, 8), Pin class 2.
+Block Block_24 (#739) at (6, 4), Pin class 2.
+Block Block_25 (#740) at (3, 7), Pin class 2.
+Block Block_26 (#741) at (3, 6), Pin class 2.
+Block Block_27 (#742) at (8, 8), Pin class 2.
+Block Block_28 (#743) at (8, 4), Pin class 2.
+Block Block_29 (#744) at (7, 3), Pin class 2.
+Block Block_30 (#745) at (6, 7), Pin class 2.
+Block Block_31 (#746) at (8, 5), Pin class 2.
+Block Block_32 (#747) at (4, 7), Pin class 2.
+Block Block_33 (#748) at (3, 8), Pin class 2.
+
+
+Net 149 (data_sub_out[0])
+
+SOURCE (6,4)  Class: 1  
+  OPIN (6,4)  Pin: 20  
+ CHANY (6,4) to (6,5)  Track: 2  
+ CHANX (5,5) to (6,5)  Track: 2  
+  IPIN (5,6)  Pin: 8  
+  SINK (5,6)  Class: 0  
+  OPIN (6,4)  Pin: 20  
+ DIREX (6,4)  Track: 0  
+  IPIN (7,4)  Pin: 32  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  SINK (7,5)  Class: 0  
+
+
+Net 150 (m1)
+
+SOURCE (5,6)  Class: 1  
+  OPIN (5,6)  Pin: 20  
+ CHANY (5,6) to (5,8)  Track: 4  
+ CHANY (5,2) to (5,5)  Track: 4  
+  IPIN (6,2)  Pin: 0  
+  OPIN (6,2)  Pin: 20  
+ DIREX (6,2)  Track: 0  
+  IPIN (7,2)  Pin: 0  
+  SINK (7,2)  Class: 0  
+SOURCE (5,6)  Class: 1  
+  OPIN (5,6)  Pin: 28  
+ CHANX (5,6) to (8,6)  Track: 4  
+ CHANY (8,3) to (8,6)  Track: 4  
+  IPIN (8,3)  Pin: 4  
+  SINK (8,3)  Class: 0  
+ CHANY (5,2) to (5,5)  Track: 4  
+ CHANX (6,1) to (8,1)  Track: 4  
+  IPIN (6,1)  Pin: 12  
+  SINK (6,1)  Class: 0  
+  OPIN (5,6)  Pin: 28  
+ DIREY (5,6)  Track: 0  
+  IPIN (5,7)  Pin: 8  
+  OPIN (5,7)  Pin: 28  
+ DIREY (5,7)  Track: 0  
+  IPIN (5,8)  Pin: 8  
+  OPIN (5,8)  Pin: 20  
+ DIREX (5,8)  Track: 0  
+  IPIN (6,8)  Pin: 32  
+  OPIN (6,8)  Pin: 20  
+ DIREX (6,8)  Track: 0  
+  IPIN (7,8)  Pin: 0  
+  SINK (7,8)  Class: 0  
+  OPIN (5,7)  Pin: 28  
+ CHANX (5,7) to (6,7)  Track: 1  
+  IPIN (5,8)  Pin: 11  
+  OPIN (5,8)  Pin: 31  
+ CHANX (5,8) to (8,8)  Track: 3  
+  IPIN (5,8)  Pin: 12  
+  SINK (5,8)  Class: 0  
+ CHANX (5,6) to (8,6)  Track: 4  
+ CHANY (8,7) to (8,8)  Track: 4  
+  IPIN (8,7)  Pin: 4  
+  SINK (8,7)  Class: 0  
+SOURCE (5,6)  Class: 1  
+  OPIN (5,6)  Pin: 24  
+ CHANX (5,5) to (6,5)  Track: 1  
+ CHANX (3,5) to (4,5)  Track: 1  
+  IPIN (3,6)  Pin: 8  
+  OPIN (3,6)  Pin: 20  
+ DIREX (3,6)  Track: 0  
+  IPIN (4,6)  Pin: 0  
+  SINK (4,6)  Class: 0  
+ CHANX (5,5) to (6,5)  Track: 1  
+ CHANY (6,4) to (6,5)  Track: 1  
+  IPIN (6,4)  Pin: 4  
+  OPIN (6,4)  Pin: 24  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,3)  Pin: 12  
+  SINK (6,3)  Class: 0  
+ CHANX (5,5) to (6,5)  Track: 1  
+ CHANY (6,6) to (6,7)  Track: 1  
+  IPIN (7,6)  Pin: 0  
+  SINK (7,6)  Class: 0  
+ CHANY (6,4) to (6,5)  Track: 1  
+  IPIN (7,4)  Pin: 0  
+  SINK (7,4)  Class: 0  
+ CHANY (5,6) to (5,8)  Track: 4  
+ CHANX (2,5) to (5,5)  Track: 4  
+  IPIN (2,6)  Pin: 8  
+  SINK (2,6)  Class: 0  
+  OPIN (5,6)  Pin: 20  
+ CHANY (5,6) to (5,7)  Track: 0  
+ CHANX (4,7) to (5,7)  Track: 0  
+  IPIN (4,8)  Pin: 8  
+  SINK (4,8)  Class: 0  
+  OPIN (5,6)  Pin: 20  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 32  
+  OPIN (6,6)  Pin: 24  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 12  
+  SINK (6,5)  Class: 0  
+ DIREX (5,6)  Track: 0  
+  IPIN (6,6)  Pin: 0  
+  SINK (6,6)  Class: 0  
+ CHANY (5,6) to (5,8)  Track: 4  
+  IPIN (6,6)  Pin: 1  
+  OPIN (6,6)  Pin: 29  
+ DIREY (6,6)  Track: 1  
+  IPIN (6,7)  Pin: 9  
+  OPIN (6,7)  Pin: 21  
+ CHANY (6,7) to (6,8)  Track: 3  
+  IPIN (7,7)  Pin: 0  
+  SINK (7,7)  Class: 0  
+
+
+Net 151 (data_sub_out[1])
+
+SOURCE (4,8)  Class: 1  
+  OPIN (4,8)  Pin: 20  
+ DIREX (4,8)  Track: 0  
+  IPIN (5,8)  Pin: 0  
+  OPIN (5,8)  Pin: 24  
+ DIREY (5,7)  Track: 0  
+  IPIN (5,7)  Pin: 12  
+  SINK (5,7)  Class: 0  
+
+
+Net 152 (data_sub_out[2])
+
+SOURCE (6,5)  Class: 1  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  OPIN (6,6)  Pin: 20  
+ DIREX (6,6)  Track: 0  
+  IPIN (7,6)  Pin: 32  
+  OPIN (7,6)  Pin: 20  
+ DIREX (7,6)  Track: 0  
+  IPIN (8,6)  Pin: 32  
+  OPIN (8,6)  Pin: 20  
+ CHANY (8,6) to (8,7)  Track: 1  
+  IPIN (8,6)  Pin: 4  
+  SINK (8,6)  Class: 0  
+
+
+Net 153 (data_sub_out[3])
+
+SOURCE (6,1)  Class: 1  
+  OPIN (6,1)  Pin: 20  
+ DIREX (6,1)  Track: 0  
+  IPIN (7,1)  Pin: 32  
+  OPIN (7,1)  Pin: 20  
+ DIREX (7,1)  Track: 0  
+  IPIN (8,1)  Pin: 32  
+  OPIN (8,1)  Pin: 28  
+ DIREY (8,1)  Track: 0  
+  IPIN (8,2)  Pin: 8  
+  SINK (8,2)  Class: 0  
+
+
+Net 154 (data_sub_out[4])
+
+SOURCE (6,3)  Class: 1  
+  OPIN (6,3)  Pin: 24  
+ DIREY (6,2)  Track: 0  
+  IPIN (6,2)  Pin: 12  
+  SINK (6,2)  Class: 0  
+
+
+Net 155 (data_sub_out[5])
+
+SOURCE (2,6)  Class: 1  
+  OPIN (2,6)  Pin: 28  
+ DIREY (2,6)  Track: 0  
+  IPIN (2,7)  Pin: 8  
+  SINK (2,7)  Class: 0  
+
+
+Net 156 (data_sub_out[6])
+
+SOURCE (7,7)  Class: 1  
+  OPIN (7,7)  Pin: 28  
+ DIREY (7,7)  Track: 0  
+  IPIN (7,8)  Pin: 8  
+  OPIN (7,8)  Pin: 16  
+ DIREX (6,8)  Track: 0  
+  IPIN (6,8)  Pin: 4  
+  SINK (6,8)  Class: 0  
+
+
+Net 157 (data_sub_out[7])
+
+SOURCE (4,6)  Class: 1  
+  OPIN (4,6)  Pin: 24  
+ CHANX (4,5) to (5,5)  Track: 0  
+ CHANY (5,4) to (5,5)  Track: 0  
+  IPIN (6,4)  Pin: 0  
+  SINK (6,4)  Class: 0  
+
+
+Net 158 (data_sub_out[8])
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 24  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 12  
+  OPIN (7,3)  Pin: 16  
+ CHANY (6,3) to (6,6)  Track: 3  
+ CHANX (3,6) to (6,6)  Track: 3  
+  IPIN (3,7)  Pin: 8  
+  SINK (3,7)  Class: 0  
+
+
+Net 159 (data_sub_out[9])
+
+SOURCE (6,6)  Class: 1  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  OPIN (5,6)  Pin: 16  
+ DIREX (4,6)  Track: 0  
+  IPIN (4,6)  Pin: 4  
+  OPIN (4,6)  Pin: 16  
+ DIREX (3,6)  Track: 0  
+  IPIN (3,6)  Pin: 4  
+  SINK (3,6)  Class: 0  
+
+
+Net 160 (data_sub_out[10])
+
+SOURCE (8,7)  Class: 1  
+  OPIN (8,7)  Pin: 28  
+ CHANX (8,7)  Track: 4  
+ CHANY (7,8)  Track: 4  
+  IPIN (8,8)  Pin: 0  
+  SINK (8,8)  Class: 0  
+
+
+Net 161 (data_sub_out[11])
+
+SOURCE (8,3)  Class: 1  
+  OPIN (8,3)  Pin: 28  
+ DIREY (8,3)  Track: 0  
+  IPIN (8,4)  Pin: 8  
+  SINK (8,4)  Class: 0  
+
+
+Net 162 (data_sub_out[12])
+
+SOURCE (7,2)  Class: 1  
+  OPIN (7,2)  Pin: 28  
+ DIREY (7,2)  Track: 0  
+  IPIN (7,3)  Pin: 8  
+  SINK (7,3)  Class: 0  
+
+
+Net 163 (data_sub_out[13])
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 16  
+ DIREX (6,6)  Track: 0  
+  IPIN (6,6)  Pin: 4  
+  OPIN (6,6)  Pin: 28  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,7)  Pin: 8  
+  SINK (6,7)  Class: 0  
+
+
+Net 164 (data_sub_out[14])
+
+SOURCE (7,8)  Class: 1  
+  OPIN (7,8)  Pin: 20  
+ DIREX (7,8)  Track: 0  
+  IPIN (8,8)  Pin: 32  
+  OPIN (8,8)  Pin: 24  
+ DIREY (8,7)  Track: 0  
+  IPIN (8,7)  Pin: 12  
+  OPIN (8,7)  Pin: 24  
+ CHANX (8,6)  Track: 2  
+  IPIN (8,6)  Pin: 13  
+  OPIN (8,6)  Pin: 25  
+ CHANX (8,5)  Track: 0  
+  IPIN (8,5)  Pin: 12  
+  SINK (8,5)  Class: 0  
+
+
+Net 165 (data_sub_out[15])
+
+SOURCE (5,8)  Class: 1  
+  OPIN (5,8)  Pin: 16  
+ DIREX (4,8)  Track: 0  
+  IPIN (4,8)  Pin: 4  
+  OPIN (4,8)  Pin: 24  
+ DIREY (4,7)  Track: 0  
+  IPIN (4,7)  Pin: 12  
+  SINK (4,7)  Class: 0  
+
+
+Net 166 (m2)
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 16  
+ DIREX (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 4  
+  OPIN (6,5)  Pin: 16  
+ CHANY (5,5) to (5,6)  Track: 1  
+ CHANX (4,6) to (5,6)  Track: 1  
+  IPIN (4,7)  Pin: 8  
+  OPIN (4,7)  Pin: 16  
+ DIREX (3,7)  Track: 0  
+  IPIN (3,7)  Pin: 4  
+  SINK (3,7)  Class: 0  
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 24  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  OPIN (7,4)  Pin: 20  
+ DIREX (7,4)  Track: 0  
+  IPIN (8,4)  Pin: 32  
+  OPIN (8,4)  Pin: 24  
+ DIREY (8,3)  Track: 0  
+  IPIN (8,3)  Pin: 12  
+  OPIN (8,3)  Pin: 24  
+ DIREY (8,2)  Track: 0  
+  IPIN (8,2)  Pin: 12  
+  SINK (8,2)  Class: 0  
+  OPIN (7,5)  Pin: 16  
+ CHANY (6,5) to (6,6)  Track: 0  
+ CHANX (5,6) to (6,6)  Track: 0  
+ CHANX (3,6) to (4,6)  Track: 0  
+  IPIN (3,6)  Pin: 12  
+  SINK (3,6)  Class: 0  
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 28  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,6)  Pin: 8  
+  OPIN (7,6)  Pin: 28  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,7)  Pin: 8  
+  OPIN (7,7)  Pin: 16  
+ DIREX (6,7)  Track: 0  
+  IPIN (6,7)  Pin: 4  
+  SINK (6,7)  Class: 0  
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 20  
+ DIREX (7,5)  Track: 0  
+  IPIN (8,5)  Pin: 32  
+  OPIN (8,5)  Pin: 28  
+ DIREY (8,5)  Track: 0  
+  IPIN (8,6)  Pin: 8  
+  OPIN (8,6)  Pin: 16  
+ CHANY (7,6) to (7,7)  Track: 0  
+ CHANX (6,7) to (7,7)  Track: 0  
+  IPIN (6,8)  Pin: 8  
+  SINK (6,8)  Class: 0  
+ CHANX (3,6) to (4,6)  Track: 0  
+ CHANY (2,7) to (2,8)  Track: 0  
+  IPIN (2,7)  Pin: 4  
+  SINK (2,7)  Class: 0  
+ CHANX (5,6) to (6,6)  Track: 0  
+ CHANY (4,7) to (4,8)  Track: 0  
+  IPIN (5,7)  Pin: 0  
+  SINK (5,7)  Class: 0  
+ CHANY (7,6) to (7,7)  Track: 0  
+ CHANX (8,7)  Track: 0  
+  IPIN (8,8)  Pin: 8  
+  SINK (8,8)  Class: 0  
+ CHANY (4,7) to (4,8)  Track: 0  
+  IPIN (4,7)  Pin: 4  
+  SINK (4,7)  Class: 0  
+  OPIN (7,5)  Pin: 24  
+ CHANX (7,4) to (8,4)  Track: 4  
+  IPIN (7,4)  Pin: 14  
+  OPIN (7,4)  Pin: 26  
+ CHANX (7,3) to (8,3)  Track: 1  
+ CHANY (6,2) to (6,3)  Track: 1  
+  IPIN (6,2)  Pin: 4  
+  SINK (6,2)  Class: 0  
+  OPIN (7,5)  Pin: 20  
+ CHANY (7,5) to (7,6)  Track: 1  
+ CHANX (6,4) to (7,4)  Track: 1  
+  IPIN (6,4)  Pin: 12  
+  SINK (6,4)  Class: 0  
+ CHANY (7,5) to (7,6)  Track: 1  
+ CHANY (7,3) to (7,4)  Track: 1  
+  IPIN (7,3)  Pin: 4  
+  SINK (7,3)  Class: 0  
+ CHANY (7,5) to (7,6)  Track: 1  
+ CHANX (8,6)  Track: 1  
+  IPIN (8,6)  Pin: 12  
+  SINK (8,6)  Class: 0  
+ DIREX (7,5)  Track: 0  
+  IPIN (8,5)  Pin: 0  
+  OPIN (8,5)  Pin: 24  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 12  
+  SINK (8,4)  Class: 0  
+  OPIN (7,5)  Pin: 24  
+ CHANX (7,4) to (8,4)  Track: 0  
+ CHANY (8,5) to (8,6)  Track: 0  
+  IPIN (8,5)  Pin: 4  
+  SINK (8,5)  Class: 0  
+The folding stage: 22
+
+Net 167 (PO[0])
+
+SOURCE (3,7)  Class: 1  
+  OPIN (3,7)  Pin: 28  
+ CHANX (3,7) to (4,7)  Track: 1  
+ CHANY (2,6) to (2,7)  Track: 1  
+ CHANX (3,5) to (4,5)  Track: 1  
+ CHANX (5,5) to (6,5)  Track: 1  
+ CHANX (7,5) to (8,5)  Track: 1  
+ CHANY (8,6) to (8,7)  Track: 1  
+  IPIN (9,6)  Pad: 0  
+  SINK (9,6)  Pad: 0  
+
+
+Net 168 (PO[1])
+
+SOURCE (4,7)  Class: 1  
+  OPIN (4,7)  Pin: 16  
+ CHANY (3,7) to (3,8)  Track: 2  
+ CHANX (2,6) to (3,6)  Track: 2  
+ CHANY (1,7) to (1,8)  Track: 2  
+  IPIN (1,7)  Pin: 6  
+  OPIN (1,7)  Pin: 18  
+ DIREX (0,7)  Track: 2  
+  IPIN (0,7)  Pad: 2  
+  SINK (0,7)  Pad: 2  
+
+
+Net 169 (PO[2])
+
+SOURCE (8,5)  Class: 1  
+  OPIN (8,5)  Pin: 20  
+ CHANY (8,5) to (8,8)  Track: 3  
+  IPIN (9,5)  Pad: 1  
+  SINK (9,5)  Pad: 1  
+
+
+Net 170 (PO[3])
+
+SOURCE (6,7)  Class: 1  
+  OPIN (6,7)  Pin: 16  
+ DIREX (5,7)  Track: 0  
+  IPIN (5,7)  Pin: 4  
+  OPIN (5,7)  Pin: 24  
+ CHANX (5,6) to (6,6)  Track: 0  
+ CHANX (7,6) to (8,6)  Track: 0  
+ CHANY (8,5) to (8,6)  Track: 0  
+  IPIN (9,5)  Pad: 0  
+  SINK (9,5)  Pad: 0  
+
+
+Net 171 (PO[4])
+
+SOURCE (7,3)  Class: 1  
+  OPIN (7,3)  Pin: 20  
+ CHANY (7,3) to (7,4)  Track: 2  
+ CHANY (7,5) to (7,6)  Track: 2  
+ CHANX (8,6)  Track: 2  
+  IPIN (8,7)  Pin: 9  
+  OPIN (8,7)  Pin: 17  
+ DIREX (8,7)  Track: 1  
+  IPIN (9,7)  Pad: 1  
+  SINK (9,7)  Pad: 1  
+
+
+Net 172 (PO[5])
+
+SOURCE (8,4)  Class: 1  
+  OPIN (8,4)  Pin: 20  
+ CHANY (8,4) to (8,5)  Track: 2  
+  IPIN (9,4)  Pad: 1  
+  SINK (9,4)  Pad: 1  
+
+
+Net 173 (PO[6])
+
+SOURCE (8,8)  Class: 1  
+  OPIN (8,8)  Pin: 16  
+ CHANY (7,8)  Track: 0  
+ CHANX (6,7) to (7,7)  Track: 0  
+ CHANX (4,7) to (5,7)  Track: 0  
+ CHANX (2,7) to (3,7)  Track: 0  
+ CHANY (1,8)  Track: 0  
+  IPIN (1,8)  Pin: 4  
+  OPIN (1,8)  Pin: 24  
+ DIREY (1,8)  Track: 0  
+  IPIN (1,9)  Pad: 0  
+  SINK (1,9)  Pad: 0  
+
+
+Net 174 (PO[7])
+
+SOURCE (3,6)  Class: 1  
+  OPIN (3,6)  Pin: 16  
+ CHANY (2,6) to (2,7)  Track: 2  
+ CHANY (2,8)  Track: 2  
+  IPIN (3,8)  Pin: 1  
+  OPIN (3,8)  Pin: 25  
+ DIREY (3,8)  Track: 1  
+  IPIN (3,9)  Pad: 1  
+  SINK (3,9)  Pad: 1  
+
+
+Net 175 (PO[8])
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 24  
+ CHANX (7,4) to (8,4)  Track: 4  
+ CHANY (6,1) to (6,4)  Track: 4  
+  IPIN (6,1)  Pin: 5  
+  OPIN (6,1)  Pin: 25  
+ DIREY (6,0)  Track: 1  
+  IPIN (6,0)  Pad: 1  
+  SINK (6,0)  Pad: 1  
+
+
+Net 176 (PO[9])
+
+SOURCE (5,7)  Class: 1  
+  OPIN (5,7)  Pin: 16  
+ CHANY (4,7) to (4,8)  Track: 0  
+ CHANX (5,8) to (6,8)  Track: 0  
+  IPIN (5,9)  Pad: 0  
+  SINK (5,9)  Pad: 0  
+
+
+Net 177 (PO[10])
+
+SOURCE (8,6)  Class: 1  
+  OPIN (8,6)  Pin: 20  
+ CHANY (8,6) to (8,7)  Track: 2  
+  IPIN (8,6)  Pin: 7  
+  OPIN (8,6)  Pin: 31  
+ DIREY (8,6)  Track: 3  
+  IPIN (8,7)  Pin: 11  
+  OPIN (8,7)  Pin: 23  
+ CHANY (8,7) to (8,8)  Track: 4  
+  IPIN (9,7)  Pad: 0  
+  SINK (9,7)  Pad: 0  
+
+
+Net 178 (PO[11])
+
+SOURCE (8,2)  Class: 1  
+  OPIN (8,2)  Pin: 16  
+ DIREX (7,2)  Track: 0  
+  IPIN (7,2)  Pin: 4  
+  OPIN (7,2)  Pin: 24  
+ CHANX (7,1) to (8,1)  Track: 1  
+ CHANX (5,1) to (6,1)  Track: 1  
+ CHANX (3,1) to (4,1)  Track: 1  
+ CHANX (1,1) to (2,1)  Track: 1  
+ CHANY (0,2) to (0,3)  Track: 1  
+  IPIN (0,2)  Pad: 1  
+  SINK (0,2)  Pad: 1  
+
+
+Net 179 (PO[12])
+
+SOURCE (6,2)  Class: 1  
+  OPIN (6,2)  Pin: 20  
+ CHANY (6,2) to (6,3)  Track: 2  
+ CHANX (5,1) to (6,1)  Track: 2  
+ CHANX (3,1) to (4,1)  Track: 2  
+ CHANX (1,1) to (2,1)  Track: 2  
+ CHANY (0,2) to (0,3)  Track: 2  
+  IPIN (0,2)  Pad: 0  
+  SINK (0,2)  Pad: 0  
+
+
+Net 180 (PO[13])
+
+SOURCE (2,7)  Class: 1  
+  OPIN (2,7)  Pin: 16  
+ DIREX (1,7)  Track: 0  
+  IPIN (1,7)  Pin: 4  
+  OPIN (1,7)  Pin: 24  
+ DIREY (1,6)  Track: 0  
+  IPIN (1,6)  Pin: 12  
+  OPIN (1,6)  Pin: 16  
+ DIREX (0,6)  Track: 0  
+  IPIN (0,6)  Pad: 0  
+  SINK (0,6)  Pad: 0  
+
+
+Net 181 (PO[14])
+
+SOURCE (6,8)  Class: 1  
+  OPIN (6,8)  Pin: 28  
+ CHANX (6,8) to (7,8)  Track: 2  
+  IPIN (6,9)  Pad: 1  
+  SINK (6,9)  Pad: 1  
+
+
+Net 182 (PO[15])
+
+SOURCE (3,8)  Class: 1  
+  OPIN (3,8)  Pin: 16  
+ DIREY (3,8)  Track: 0  
+  IPIN (3,9)  Pad: 0  
+  SINK (3,9)  Pad: 0  
+
+
+Net 183 (clk): global net connecting:
+
+Block clk (#765) at (7, 0), Pin class -1.
+Block Block_25 (#766) at (3, 7), Pin class 2.
+Block Block_32 (#767) at (4, 7), Pin class 2.
+Block Block_31 (#768) at (8, 5), Pin class 2.
+Block Block_30 (#769) at (6, 7), Pin class 2.
+Block Block_29 (#770) at (7, 3), Pin class 2.
+Block Block_28 (#771) at (8, 4), Pin class 2.
+Block Block_27 (#772) at (8, 8), Pin class 2.
+Block Block_26 (#773) at (3, 6), Pin class 2.
+Block Block_1 (#774) at (7, 5), Pin class 2.
+Block Block_11 (#775) at (5, 7), Pin class 2.
+Block Block_12 (#776) at (8, 6), Pin class 2.
+Block Block_13 (#777) at (8, 2), Pin class 2.
+Block Block_14 (#778) at (6, 2), Pin class 2.
+Block Block_15 (#779) at (2, 7), Pin class 2.
+Block Block_16 (#780) at (6, 8), Pin class 2.
+Block Block_33 (#781) at (3, 8), Pin class 2.
+Block Block_24 (#782) at (6, 4), Pin class 2.
+Block Block_17 (#783) at (4, 8), Pin class 2.
+Block Block_18 (#784) at (6, 5), Pin class 2.
+Block Block_19 (#785) at (6, 1), Pin class 2.
+Block Block_20 (#786) at (6, 3), Pin class 2.
+Block Block_21 (#787) at (2, 6), Pin class 2.
+Block Block_22 (#788) at (7, 7), Pin class 2.
+Block Block_23 (#789) at (4, 6), Pin class 2.
+Block Block_3 (#790) at (7, 4), Pin class 2.
+Block Block_9 (#791) at (6, 6), Pin class 2.
+Block Block_8 (#792) at (8, 7), Pin class 2.
+Block Block_7 (#793) at (8, 3), Pin class 2.
+Block Block_6 (#794) at (7, 2), Pin class 2.
+Block Block_2 (#795) at (7, 6), Pin class 2.
+Block Block_5 (#796) at (7, 8), Pin class 2.
+Block Block_4 (#797) at (5, 8), Pin class 2.
+Block Block_10 (#798) at (5, 6), Pin class 2.
+
+
+Net 184 (mx1_out[0])
+
+SOURCE (5,6)  Class: 1  
+  OPIN (5,6)  Pin: 24  
+ CHANX (5,5) to (6,5)  Track: 2  
+ CHANX (3,5) to (4,5)  Track: 2  
+  IPIN (3,6)  Pin: 8  
+  OPIN (3,6)  Pin: 28  
+ DIREY (3,6)  Track: 0  
+  IPIN (3,7)  Pin: 8  
+  SINK (3,7)  Class: 0  
+
+
+Net 185 (l1)
+
+SOURCE (3,7)  Class: 1  
+  OPIN (3,7)  Pin: 20  
+ DIREX (3,7)  Track: 0  
+  IPIN (4,7)  Pin: 0  
+  OPIN (4,7)  Pin: 24  
+ DIREY (4,6)  Track: 0  
+  IPIN (4,6)  Pin: 12  
+  OPIN (4,6)  Pin: 24  
+ CHANX (4,5) to (7,5)  Track: 3  
+ CHANY (7,2) to (7,5)  Track: 3  
+  IPIN (8,2)  Pin: 0  
+  SINK (8,2)  Class: 0  
+ CHANX (4,5) to (7,5)  Track: 3  
+ CHANX (8,5)  Track: 3  
+  IPIN (8,5)  Pin: 12  
+  SINK (8,5)  Class: 0  
+ CHANX (8,5)  Track: 3  
+  IPIN (8,6)  Pin: 8  
+  SINK (8,6)  Class: 0  
+  OPIN (4,7)  Pin: 24  
+ CHANX (4,6) to (5,6)  Track: 2  
+ CHANY (5,5) to (5,6)  Track: 2  
+  IPIN (6,5)  Pin: 0  
+  OPIN (6,5)  Pin: 20  
+ DIREX (6,5)  Track: 0  
+  IPIN (7,5)  Pin: 0  
+  SINK (7,5)  Class: 0  
+  OPIN (3,7)  Pin: 20  
+ CHANY (3,7) to (3,8)  Track: 1  
+ CHANY (3,5) to (3,6)  Track: 1  
+ CHANY (3,3) to (3,4)  Track: 1  
+ CHANX (4,2) to (5,2)  Track: 1  
+ CHANX (6,2) to (7,2)  Track: 1  
+  IPIN (6,2)  Pin: 12  
+  SINK (6,2)  Class: 0  
+ DIREX (3,7)  Track: 0  
+  IPIN (4,7)  Pin: 32  
+  OPIN (4,7)  Pin: 28  
+ CHANX (4,7) to (7,7)  Track: 4  
+ CHANY (7,4) to (7,7)  Track: 4  
+  IPIN (8,4)  Pin: 0  
+  SINK (8,4)  Class: 0  
+SOURCE (3,7)  Class: 1  
+  OPIN (3,7)  Pin: 16  
+ CHANY (2,7) to (2,8)  Track: 3  
+ CHANX (3,6) to (6,6)  Track: 3  
+ CHANY (6,3) to (6,6)  Track: 3  
+  IPIN (7,3)  Pin: 0  
+  SINK (7,3)  Class: 0  
+  OPIN (4,7)  Pin: 28  
+ DIREY (4,7)  Track: 0  
+  IPIN (4,8)  Pin: 8  
+  OPIN (4,8)  Pin: 16  
+ DIREX (3,8)  Track: 0  
+  IPIN (3,8)  Pin: 4  
+  SINK (3,8)  Class: 0  
+ CHANX (4,7) to (7,7)  Track: 4  
+ CHANY (7,8)  Track: 4  
+  IPIN (8,8)  Pin: 0  
+  SINK (8,8)  Class: 0  
+ CHANY (3,7) to (3,8)  Track: 1  
+  IPIN (4,7)  Pin: 1  
+  OPIN (4,7)  Pin: 21  
+ CHANY (4,7) to (4,8)  Track: 4  
+  IPIN (5,7)  Pin: 0  
+  SINK (5,7)  Class: 0  
+  OPIN (3,7)  Pin: 16  
+ DIREX (2,7)  Track: 0  
+  IPIN (2,7)  Pin: 4  
+  SINK (2,7)  Class: 0  
+ CHANX (4,6) to (5,6)  Track: 2  
+ CHANY (5,7) to (5,8)  Track: 2  
+  IPIN (6,7)  Pin: 0  
+  SINK (6,7)  Class: 0  
+ CHANX (4,6) to (5,6)  Track: 2  
+  IPIN (4,7)  Pin: 8  
+  SINK (4,7)  Class: 0  
+  OPIN (4,8)  Pin: 16  
+ CHANY (3,8)  Track: 4  
+  IPIN (4,8)  Pin: 0  
+  OPIN (4,8)  Pin: 20  
+ DIREX (4,8)  Track: 0  
+  IPIN (5,8)  Pin: 32  
+  OPIN (5,8)  Pin: 20  
+ DIREX (5,8)  Track: 0  
+  IPIN (6,8)  Pin: 0  
+  SINK (6,8)  Class: 0  
+ CHANX (3,6) to (6,6)  Track: 3  
+  IPIN (3,6)  Pin: 12  
+  SINK (3,6)  Class: 0  
+
+
+Net 186 (mx2_out[8])
+
+SOURCE (3,7)  Class: 1  
+  OPIN (3,7)  Pin: 24  
+ CHANX (3,6) to (4,6)  Track: 0  
+ CHANY (4,5) to (4,6)  Track: 0  
+ CHANX (5,4) to (6,4)  Track: 0  
+ CHANX (7,4) to (8,4)  Track: 0  
+  IPIN (7,4)  Pin: 12  
+  SINK (7,4)  Class: 0  
+
+
+Net 187 (mx1_out[1])
+
+SOURCE (4,8)  Class: 1  
+  OPIN (4,8)  Pin: 24  
+ DIREY (4,7)  Track: 0  
+  IPIN (4,7)  Pin: 12  
+  SINK (4,7)  Class: 0  
+
+
+Net 188 (mx2_out[15])
+
+SOURCE (4,7)  Class: 1  
+  OPIN (4,7)  Pin: 20  
+ DIREX (4,7)  Track: 0  
+  IPIN (5,7)  Pin: 32  
+  OPIN (5,7)  Pin: 28  
+ DIREY (5,7)  Track: 0  
+  IPIN (5,8)  Pin: 8  
+  SINK (5,8)  Class: 0  
+
+
+Net 189 (mx1_out[2])
+
+SOURCE (6,5)  Class: 1  
+  OPIN (6,5)  Pin: 24  
+ CHANX (6,4) to (7,4)  Track: 2  
+ CHANX (8,4)  Track: 2  
+  IPIN (8,5)  Pin: 8  
+  SINK (8,5)  Class: 0  
+
+
+Net 190 (mx2_out[14])
+
+SOURCE (8,5)  Class: 1  
+  OPIN (8,5)  Pin: 28  
+ CHANX (8,5)  Track: 0  
+  IPIN (8,6)  Pin: 9  
+  OPIN (8,6)  Pin: 17  
+ DIREX (7,6)  Track: 1  
+  IPIN (7,6)  Pin: 5  
+  OPIN (7,6)  Pin: 29  
+ DIREY (7,6)  Track: 1  
+  IPIN (7,7)  Pin: 9  
+  OPIN (7,7)  Pin: 29  
+ CHANX (7,7) to (8,7)  Track: 1  
+  IPIN (7,8)  Pin: 8  
+  SINK (7,8)  Class: 0  
+
+
+Net 191 (mx1_out[3])
+
+SOURCE (6,1)  Class: 1  
+  OPIN (6,1)  Pin: 28  
+ DIREY (6,1)  Track: 0  
+  IPIN (6,2)  Pin: 8  
+  OPIN (6,2)  Pin: 16  
+ CHANY (5,2) to (5,5)  Track: 4  
+ CHANY (5,6) to (5,8)  Track: 4  
+  IPIN (6,6)  Pin: 0  
+  OPIN (6,6)  Pin: 28  
+ DIREY (6,6)  Track: 0  
+  IPIN (6,7)  Pin: 8  
+  SINK (6,7)  Class: 0  
+
+
+Net 192 (mx2_out[13])
+
+SOURCE (6,7)  Class: 1  
+  OPIN (6,7)  Pin: 20  
+ DIREX (6,7)  Track: 0  
+  IPIN (7,7)  Pin: 0  
+  OPIN (7,7)  Pin: 24  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 12  
+  SINK (7,6)  Class: 0  
+
+
+Net 193 (mx1_out[4])
+
+SOURCE (6,3)  Class: 1  
+  OPIN (6,3)  Pin: 20  
+ DIREX (6,3)  Track: 0  
+  IPIN (7,3)  Pin: 32  
+  OPIN (7,3)  Pin: 28  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,4)  Pin: 8  
+  OPIN (7,4)  Pin: 24  
+ DIREY (7,3)  Track: 0  
+  IPIN (7,3)  Pin: 12  
+  SINK (7,3)  Class: 0  
+
+
+Net 194 (mx2_out[12])
+
+SOURCE (7,3)  Class: 1  
+  OPIN (7,3)  Pin: 24  
+ DIREY (7,2)  Track: 0  
+  IPIN (7,2)  Pin: 12  
+  SINK (7,2)  Class: 0  
+
+
+Net 195 (mx1_out[5])
+
+SOURCE (2,6)  Class: 1  
+  OPIN (2,6)  Pin: 24  
+ CHANX (2,5) to (3,5)  Track: 0  
+ CHANY (3,4) to (3,5)  Track: 0  
+ CHANX (4,3) to (5,3)  Track: 0  
+ CHANX (6,3) to (7,3)  Track: 0  
+ CHANX (8,3)  Track: 0  
+  IPIN (8,4)  Pin: 8  
+  SINK (8,4)  Class: 0  
+
+
+Net 196 (mx2_out[11])
+
+SOURCE (8,4)  Class: 1  
+  OPIN (8,4)  Pin: 24  
+ DIREY (8,3)  Track: 0  
+  IPIN (8,3)  Pin: 12  
+  SINK (8,3)  Class: 0  
+
+
+Net 197 (mx1_out[6])
+
+SOURCE (7,7)  Class: 1  
+  OPIN (7,7)  Pin: 20  
+ DIREX (7,7)  Track: 0  
+  IPIN (8,7)  Pin: 0  
+  OPIN (8,7)  Pin: 28  
+ DIREY (8,7)  Track: 0  
+  IPIN (8,8)  Pin: 8  
+  SINK (8,8)  Class: 0  
+
+
+Net 198 (mx2_out[10])
+
+SOURCE (8,8)  Class: 1  
+  OPIN (8,8)  Pin: 24  
+ DIREY (8,7)  Track: 0  
+  IPIN (8,7)  Pin: 12  
+  SINK (8,7)  Class: 0  
+
+
+Net 199 (mx1_out[7])
+
+SOURCE (4,6)  Class: 1  
+  OPIN (4,6)  Pin: 16  
+ DIREX (3,6)  Track: 0  
+  IPIN (3,6)  Pin: 4  
+  SINK (3,6)  Class: 0  
+
+
+Net 200 (mx2_out[9])
+
+SOURCE (3,6)  Class: 1  
+  OPIN (3,6)  Pin: 20  
+ DIREX (3,6)  Track: 0  
+  IPIN (4,6)  Pin: 0  
+  OPIN (4,6)  Pin: 28  
+ CHANX (4,6) to (5,6)  Track: 1  
+ CHANX (6,6) to (7,6)  Track: 1  
+  IPIN (6,6)  Pin: 12  
+  SINK (6,6)  Class: 0  
+
+
+Net 201 (mx1_out[8])
+
+SOURCE (7,4)  Class: 1  
+  OPIN (7,4)  Pin: 28  
+ DIREY (7,4)  Track: 0  
+  IPIN (7,5)  Pin: 8  
+  SINK (7,5)  Class: 0  
+
+
+Net 202 (mx2_out[0])
+
+SOURCE (7,5)  Class: 1  
+  OPIN (7,5)  Pin: 20  
+ DIREX (7,5)  Track: 0  
+  IPIN (8,5)  Pin: 32  
+  OPIN (8,5)  Pin: 24  
+ DIREY (8,4)  Track: 0  
+  IPIN (8,4)  Pin: 12  
+  OPIN (8,4)  Pin: 16  
+ DIREX (7,4)  Track: 0  
+  IPIN (7,4)  Pin: 4  
+  OPIN (7,4)  Pin: 16  
+ DIREX (6,4)  Track: 0  
+  IPIN (6,4)  Pin: 4  
+  SINK (6,4)  Class: 0  
+
+
+Net 203 (mx1_out[9])
+
+SOURCE (6,6)  Class: 1  
+  OPIN (6,6)  Pin: 20  
+ CHANY (6,6) to (6,7)  Track: 1  
+ CHANX (5,7) to (6,7)  Track: 1  
+  IPIN (5,7)  Pin: 12  
+  SINK (5,7)  Class: 0  
+
+
+Net 204 (mx2_out[1])
+
+SOURCE (5,7)  Class: 1  
+  OPIN (5,7)  Pin: 20  
+ CHANY (5,7) to (5,8)  Track: 1  
+ CHANX (4,8) to (5,8)  Track: 1  
+  IPIN (4,8)  Pin: 12  
+  SINK (4,8)  Class: 0  
+
+
+Net 205 (mx1_out[10])
+
+SOURCE (8,7)  Class: 1  
+  OPIN (8,7)  Pin: 24  
+ DIREY (8,6)  Track: 0  
+  IPIN (8,6)  Pin: 12  
+  SINK (8,6)  Class: 0  
+
+
+Net 206 (mx2_out[2])
+
+SOURCE (8,6)  Class: 1  
+  OPIN (8,6)  Pin: 16  
+ DIREX (7,6)  Track: 0  
+  IPIN (7,6)  Pin: 4  
+  OPIN (7,6)  Pin: 24  
+ DIREY (7,5)  Track: 0  
+  IPIN (7,5)  Pin: 12  
+  OPIN (7,5)  Pin: 16  
+ DIREX (6,5)  Track: 0  
+  IPIN (6,5)  Pin: 4  
+  SINK (6,5)  Class: 0  
+
+
+Net 207 (mx1_out[11])
+
+SOURCE (8,3)  Class: 1  
+  OPIN (8,3)  Pin: 24  
+ DIREY (8,2)  Track: 0  
+  IPIN (8,2)  Pin: 12  
+  SINK (8,2)  Class: 0  
+
+
+Net 208 (mx2_out[3])
+
+SOURCE (8,2)  Class: 1  
+  OPIN (8,2)  Pin: 24  
+ DIREY (8,1)  Track: 0  
+  IPIN (8,1)  Pin: 12  
+  OPIN (8,1)  Pin: 16  
+ DIREX (7,1)  Track: 0  
+  IPIN (7,1)  Pin: 4  
+  OPIN (7,1)  Pin: 16  
+ DIREX (6,1)  Track: 0  
+  IPIN (6,1)  Pin: 4  
+  SINK (6,1)  Class: 0  
+
+
+Net 209 (mx1_out[12])
+
+SOURCE (7,2)  Class: 1  
+  OPIN (7,2)  Pin: 16  
+ DIREX (6,2)  Track: 0  
+  IPIN (6,2)  Pin: 4  
+  SINK (6,2)  Class: 0  
+
+
+Net 210 (mx2_out[4])
+
+SOURCE (6,2)  Class: 1  
+  OPIN (6,2)  Pin: 28  
+ DIREY (6,2)  Track: 0  
+  IPIN (6,3)  Pin: 8  
+  SINK (6,3)  Class: 0  
+
+
+Net 211 (mx1_out[13])
+
+SOURCE (7,6)  Class: 1  
+  OPIN (7,6)  Pin: 28  
+ DIREY (7,6)  Track: 0  
+  IPIN (7,7)  Pin: 8  
+  OPIN (7,7)  Pin: 16  
+ DIREX (6,7)  Track: 0  
+  IPIN (6,7)  Pin: 4  
+  OPIN (6,7)  Pin: 28  
+ CHANX (6,7) to (8,7)  Track: 3  
+ CHANX (2,7) to (5,7)  Track: 3  
+  IPIN (2,7)  Pin: 12  
+  SINK (2,7)  Class: 0  
+
+
+Net 212 (mx2_out[5])
+
+SOURCE (2,7)  Class: 1  
+  OPIN (2,7)  Pin: 24  
+ DIREY (2,6)  Track: 0  
+  IPIN (2,6)  Pin: 12  
+  SINK (2,6)  Class: 0  
+
+
+Net 213 (mx1_out[14])
+
+SOURCE (7,8)  Class: 1  
+  OPIN (7,8)  Pin: 16  
+ DIREX (6,8)  Track: 0  
+  IPIN (6,8)  Pin: 4  
+  SINK (6,8)  Class: 0  
+
+
+Net 214 (mx2_out[6])
+
+SOURCE (6,8)  Class: 1  
+  OPIN (6,8)  Pin: 20  
+ DIREX (6,8)  Track: 0  
+  IPIN (7,8)  Pin: 32  
+  OPIN (7,8)  Pin: 24  
+ DIREY (7,7)  Track: 0  
+  IPIN (7,7)  Pin: 12  
+  SINK (7,7)  Class: 0  
+
+
+Net 215 (mx1_out[15])
+
+SOURCE (5,8)  Class: 1  
+  OPIN (5,8)  Pin: 16  
+ CHANY (4,8)  Track: 2  
+ CHANX (3,7) to (4,7)  Track: 2  
+  IPIN (3,8)  Pin: 8  
+  SINK (3,8)  Class: 0  
+
+
+Net 216 (l2)
+
+SOURCE (6,4)  Class: 1  
+  OPIN (6,4)  Pin: 28  
+ DIREY (6,4)  Track: 0  
+  IPIN (6,5)  Pin: 8  
+  OPIN (6,5)  Pin: 28  
+ DIREY (6,5)  Track: 0  
+  IPIN (6,6)  Pin: 8  
+  OPIN (6,6)  Pin: 16  
+ DIREX (5,6)  Track: 0  
+  IPIN (5,6)  Pin: 4  
+  OPIN (5,6)  Pin: 16  
+ CHANY (4,6) to (4,7)  Track: 1  
+ CHANY (4,8)  Track: 1  
+  IPIN (4,8)  Pin: 4  
+  SINK (4,8)  Class: 0  
+  OPIN (6,4)  Pin: 28  
+ CHANX (6,4) to (7,4)  Track: 1  
+ CHANY (7,5) to (7,6)  Track: 1  
+ CHANY (7,7) to (7,8)  Track: 1  
+  IPIN (7,7)  Pin: 4  
+  SINK (7,7)  Class: 0  
+SOURCE (6,4)  Class: 1  
+  OPIN (6,4)  Pin: 20  
+ CHANY (6,4) to (6,5)  Track: 2  
+ CHANY (6,6) to (6,7)  Track: 2  
+ CHANY (6,8)  Track: 2  
+  IPIN (7,8)  Pin: 0  
+  SINK (7,8)  Class: 0  
+ CHANY (7,5) to (7,6)  Track: 1  
+ CHANX (8,6)  Track: 1  
+  IPIN (8,7)  Pin: 8  
+  SINK (8,7)  Class: 0  
+  OPIN (6,6)  Pin: 16  
+ CHANY (5,6) to (5,7)  Track: 0  
+ CHANY (5,8)  Track: 0  
+  IPIN (5,8)  Pin: 4  
+  SINK (5,8)  Class: 0  
+  OPIN (6,5)  Pin: 28  
+ CHANX (6,5) to (8,5)  Track: 4  
+ CHANX (2,5) to (5,5)  Track: 4  
+  IPIN (2,6)  Pin: 8  
+  SINK (2,6)  Class: 0  
+SOURCE (6,4)  Class: 1  
+  OPIN (6,4)  Pin: 24  
+ DIREY (6,3)  Track: 0  
+  IPIN (6,3)  Pin: 12  
+  OPIN (6,3)  Pin: 16  
+ CHANY (5,3) to (5,4)  Track: 2  
+ CHANY (5,1) to (5,2)  Track: 2  
+  IPIN (6,1)  Pin: 0  
+  SINK (6,1)  Class: 0  
+  OPIN (6,4)  Pin: 20  
+ CHANY (6,4) to (6,5)  Track: 1  
+ CHANY (6,2) to (6,3)  Track: 1  
+  IPIN (7,2)  Pin: 0  
+  SINK (7,2)  Class: 0  
+ CHANX (6,4) to (7,4)  Track: 1  
+ CHANY (7,3) to (7,4)  Track: 1  
+  IPIN (8,3)  Pin: 0  
+  SINK (8,3)  Class: 0  
+ CHANY (6,6) to (6,7)  Track: 2  
+  IPIN (6,6)  Pin: 4  
+  SINK (6,6)  Class: 0  
+ CHANY (6,4) to (6,5)  Track: 2  
+ CHANX (7,5) to (8,5)  Track: 2  
+  IPIN (7,6)  Pin: 8  
+  SINK (7,6)  Class: 0  
+ CHANX (6,5) to (8,5)  Track: 4  
+  IPIN (6,5)  Pin: 12  
+  SINK (6,5)  Class: 0  
+  OPIN (5,6)  Pin: 16  
+ DIREX (4,6)  Track: 0  
+  IPIN (4,6)  Pin: 4  
+  SINK (4,6)  Class: 0  
+ CHANY (5,3) to (5,4)  Track: 2  
+  IPIN (6,3)  Pin: 0  
+  SINK (6,3)  Class: 0  
+ CHANY (6,4) to (6,5)  Track: 1  
+  IPIN (7,4)  Pin: 0  
+  SINK (7,4)  Class: 0  
+
+
+Net 217 (mx2_out[7])
+
+SOURCE (6,4)  Class: 1  
+  OPIN (6,4)  Pin: 16  
+ CHANY (5,4) to (5,5)  Track: 0  
+ CHANX (4,5) to (5,5)  Track: 0  
+  IPIN (4,6)  Pin: 8  
+  SINK (4,6)  Class: 0  

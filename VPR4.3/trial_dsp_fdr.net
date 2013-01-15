@@ -1,0 +1,519 @@
+stage 1
+
+.input regy_out[0]
+pinlist: regy_out[0]
+
+.input regy_out[1]
+pinlist: regy_out[1]
+
+.input regy_out[2]
+pinlist: regy_out[2]
+
+.input regy_out[3]
+pinlist: regy_out[3]
+
+.input regy_out[4]
+pinlist: regy_out[4]
+
+.input regy_out[5]
+pinlist: regy_out[5]
+
+.input regy_out[6]
+pinlist: regy_out[6]
+
+.input regy_out[7]
+pinlist: regy_out[7]
+
+.input regy_out[8]
+pinlist: regy_out[8]
+
+.input regy_out[9]
+pinlist: regy_out[9]
+
+.input regy_out[10]
+pinlist: regy_out[10]
+
+.input regy_out[11]
+pinlist: regy_out[11]
+
+.input regy_out[12]
+pinlist: regy_out[12]
+
+.input regy_out[13]
+pinlist: regy_out[13]
+
+.input regy_out[14]
+pinlist: regy_out[14]
+
+.input regy_out[15]
+pinlist: regy_out[15]
+
+.input PO[0]
+pinlist: PO[0]
+
+.input PO[1]
+pinlist: PO[1]
+
+.input PO[2]
+pinlist: PO[2]
+
+.input PO[3]
+pinlist: PO[3]
+
+.input PO[4]
+pinlist: PO[4]
+
+.input PO[5]
+pinlist: PO[5]
+
+.input PO[6]
+pinlist: PO[6]
+
+.input PO[7]
+pinlist: PO[7]
+
+.input PO[8]
+pinlist: PO[8]
+
+.input PO[9]
+pinlist: PO[9]
+
+.input PO[10]
+pinlist: PO[10]
+
+.input PO[11]
+pinlist: PO[11]
+
+.input PO[12]
+pinlist: PO[12]
+
+.input PO[13]
+pinlist: PO[13]
+
+.input PO[14]
+pinlist: PO[14]
+
+.input PO[15]
+pinlist: PO[15]
+
+.global clk
+
+.input clk
+pinlist: clk
+
+.global rst
+
+.input rst
+pinlist: rst
+
+.dsp Block_dsp
+pinlist: regy_out[0] regy_out[1] regy_out[2] regy_out[3] \
+regy_out[4] regy_out[5] regy_out[6] regy_out[7] \
+regy_out[8] regy_out[9] regy_out[10] regy_out[11] \
+regy_out[12] regy_out[13] regy_out[14] regy_out[15] \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+PO[0] PO[1] PO[2] PO[3] \
+PO[4] PO[5] PO[6] PO[7] \
+PO[8] PO[9] PO[10] PO[11] \
+PO[12] PO[13] PO[14] PO[15] \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open data_sub_out[0] data_sub_out[1] data_sub_out[2] \
+data_sub_out[3] data_sub_out[4] data_sub_out[5] data_sub_out[6] \
+data_sub_out[7] open open open \
+open open open open \
+open data_sub_out[8] data_sub_out[9] data_sub_out[10] \
+data_sub_out[11] data_sub_out[12] data_sub_out[13] data_sub_out[14] \
+data_sub_out[15] open open open \
+open open open open \
+open open data_sub_out[16] data_sub_out[17] \
+data_sub_out[18] data_sub_out[19] data_sub_out[20] data_sub_out[21] \
+data_sub_out[22] data_sub_out[23] open open \
+open open open open \
+open open data_sub_out[24] data_sub_out[25] \
+data_sub_out[26] data_sub_out[27] data_sub_out[28] data_sub_out[29] \
+data_sub_out[30] data_sub_out[31] open open \
+open open open open \
+open open \
+clk \
+rst 
+
+.clb Block_0
+pinlist: PO[0] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[0] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_1
+pinlist: PO[1] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[1] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_2
+pinlist: PO[2] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[2] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_3
+pinlist: PO[3] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[3] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_4
+pinlist: PO[4] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[4] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_5
+pinlist: PO[5] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[5] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_6
+pinlist: PO[6] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[6] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_7
+pinlist: PO[7] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[7] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_8
+pinlist: PO[8] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[8] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_9
+pinlist: PO[9] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[9] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_10
+pinlist: PO[10] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[10] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_11
+pinlist: PO[11] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[11] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_12
+pinlist: PO[12] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[12] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_13
+pinlist: PO[13] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[13] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_14
+pinlist: PO[14] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[14] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_15
+pinlist: PO[15] open open open \
+open open open open \
+open open open open \
+open open open open \
+data[15] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_0 ff_2 0 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 2 ff_2 open 32
+
+.output data_sub_out[0]
+pinlist: data_sub_out[0]
+
+.output data_sub_out[1]
+pinlist: data_sub_out[1]
+
+.output data_sub_out[2]
+pinlist: data_sub_out[2]
+
+.output data_sub_out[3]
+pinlist: data_sub_out[3]
+
+.output data_sub_out[4]
+pinlist: data_sub_out[4]
+
+.output data_sub_out[5]
+pinlist: data_sub_out[5]
+
+.output data_sub_out[6]
+pinlist: data_sub_out[6]
+
+.output data_sub_out[7]
+pinlist: data_sub_out[7]
+
+.output data_sub_out[8]
+pinlist: data_sub_out[8]
+
+.output data_sub_out[9]
+pinlist: data_sub_out[9]
+
+.output data_sub_out[10]
+pinlist: data_sub_out[10]
+
+.output data_sub_out[11]
+pinlist: data_sub_out[11]
+
+.output data_sub_out[12]
+pinlist: data_sub_out[12]
+
+.output data_sub_out[13]
+pinlist: data_sub_out[13]
+
+.output data_sub_out[14]
+pinlist: data_sub_out[14]
+
+.output data_sub_out[15]
+pinlist: data_sub_out[15]
+
+.output data_sub_out[16]
+pinlist: data_sub_out[16]
+
+.output data_sub_out[17]
+pinlist: data_sub_out[17]
+
+.output data_sub_out[18]
+pinlist: data_sub_out[18]
+
+.output data_sub_out[19]
+pinlist: data_sub_out[19]
+
+.output data_sub_out[20]
+pinlist: data_sub_out[20]
+
+.output data_sub_out[21]
+pinlist: data_sub_out[21]
+
+.output data_sub_out[22]
+pinlist: data_sub_out[22]
+
+.output data_sub_out[23]
+pinlist: data_sub_out[23]
+
+.output data_sub_out[24]
+pinlist: data_sub_out[24]
+
+.output data_sub_out[25]
+pinlist: data_sub_out[25]
+
+.output data_sub_out[26]
+pinlist: data_sub_out[26]
+
+.output data_sub_out[27]
+pinlist: data_sub_out[27]
+
+.output data_sub_out[28]
+pinlist: data_sub_out[28]
+
+.output data_sub_out[29]
+pinlist: data_sub_out[29]
+
+.output data_sub_out[30]
+pinlist: data_sub_out[30]
+
+.output data_sub_out[31]
+pinlist: data_sub_out[31]
+
+.output data[0]
+pinlist: data[0]
+
+.output data[1]
+pinlist: data[1]
+
+.output data[2]
+pinlist: data[2]
+
+.output data[3]
+pinlist: data[3]
+
+.output data[4]
+pinlist: data[4]
+
+.output data[5]
+pinlist: data[5]
+
+.output data[6]
+pinlist: data[6]
+
+.output data[7]
+pinlist: data[7]
+
+.output data[8]
+pinlist: data[8]
+
+.output data[9]
+pinlist: data[9]
+
+.output data[10]
+pinlist: data[10]
+
+.output data[11]
+pinlist: data[11]
+
+.output data[12]
+pinlist: data[12]
+
+.output data[13]
+pinlist: data[13]
+
+.output data[14]
+pinlist: data[14]
+
+.output data[15]
+pinlist: data[15]
+
