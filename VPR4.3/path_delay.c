@@ -207,6 +207,8 @@ float **alloc_and_load_timing_graph(t_timing_inf timing_inf,
 
 	mem_source = 0;
 	mem_sink = 0;
+	dsp_source = 0;
+	dsp_sink = 0;
 
 	if (tedge_ch_list_head != NULL) {
 		printf("Error in alloc_and_load_timing_graph:\n"
@@ -585,12 +587,11 @@ static void alloc_and_load_fanout_counts(int ***num_uses_of_clb_ipin_ptr,
 				num_uses_of_ff_opin[iblk] = NULL;
 				for (ipin = 0; ipin < pins_per_dsp; ipin++) {
 					if (block[iblk].nets[ipin] != OPEN) {
-						if (dsp_pin_class[ipin] == RECEIVER && !is_global_dsp_pin[ipin]) {
-							num_uses_of_clb_ipin[iblk][0]++;
-						}
-						else if (dsp_pin_class[ipin] == DRIVER) {
+						if (dsp_pin_class[ipin] == DRIVER) {
 							num_uses_of_clb_ipin[iblk][1]++;
 						}
+						else
+							num_uses_of_clb_ipin[iblk][0]++;
 					}
 				}
 			} else {
@@ -817,9 +818,11 @@ static void build_dsp_tnodes(int iblk, int **block_pin_to_tnode,
 	t_tedge *tedge;
 
 	if (n_uses_clb_pin[0] == 0 && n_uses_clb_pin[1] != 0)
-		mem_source++;
+		dsp_source++;
 	if (n_uses_clb_pin[0] != 0 && n_uses_clb_pin[1] == 0)
-		mem_sink++;
+		dsp_sink++;
+	if (n_uses_clb_pin[0] == 0 && n_uses_clb_pin[1] == 0)
+		return;
 
 	num_edges = n_uses_clb_pin[1];
 	for (ipin = 0; ipin < pins_per_dsp; ipin++) {

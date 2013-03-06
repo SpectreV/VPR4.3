@@ -1,6 +1,7 @@
 /* Netlist to be placed stuff. */
 extern int num_nets, num_blocks; 
 extern int num_mem, mem_sink, mem_source;
+extern int num_dsp, dsp_sink, dsp_source;
 extern int num_p_inputs, num_p_outputs, num_clbs, num_globals;
 extern struct s_net *net;
 extern struct s_block *block;
@@ -65,4 +66,4 @@ extern struct s_class *dsp_class_inf; /*[0...dsp_num_class-1]*/
 extern int dsp_num_class;
 extern int dsp_fc;
 extern int dsp_loc_start, dsp_loc_repeat;
-extern int num_dsps;
+extern int num_dsp;

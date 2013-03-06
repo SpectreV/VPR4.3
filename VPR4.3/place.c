@@ -1132,7 +1132,7 @@ static int try_swap(float t, float *cost, float *bb_cost, float *timing_cost,
 
 	/* Allocate the local bb_coordinate storage, etc. only once. */
 
-	if (bb_coord_new == NULL) {
+	if (bb_coord_new == NULL ) {
 		bb_coord_new = (struct s_bb *) my_malloc(
 				num_nets * sizeof(struct s_bb));
 		bb_edge_new = (struct s_bb *) my_malloc(num_nets * sizeof(struct s_bb));
@@ -1172,7 +1172,8 @@ static int try_swap(float t, float *cost, float *bb_cost, float *timing_cost,
 	 * until success of move is determined.)                       */
 
 	if (!is_folding) {
-		if (block[b_from].type == CLB || block[b_from].type == MEM) {
+		if (block[b_from].type == CLB || block[b_from].type == MEM
+				|| block[b_from].type == DSP) {
 			io_num = -1; /* Don't need, but stops compiler warning. */
 			if (clb[x_to][y_to].occ == 1) { /* Occupied -- do a switch */
 				b_to = clb[x_to][y_to].u.block;
@@ -1319,9 +1320,35 @@ static int try_swap(float t, float *cost, float *bb_cost, float *timing_cost,
 				sum++;
 			}
 			length = sum;
-		}
-
-		else {
+		} else if (block[b_from].type == DSP) {
+			sum = 0;
+			for (i = 0; i < num_stage; i++) {
+				if (stage_clb[i][x_to][y_to].occ == 1
+						&& stage_clb[i][x_from][y_from].occ == 1) {
+					b_to = stage_clb[i][x_to][y_to].u.block;
+					b_from = stage_clb[i][x_from][y_from].u.block;
+					block[b_from].x = x_to;
+					block[b_from].y = y_to;
+					block[b_to].x = x_from;
+					block[b_to].y = y_from;
+				} else if (stage_clb[i][x_to][y_to].occ == 1) {
+					b_to = stage_clb[i][x_to][y_to].u.block;
+					b_from = EMPTY;
+					block[b_to].x = x_from;
+					block[b_to].y = y_from;
+				} else if (stage_clb[i][x_from][y_from].occ == 1) {
+					b_to = EMPTY;
+					b_from = stage_clb[i][x_from][y_from].u.block;
+					block[b_from].x = x_to;
+					block[b_from].y = y_to;
+				} else
+					continue;
+				bflist[sum] = b_from;
+				btlist[sum] = b_to;
+				sum++;
+			}
+			length = sum;
+		} else {
 			/* io block was selected for moving */
 			//printf("swap pad from %d \n", b_from);
 			io_num = my_irand(io_rat - 1);
@@ -1630,7 +1657,8 @@ static int try_swap(float t, float *cost, float *bb_cost, float *timing_cost,
 			}
 		} else { //for folding case
 			if (clb[x_from][y_from].type == CLB
-					|| clb[x_from][y_from].type == MEM) {
+					|| clb[x_from][y_from].type == MEM
+					|| clb[x_from][y_from].type == DSP) {
 				// printf("length is %d\n", length);
 				for (i = 0; i < length; i++) {
 					b_from = bflist[i];
@@ -4025,7 +4053,8 @@ static void check_place(float bb_cost, float timing_cost, int place_cost_type,
 						}
 						bdone[bnum]++;
 					} else if (stage_clb[istage][i][j].type == DSP) {
-						if (stage_clb[istage][i][j].x_off == 0 && stage_clb[istage][i][j].y_off == 0) {
+						if (stage_clb[istage][i][j].x_off == 0
+								&& stage_clb[istage][i][j].y_off == 0) {
 							bnum = stage_clb[istage][i][j].u.block;
 							if (block[bnum].type != DSP) {
 								printf(

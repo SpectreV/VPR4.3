@@ -342,7 +342,7 @@ static void init_parse(int doall) {
 	num_p_outputs = 0;
 	num_clbs = 0;
 	num_mem = 0;
-	num_dsps = 0;
+	num_dsp = 0;
 	num_blocks = 0;
 	num_globals = 0;
 	/* Added by Wei */
@@ -847,7 +847,7 @@ static char *add_dsp(int doall, FILE *fp_net, char *buf) {
 	//printf("block %d\n", num_blocks);
 	parse_name_and_pinlist(doall, fp_net, buf, DSP);
 	if (!is_folding)
-		num_dsps++;
+		num_dsp++;
 
 	if (doall) {
 		block[num_blocks - 1].type = DSP;
@@ -863,7 +863,7 @@ static char *add_dsp(int doall, FILE *fp_net, char *buf) {
 		pin_index++;
 		if (pin_index >= pins_per_dsp) {
 			printf("Error in add_dsp on line %d of netlist file.\n", linenum);
-			printf("Too many pins on this dsp.  Expected %d.\n", pins_per_clb);
+			printf("Too many pins on this dsp %d.  Expected %d.\n", pin_index, pins_per_dsp);
 			exit(1);
 		}
 
@@ -1011,7 +1011,7 @@ static void parse_name_and_pinlist(int doall, FILE *fp_net, char *buf,
 					//printf("num of mem %d\n", num_mem);
 				}
 				if (type == DSP)
-					num_dsps++;
+					num_dsp++;
 				h_ptr->index = count;
 				blockmap_inf[count] = num_blocks - 1;
 				//printf("blk index %d\n", num_blocks-1);

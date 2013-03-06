@@ -53,16 +53,15 @@ outpin class: 1 top
 outpin class: 1 top
 inpin class: 2 global top   # Clock, global -> routed on a special resource.
 
-dsp_inpin class: 0 num: 22 left 
-dsp_inpin class: 0 num: 22 top 
-dsp_inpin class: 0 num: 22 right 
-dsp_inpin class: 0 num: 23 bottom 
+dsp_inpin class: 0 num: 16 left 
+dsp_inpin class: 0 num: 16 top 
+dsp_inpin class: 0 num: 17 right 
+dsp_inpin class: 0 num: 17 bottom 
 dsp_outpin class: 1 num: 16 left 
 dsp_outpin class: 1 num: 17 top 
 dsp_outpin class: 1 num: 16 right 
 dsp_outpin class: 1 num: 16 bottom 
 dsp_inpin class: 2 num: 1 global left  # Clock;
-dsp_inpin class: 2 num: 1 global right # Reset;
 
 dsp_width	5
 dsp_height	5

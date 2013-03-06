@@ -202,19 +202,21 @@ void check_timing_graph(int num_const_gen, int num_ff, int num_sinks) {
 	printf("num of ffs with input %d\n", num_ff);
 	printf("memory source %d\n", mem_source);
 	printf("memory sink %d\n", mem_sink);
+	printf("dsp source %d\n", dsp_source);
+	printf("dsp sink %d\n", dsp_sink);
 
-	if (num_const_gen + num_p_inputs + mem_source != tnodes_at_level[0].nelem) {
+	if (num_const_gen + num_p_inputs + mem_source + dsp_source != tnodes_at_level[0].nelem) {
 		printf(
 				"Error in check_timing_graph: %d tnodes are sources -- expected %d.\n",
 				tnodes_at_level[0].nelem,
-				num_const_gen + num_p_inputs + mem_source);
+				num_const_gen + num_p_inputs + mem_source + dsp_source);
 		error++;
 	}
 
-	if (num_sinks != num_p_outputs + num_ff + mem_sink) {
+	if (num_sinks != num_p_outputs + num_ff + mem_sink + dsp_sink) {
 		printf("Error in check_timing_graph: %d tnodes are sinks (have no "
 				"outputs -- expected %d.\n", num_sinks,
-				num_ff + num_p_outputs + mem_sink);
+				num_ff + num_p_outputs + mem_sink + dsp_sink);
 		error++;
 	}
 

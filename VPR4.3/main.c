@@ -28,8 +28,9 @@ int num_smbs = 0, num_pads = 0, max_smb_stage = 0, num_direct = 0;
 struct s_clb ***stage_clb;
 int fs, fo, fi;
 
-int num_nets, num_blocks, num_mem = 0, num_dsps = 0;
+int num_nets, num_blocks, num_mem = 0, num_dsp = 0;
 int mem_source = 0, mem_sink = 0;
+int dsp_source = 0, dsp_sink = 0;
 int num_p_inputs, num_p_outputs, num_clbs, num_globals;
 struct s_net *net;
 struct s_block *block;
