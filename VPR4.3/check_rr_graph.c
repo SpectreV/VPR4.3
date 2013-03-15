@@ -55,6 +55,11 @@ void check_rr_graph(enum e_route_type route_type, int num_switch) {
 				exit(1);
 			}
 
+			if (to_node == 0) {
+				printf("%d ", inode);
+				printf("\n");
+			}
+
 			num_edges_from_current_to_node[to_node]++;
 			total_edges_to_node[to_node]++;
 

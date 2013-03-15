@@ -63,8 +63,8 @@ dsp_outpin class: 1 num: 16 right
 dsp_outpin class: 1 num: 16 bottom 
 dsp_inpin class: 2 num: 1 global left  # Clock;
 
-dsp_width	5
-dsp_height	5
+dsp_width	4
+dsp_height	4
 dsp_fc		1
 dsp_loc_start	1
 dsp_loc_repeat	15

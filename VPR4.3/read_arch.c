@@ -2028,6 +2028,7 @@ void print_arch(char *arch_file, enum e_route_type route_type,
 }
 
 void init_arch(float aspect_ratio, boolean user_sized, int max_smb_stage,
+		int max_dsp_stage,
 		int mem_density_x, int mem_density_y) {
 
 	/* Allocates various data structures that depend on the FPGA         *
@@ -2118,6 +2119,7 @@ void init_arch(float aspect_ratio, boolean user_sized, int max_smb_stage,
 	} else {
 		printf("num of distinct SMBs %d\n", num_smbs);
 		printf("num of distinct pads %d\n", num_pads);
+		printf("num of distinct DSPs %d\n", num_dsp);
 		printf("num of memory %d\n", num_mem);
 
 		if (!is_mem) {
@@ -2143,7 +2145,7 @@ void init_arch(float aspect_ratio, boolean user_sized, int max_smb_stage,
 					if (((nx - dsp_loc_start + 1) % dsp_loc_repeat) >= dsp_w)
 							dsp_num ++;
 					dsp_num *= ((int) (ny / dsp_h)) * dsp_w * dsp_h;
-					if (nx * ny - dsp_num > max_smb_stage)
+					if (nx * ny - dsp_num > max_smb_stage && dsp_num >= max_dsp_stage * dsp_w * dsp_h)
 						break;
 					else
 						ny++;

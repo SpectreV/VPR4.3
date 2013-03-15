@@ -47,7 +47,8 @@ typedef enum {
 	IFF_SOURCE,
 	DSP_IPIN,
 	DSP_OPIN,
-	DSP_SINK
+	DSP_SINK,
+	DSP_SOURCE
 } t_tnode_type;
 
 typedef struct {

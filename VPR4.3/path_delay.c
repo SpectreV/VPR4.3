@@ -481,7 +481,7 @@ static int alloc_and_load_pin_mappings(int ***block_pin_to_tnode_ptr,
 					curr_tnode++;
 				}
 			}
-			curr_tnode++; //for DSP SINK
+			curr_tnode+=2; //for DSP SINK and SOURCE
 		} else { /* INPAD or OUTPAD */
 			if ((block[iblk].type == INPAD) || (block[iblk].type == OUTPAD)) {
 				block_pin_to_tnode[iblk][0] = curr_tnode; /* Pad input  */
@@ -817,12 +817,10 @@ static void build_dsp_tnodes(int iblk, int **block_pin_to_tnode,
 	int count = 0, num_edges;
 	t_tedge *tedge;
 
-	if (n_uses_clb_pin[0] == 0 && n_uses_clb_pin[1] != 0)
-		dsp_source++;
-	if (n_uses_clb_pin[0] != 0 && n_uses_clb_pin[1] == 0)
-		dsp_sink++;
-	if (n_uses_clb_pin[0] == 0 && n_uses_clb_pin[1] == 0)
-		return;
+	if(n_uses_clb_pin[1] == 0)
+		dsp_sink++;   // if DSP block have no output, both DSP_SOURCE and DSP_SINK are sinks to timing graph.
+	dsp_sink++;
+	dsp_source++;
 
 	num_edges = n_uses_clb_pin[1];
 	for (ipin = 0; ipin < pins_per_dsp; ipin++) {
@@ -831,15 +829,24 @@ static void build_dsp_tnodes(int iblk, int **block_pin_to_tnode,
 	}
 	inter_node++;
 	//printf("inter node is %d\n", inter_node);
-	tnode_descript[inter_node].type = DSP_SINK;
+	tnode_descript[inter_node].type = DSP_SOURCE;
 	tnode_descript[inter_node].ipin = OPEN;
 	tnode_descript[inter_node].isubblk = OPEN;
 	tnode_descript[inter_node].iblk = iblk;
+
+	tnode_descript[inter_node + 1].type = DSP_SINK;
+	tnode_descript[inter_node + 1].ipin = OPEN;
+	tnode_descript[inter_node + 1].isubblk = OPEN;
+	tnode_descript[inter_node + 1].iblk = iblk;
+
 
 	tnode[inter_node].num_edges = num_edges;
 	tnode[inter_node].out_edges = (t_tedge *) my_chunk_malloc(
 			num_edges * sizeof(t_tedge), &tedge_ch_list_head,
 			&tedge_ch_bytes_avail, &tedge_ch_next_avail);
+
+	tnode[inter_node + 1].num_edges = 0;
+	tnode[inter_node + 1].out_edges = NULL;
 
 	for (ipin = 0; ipin < pins_per_dsp; ipin++) {
 		inode = block_pin_to_tnode[iblk][ipin];
@@ -865,7 +872,7 @@ static void build_dsp_tnodes(int iblk, int **block_pin_to_tnode,
 						num_edges * sizeof(t_tedge), &tedge_ch_list_head,
 						&tedge_ch_bytes_avail, &tedge_ch_next_avail);
 				tedge = tnode[inode].out_edges;
-				tedge[0].to_node = inter_node;
+				tedge[0].to_node = inter_node + 1;
 				tedge[0].Tdel = T_dsp_in;
 				tnode_descript[inode].type = DSP_IPIN;
 			}

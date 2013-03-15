@@ -25,6 +25,7 @@ struct p_index *num_net_per_stage;
 struct p_index *num_block_per_stage;
 int num_stage, current_stage;
 int num_smbs = 0, num_pads = 0, max_smb_stage = 0, num_direct = 0;
+int max_dsp_stage = 0;
 struct s_clb ***stage_clb;
 int fs, fo, fi;
 
@@ -1434,11 +1435,12 @@ static void get_input(char *net_file, char *arch_file, int place_cost_type,
 	/* use num_smbs to give exact nx, ny for folding case */
 
 	if (is_folding)
-		max_smb_stage = count_num_smbs();
+		max_smb_stage = count_num_smbs(&max_dsp_stage);
 
 	printf("max_smb_stage %d\n", max_smb_stage);
+	printf("max_dsp_stage %d\n", max_dsp_stage);
 
-	init_arch(aspect_ratio, user_sized, max_smb_stage,
+	init_arch(aspect_ratio, user_sized, max_smb_stage, max_dsp_stage,
 			subblock_data_ptr->mem_density_x, subblock_data_ptr->mem_density_y);
 
 	printf("The circuit will be mapped into a %d x %d array of clbs.\n\n", nx,
@@ -1453,15 +1455,16 @@ static void get_input(char *net_file, char *arch_file, int place_cost_type,
 
 }
 
-static int count_num_smbs() {
+static int count_num_smbs(int *max_num_dsp) {
 	int **pos;
-	int count, iblk, k, i, cstage, begin, bcount, tar_pos, nblk;
+	int count, dsp_count, iblk, k, i, cstage, begin, bcount, tar_pos, dsp_tar_pos, nblk;
 	char* name;
 	struct s_hash *h_ptr;
 	boolean feasible;
 
 	printf("distinct smbs %d\n", num_smbs);
-	int total = num_smbs;
+	printf("distinct dsps %d\n", num_dsp);
+	int total = num_smbs + num_dsp;
 	pos = (int**) alloc_matrix(0, num_stage - 1, 0, total - 1, sizeof(int));
 	int *pos_fixed = (int*) my_malloc(num_blocks * sizeof(int));
 	for (i = 0; i < num_blocks; i++) {
@@ -1469,10 +1472,11 @@ static int count_num_smbs() {
 		//printf("the block %d(%s)\n", i, block[i].name);
 	}
 	for (i = 0; i < num_stage; i++)
-		for (k = 0; k < num_smbs; k++)
+		for (k = 0; k < total; k++)
 			pos[i][k] = -1;
 
 	count = 0;
+	dsp_count = 0;
 	for (iblk = 0; iblk < num_blocks; iblk++) {
 		if (block[iblk].type == CLB) { /* only place CLBs in center */
 			if (pos_fixed[iblk] == -1) {
@@ -1511,7 +1515,45 @@ static int count_num_smbs() {
 				}
 			}
 		}
+		if (block[iblk].type == DSP) { /* only place DSPs in center */
+			if (pos_fixed[iblk] == -1) {
+				tar_pos = -1;
+				name = block[iblk].name;
+				h_ptr = get_hash_entry(map_table, name);
+				begin = h_ptr->index;
+				bcount = h_ptr->count;
+				for (i = 0; i < num_dsp; i++) {
+					feasible = TRUE;
+					for (k = begin; k < begin + bcount; k++) {
+						nblk = blockmap_inf[k];
+						cstage = block[nblk].stage;
+						if (pos[cstage - 1][i + num_smbs] == 1) {
+							feasible = FALSE;
+							break;
+						}
+					}
+					if (feasible) {
+						tar_pos = i;
+						break;
+					}
+				}
+				if (tar_pos == -1) {
+					printf("error, not find position\n");
+					exit(1);
+				} else {
+					if (tar_pos > dsp_count)
+						dsp_count = tar_pos;
+					for (k = begin; k < begin + bcount; k++) {
+						nblk = blockmap_inf[k];
+						cstage = block[nblk].stage;
+						pos[cstage - 1][tar_pos + num_smbs] = 1;
+						pos_fixed[nblk] = 1;
+					}
+				}
+			}
+		}
 	}
+	*max_num_dsp = dsp_count + 1;
 	return count + 1;
 }
 

@@ -172,6 +172,7 @@ void read_net(char *net_file, t_subblock_data *subblock_data_ptr) {
 		}
 		printf("num_blocks %d\n", num_blocks);
 		printf("num_nets %d\n", num_nets);
+		printf("num_dsp %d\n", num_dsp);
 		if (doall && total_stage == 1) {
 			num_block_per_stage[0].num = num_blocks;
 			num_net_per_stage[0].num = num_nets + 1;
