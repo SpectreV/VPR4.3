@@ -228,6 +228,39 @@ t_seg_details *alloc_and_load_direct_details(int nodes_direct,
 	return (seg_details);
 }
 
+t_seg_details *alloc_and_load_direct_dsp_details(int nodes_dsp_direct,
+		t_segment_inf *segment_inf, int num_seg_types) {
+	int itrack, i, type_index;
+	float rmetal, cmetal;
+	t_seg_details *seg_details;
+	seg_details = (t_seg_details *) my_malloc(
+			nodes_dsp_direct * sizeof(t_seg_details));
+	//printf("num_seg %d\n", num_seg_types);
+	for (i = 0; i < num_seg_types; i++) { // printf("C %g, R %g\n", segment_inf[i].Rmetal, segment_inf[i].Cmetal);
+		if (segment_inf[i].type == DIRECT_DSP) {
+			rmetal = segment_inf[i].Rmetal;
+			cmetal = segment_inf[i].Cmetal;
+			//printf("rmetal %g cmetal %g\n", rmetal, cmetal);
+			type_index = i;
+			break;
+		}
+	}
+
+	for (itrack = 0; itrack < nodes_dsp_direct; itrack++) {
+		seg_details[itrack].length = 1;
+		seg_details[itrack].longline = FALSE;
+		seg_details[itrack].start = 1;
+		seg_details[itrack].cb = NULL;
+		seg_details[itrack].sb = NULL;
+		seg_details[itrack].Rmetal = rmetal;
+		seg_details[itrack].Cmetal = cmetal;
+		seg_details[itrack].wire_switch = OPEN;
+		seg_details[itrack].opin_switch = OPEN;
+		seg_details[itrack].index = type_index;
+	}
+	return (seg_details);
+}
+
 void free_seg_details(t_seg_details *seg_details, int nodes_per_chan) {
 
 	/* Frees all the memory allocated to an array of seg_details structures. */
@@ -462,6 +495,7 @@ int get_clb_opin_connections(int **clb_ipin_to_direct,
 
 	//nionio: clb opin to direct
 	//nionio: can do the same thing for pads
+	int no_direct_flag = 0;
 	if (if_direct)
 	// printf("come to direct links \n");
 	{
@@ -491,6 +525,8 @@ int get_clb_opin_connections(int **clb_ipin_to_direct,
 					tr_i = i - 1;
 					tr_j = j;
 					to_rr_type = DIREX;
+					if (clb[i - 1][j].type == DSP)
+						no_direct_flag = 1;
 					//nionio 8/14
 					/*if (i==1)
 					 //nionio 7/11
@@ -502,6 +538,8 @@ int get_clb_opin_connections(int **clb_ipin_to_direct,
 					tr_i = i;
 					tr_j = j;
 					to_rr_type = DIREX;
+					if (clb[i + 1][j].type == DSP)
+						no_direct_flag = 1;
 					if (i == nx)
 						pin_num = edge_pin;
 					else
@@ -510,6 +548,8 @@ int get_clb_opin_connections(int **clb_ipin_to_direct,
 					tr_i = i;
 					tr_j = j - 1;
 					to_rr_type = DIREY;
+					if (clb[i][j - 1].type == DSP)
+						no_direct_flag = 1;
 					//nionio 8/14
 					/*if (j==1)
 					 //nionio 7/11
@@ -521,6 +561,8 @@ int get_clb_opin_connections(int **clb_ipin_to_direct,
 					tr_i = i;
 					tr_j = j;
 					to_rr_type = DIREY;
+					if (clb[i][j + 1].type == DSP)
+						no_direct_flag = 1;
 					if (j == ny)
 						pin_num = edge_pin;
 					else
@@ -528,7 +570,7 @@ int get_clb_opin_connections(int **clb_ipin_to_direct,
 				}
 				//nionio modified
 				if (to_rr_type == DIREX && tr_i >= 0 && tr_i <= nx && tr_j > 0
-						&& tr_j <= ny && clb[tr_i][tr_j].type != DSP) {
+						&& tr_j <= ny && no_direct_flag == 0) {
 					to_node = get_rr_node_index(tr_i, tr_j, to_rr_type, pin_num,
 							nodes_per_chan, nodes_direct, io_rat,
 							rr_node_indices);
@@ -538,7 +580,7 @@ int get_clb_opin_connections(int **clb_ipin_to_direct,
 				}
 				//nionio modified
 				if (to_rr_type == DIREY && tr_i > 0 && tr_i <= nx && tr_j >= 0
-						&& tr_j <= ny && clb[tr_i][tr_j].type != DSP) {
+						&& tr_j <= ny && no_direct_flag == 0) {
 					to_node = get_rr_node_index(tr_i, tr_j, to_rr_type, pin_num,
 							nodes_per_chan, nodes_direct, io_rat,
 							rr_node_indices);
@@ -686,30 +728,35 @@ int get_pad_opin_connections(int **pads_to_tracks, int *pads_to_direct,
 	//int dir_num=max(stage_io_rat, nodes_direct);
 	//nionio 8/14
 	int dir_num = nodes_direct;
+	int clb_type = CLB;
 	if (if_direct) {
 		if (j == 0) { /* Bottom row of pads. */
 			chan_i = i;
 			chan_j = j;
 			chan_type = DIREY;
+			clb_type = clb[i][j + 1].type;
 			itrack = pads_to_direct[ipad];
 		} else if (j == ny + 1) {
 			chan_i = i;
 			chan_j = j - 1;
 			chan_type = DIREY;
+			clb_type = clb[i][j - 1].type;
 			itrack = pads_to_direct[ipad] + dir_num;
 		} else if (i == 0) {
 			chan_i = i;
 			chan_j = j;
 			chan_type = DIREX;
+			clb_type = clb[i + 1][j].type;
 			itrack = pads_to_direct[ipad];
 		} else if (i == nx + 1) {
 			chan_i = i - 1;
 			chan_j = j;
 			chan_type = DIREX;
+			clb_type = clb[i - 1][j].type;
 			itrack = pads_to_direct[ipad] + dir_num;
 		}
 		//nionio add if 8/14
-		if (pads_to_direct[ipad] != -1) {
+		if (pads_to_direct[ipad] != -1 && clb_type != DSP) {
 			to_node = get_rr_node_index(chan_i, chan_j, chan_type, itrack,
 					nodes_per_chan, nodes_direct, io_rat, rr_node_indices);
 
@@ -781,21 +828,18 @@ int **alloc_and_load_rr_node_indices(int nodes_per_clb, int nodes_per_pad,
 	 }*/
 
 	//nionio 7/11
-	if (nodes_direct > 2) {
-		direx_rr_indices = (int ***) alloc_matrix3(0, nx, 1, ny, 0,
-				2 * nodes_direct - 1, sizeof(int));
-		direy_rr_indices = (int ***) alloc_matrix3(1, nx, 0, ny, 0,
-				2 * nodes_direct - 1, sizeof(int));
-	} else {
-		direx_rr_indices = (int ***) alloc_matrix3(0, nx, 1, ny, 0, 2 * 2,
-				sizeof(int));
-		direy_rr_indices = (int ***) alloc_matrix3(1, nx, 0, ny, 0, 2 * 2,
-				sizeof(int));
-	}
+	nodes_direct = max(2, nodes_direct);
+
+	direx_rr_indices = (int ***) alloc_matrix3(0, nx, 1, ny, 0,
+			2 * nodes_direct - 1, sizeof(int));
+	direy_rr_indices = (int ***) alloc_matrix3(1, nx, 0, ny, 0,
+			2 * nodes_direct - 1, sizeof(int));
 
 	index = 0;
 
 	int x_off, y_off;
+
+	int iclass;
 
 	for (i = 0; i <= nx + 1; i++) {
 		for (j = 0; j <= ny + 1; j++) {
@@ -818,25 +862,25 @@ int **alloc_and_load_rr_node_indices(int nodes_per_clb, int nodes_per_pad,
 					 index = load_direy_rr_indices (nodes_direct, index, i, j);*/
 
 					//nionio 7/11
-					if ((i == nx) && (2 > nodes_direct))
-						index = load_direx_rr_indices(2, index, i, j);
-					else
+					if (clb[i + 1][j].type != DSP)
 						index = load_direx_rr_indices(nodes_direct, index, i,
 								j);
-					if ((j == ny) && (2 > nodes_direct))
-						index = load_direy_rr_indices(2, index, i, j);
-					else
+					if (clb[i][j + 1].type != DSP)
 						index = load_direy_rr_indices(nodes_direct, index, i,
 								j);
 				}
 			} else if (clb[i][j].type == DSP) {
-				if (clb[i][j].x_off == 0 && clb[i][j].y_off == 0)
+				if (clb[i][j].x_off == 0 && clb[i][j].y_off == 0) {
 					index += dsp_num_class + pins_per_dsp;
+					if (clb[i][j + dsp_h].type == DSP)
+						index += 2 * num_dsp_direct; // direct links to upper dsp block
+				}
 
 				index = load_chanx_rr_indices(seg_details_x, nodes_per_chan,
 						index, i, j);
 				index = load_chany_rr_indices(seg_details_y, nodes_per_chan,
 						index, i, j);
+
 			} else if (clb[i][j].type == IO) {
 				index += nodes_per_pad;
 				if (j == 0) { /* Bottom row */
@@ -848,11 +892,9 @@ int **alloc_and_load_rr_node_indices(int nodes_per_clb, int nodes_per_pad,
 						 index = load_direy_rr_indices (nodes_direct, index, i, j);
 						 else index = load_direy_rr_indices (io_rat, index, i, j);*/
 						//nionio 7/11
-						if (nodes_direct > 2)
+						if (clb[i][j + 1].type != DSP)
 							index = load_direy_rr_indices(nodes_direct, index,
 									i, j);
-						else
-							index = load_direy_rr_indices(2, index, i, j);
 					}
 				}
 				if (i == 0) { /* Leftmost column */
@@ -864,11 +906,9 @@ int **alloc_and_load_rr_node_indices(int nodes_per_clb, int nodes_per_pad,
 						 index = load_direx_rr_indices (nodes_direct, index, i, j);
 						 else index = load_direx_rr_indices (io_rat, index, i, j);*/
 						//nionio 7/11
-						if (nodes_direct > 2)
+						if (clb[i + 1][j].type != DSP)
 							index = load_direx_rr_indices(nodes_direct, index,
 									i, j);
-						else
-							index = load_direx_rr_indices(2, index, i, j);
 					}
 				}
 			}
@@ -1145,24 +1185,11 @@ int get_rr_node_index(int i, int j, t_rr_type rr_type, int ioff,
 			index = chany_rr_indices[i][j][ioff];
 			return (index);
 
-		case DIREX:
-			//nionio 7/11
-			//if (i==nx) assert (ioff < 2*io_rat);
-			if ((i == nx) || (i == 0))
-				assert(ioff < 2 * stage_io_rat);
-			else
-				assert(ioff < 2 * nodes_direct);
-			index = direx_rr_indices[i][j][ioff];
-			return (index);
-
 		case DIREY:
 			//nionio 7/11
 			//if (j==ny) assert (ioff < 2*io_rat);
-			if ((j == ny) || (j == 0))
-				assert(ioff < 2 * stage_io_rat);
-			else
-				assert(ioff < 2 * nodes_direct);
-			index = direy_rr_indices[i][j][ioff];
+			assert(clb[i][j + dsp_h].type == DSP);
+			index += dsp_num_class + pins_per_dsp + ioff;
 			return (index);
 
 		default:

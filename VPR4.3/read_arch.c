@@ -1202,6 +1202,48 @@ static void get_segment_inf(FILE *fp_arch, char *buf, t_segment_inf *seg_ptr,
 		}
 		printf("R %g, C %g\n", seg_ptr->Rmetal, seg_ptr->Cmetal);
 		return;
+	} if (strcmp(ptr, "direct_dsp:") == 0) {
+		if_direct = TRUE;
+		seg_ptr->type = DIRECT_DSP;
+		seg_ptr->frequency = 0;
+		seg_ptr->length = 5;
+		seg_ptr->opin_switch = OPEN;
+		seg_ptr->wire_switch = OPEN;
+		seg_ptr->frac_cb = 0;
+		seg_ptr->frac_sb = 0;
+		seg_ptr->longline = FALSE;
+
+		check_keyword(fp_arch, buf, "Track:");
+		ptr = get_middle_token(fp_arch, buf);
+		num_dsp_direct = atoi(ptr);
+
+		check_keyword(fp_arch, buf, "opin_switch:");
+
+		ptr = get_middle_token(fp_arch, buf);
+		seg_ptr->opin_switch = my_atoi(ptr);
+
+		check_keyword(fp_arch, buf, "Rmetal:");
+		ptr = get_middle_token(fp_arch, buf);
+		seg_ptr->Rmetal = atof(ptr);
+		//printf("rmetal %s %g %g\n", ptr, atof(ptr), seg_ptr->Rmetal);
+		if (seg_ptr->Rmetal < 0.) {
+			printf("Error on line %d:  Rmetal value (%g) is out of range.\n",
+					linenum, seg_ptr->Rmetal);
+			exit(1);
+		}
+
+		check_keyword(fp_arch, buf, "Cmetal:");
+
+		ptr = get_last_token(fp_arch, buf);
+		seg_ptr->Cmetal = atof(ptr);
+		//printf("cmetal %s %g %g %g\n", ptr, atof(ptr), seg_ptr->Cmetal, seg_ptr->Rmetal);
+		if (seg_ptr->Cmetal < 0.) {
+			printf("Error on line %d:  Cmetal value (%g) is out of range.\n",
+					linenum, seg_ptr->Cmetal);
+			exit(1);
+		}
+		printf("R %g, C %g\n", seg_ptr->Rmetal, seg_ptr->Cmetal);
+		return;
 	} else if (strcmp(ptr, "frequency:") == 0) {
 		ptr = get_middle_token(fp_arch, buf);
 		seg_ptr->frequency = atof(ptr);

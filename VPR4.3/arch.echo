@@ -65,14 +65,15 @@ Fc value is fraction of tracks in a channel.
 Fc_output: 1.  Fc_input: 1.  Fc_pad: 1.
 switch_block_type: SUBSET.
 
-num_segment: 3,  num_switch: 6.
+num_segment: 4,  num_switch: 6.
 (Two switch types were generated automatically.)
 #5:  delayless switch.  #4:  wire_to_ipin_switch.
 
 Seg. #	freq.	length	longln	opin_sw	wire_sw	Frac_cb	Frac_sb	Cmetal	Rmetal
 0	0	1	0	0	-1	0	0	6e-15	20
-1	0.5	2	0	0	2	0.5	0.5	8.5e-15	29
-2	0.5	4	0	0	2	0.25	0.33	8.5e-15	29
+1	0	5	0	0	-1	0	0	3e-14	100
+2	0.5	2	0	0	2	0.5	0.5	8.5e-15	29
+3	0.5	4	0	0	2	0.25	0.33	8.5e-15	29
 
 Switch#	buff?	R	Cin	Cout	Tdel
 0	1	1839	2.15e-15	3.22e-15	2e-11

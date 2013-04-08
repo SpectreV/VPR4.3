@@ -559,10 +559,6 @@ void check_node(int inode, enum e_route_type route_type) {
 			printf(
 					"Warning: Direct Link X at [%d][%d] meets a DSP block on its right.\n",
 					xhigh, yhigh);
-		} else if (rr_type == DIREY && clb[xhigh][yhigh + 1].type == DSP) {
-			printf(
-					"Warning: Direct Link Y at [%d][%d] meets a DSP block on its top.\n",
-					xhigh, yhigh);
 		} else if (num_edges <= 0) {
 			printf("Error in check_node: node %d has no edges.\n", inode);
 			exit(1);

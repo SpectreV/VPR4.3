@@ -11,19 +11,19 @@ cb list: 1 0
 sb list: 1 0 1 
 
 Track: 2.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
+Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
 cb list: 1 0 
 sb list: 1 0 1 
 
 Track: 3.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
+Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
 cb list: 1 0 
 sb list: 1 0 1 
 
 Track: 4.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
+Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
 cb list: 1 0 
 sb list: 1 0 1 
@@ -35,361 +35,37 @@ cb list: 1 0
 sb list: 1 0 1 
 
 Track: 6.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
+Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
+cb list: 1 0 0 0 
+sb list: 1 0 0 0 1 
 
 Track: 7.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
+Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
+cb list: 1 0 0 0 
+sb list: 1 0 0 0 1 
 
 Track: 8.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
+Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
+cb list: 1 0 0 0 
+sb list: 1 0 0 0 1 
 
 Track: 9.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
+Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
+cb list: 1 0 0 0 
+sb list: 1 0 0 0 1 
 
 Track: 10.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
+Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
+cb list: 1 0 0 0 
+sb list: 1 0 0 0 1 
 
 Track: 11.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 12.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 13.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 14.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 15.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 16.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 17.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 18.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 19.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 20.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 21.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 22.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 23.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 24.
-Length: 2,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 25.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 26.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 27.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 28.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 29.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 30.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 31.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 32.
-Length: 2,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 
-sb list: 1 0 1 
-
-Track: 33.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 34.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 35.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 36.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 37.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 38.
-Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 39.
-Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 40.
-Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 41.
-Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 42.
-Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 43.
-Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 44.
-Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 45.
-Length: 4,  Start: 2,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 46.
-Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 47.
-Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 48.
-Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 49.
-Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 50.
-Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 51.
-Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 52.
-Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 53.
-Length: 4,  Start: 3,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 54.
 Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 55.
-Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 56.
-Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 57.
-Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 58.
-Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 59.
-Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 60.
-Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 61.
-Length: 4,  Start: 4,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 62.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 63.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 64.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
-Rmetal: 29  Cmetal: 8.5e-15
-cb list: 1 0 0 0 
-sb list: 1 0 0 0 1 
-
-Track: 65.
-Length: 4,  Start: 1,  Long line: 0  wire_switch: 2  opin_switch: 0.
 Rmetal: 29  Cmetal: 8.5e-15
 cb list: 1 0 0 0 
 sb list: 1 0 0 0 1 

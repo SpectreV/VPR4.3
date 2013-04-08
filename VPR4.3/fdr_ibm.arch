@@ -53,21 +53,21 @@ outpin class: 1 top
 outpin class: 1 top
 inpin class: 2 global top   # Clock, global -> routed on a special resource.
 
-dsp_inpin class: 0 num: 16 left 
-dsp_inpin class: 0 num: 16 top 
-dsp_inpin class: 0 num: 17 right 
-dsp_inpin class: 0 num: 17 bottom 
+dsp_inpin class: 0 num: 24 left 
+dsp_inpin class: 0 num: 25 top 
+dsp_inpin class: 0 num: 25 right 
+dsp_inpin class: 0 num: 24 bottom 
 dsp_outpin class: 1 num: 16 left 
-dsp_outpin class: 1 num: 17 top 
+dsp_outpin class: 1 num: 16 top 
 dsp_outpin class: 1 num: 16 right 
-dsp_outpin class: 1 num: 16 bottom 
+dsp_outpin class: 1 num: 17 bottom 
 dsp_inpin class: 2 num: 1 global left  # Clock;
 
-dsp_width	4
-dsp_height	4
+dsp_width	5
+dsp_height	5
 dsp_fc		1
-dsp_loc_start	1
-dsp_loc_repeat	15
+dsp_loc_start	3
+dsp_loc_repeat	9
 
 # Class 0 -> logic cluster inputs, Class 1 -> Outputs, Class 2 -> clock.
 
@@ -97,6 +97,8 @@ Fc_direct 0.25
 # 10lamda for pass transistor
 
 segment direct: Track: 4 opin_switch: 0 Rmetal: 20 Cmetal: 6e-15
+
+segment direct_dsp: Track: 65 opin_switch: 0 Rmetal: 100 Cmetal: 3e-14
 
 segment frequency: 0.5 length: 2 wire_switch: 2 opin_switch: 0 Frac_cb: 0.5 \
          Frac_sb: 0.5 Rmetal: 29 Cmetal: 8.5e-15

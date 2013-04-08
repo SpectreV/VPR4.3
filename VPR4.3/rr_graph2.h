@@ -28,6 +28,9 @@ t_seg_details *alloc_and_load_seg_details(int nodes_per_chan,
 t_seg_details *alloc_and_load_direct_details(int nodes_per_chan,
 		t_segment_inf *segment_inf, int num_seg_types);
 
+t_seg_details *alloc_and_load_direct_dsp_details(int nodes_per_chan,
+		t_segment_inf *segment_inf, int num_seg_types);
+
 void dump_seg_details(t_seg_details *seg_details, int nodes_per_chan,
 		char *fname);
 

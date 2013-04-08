@@ -25,6 +25,7 @@ struct p_index *num_net_per_stage;
 struct p_index *num_block_per_stage;
 int num_stage, current_stage;
 int num_smbs = 0, num_pads = 0, max_smb_stage = 0, num_direct = 0;
+int num_dsp_direct = 0;
 int max_dsp_stage = 0;
 struct s_clb ***stage_clb;
 int fs, fo, fi;
@@ -83,6 +84,7 @@ struct s_class *dsp_class_inf; /*[0...dsp_num_class-1]*/
 int dsp_num_class;
 int dsp_fc;
 int dsp_loc_start, dsp_loc_repeat;
+int *dsp_pin_to_direct;
 
 /******** Structures defining the routing ***********/
 
@@ -133,6 +135,8 @@ static int read_int_option(int argc, char *argv[], int iarg);
 static float read_float_option(int argc, char *argv[], int iarg);
 
 static int count_num_smbs();
+
+static void alloc_dsp_pin_to_direct();
 
 /************************* Subroutine definitions ***************************/
 
@@ -1453,11 +1457,181 @@ static void get_input(char *net_file, char *arch_file, int place_cost_type,
 		exit(1);
 	}
 
+	alloc_dsp_pin_to_direct();
+
+}
+
+static void alloc_dsp_pin_to_direct() {
+	dsp_pin_to_direct = (int *) my_malloc(pins_per_dsp * sizeof(int));
+	num_dsp_direct = 65;
+
+	int pin_index;
+	int dir_index;
+
+	/*temporary allocation*/
+
+	//left 24 input pins
+	dsp_pin_to_direct[0] = 0; //A[0-3] <- Di[0-3]
+	dsp_pin_to_direct[1] = 1;
+	dsp_pin_to_direct[2] = 2;
+	dsp_pin_to_direct[3] = 3;
+
+	dsp_pin_to_direct[4] = 0; //C[0-3] <- Di[0-3]
+	dsp_pin_to_direct[5] = 1;
+	dsp_pin_to_direct[6] = 2;
+	dsp_pin_to_direct[7] = 3;
+
+	dsp_pin_to_direct[8] = 16; //B[0-3] <- Di[16-19]
+	dsp_pin_to_direct[9] = 17;
+	dsp_pin_to_direct[10] = 18;
+	dsp_pin_to_direct[11] = 19;
+
+	dsp_pin_to_direct[12] = 16; //D[0-3] <- Di[16-19]
+	dsp_pin_to_direct[13] = 17;
+	dsp_pin_to_direct[14] = 18;
+	dsp_pin_to_direct[15] = 19;
+
+	for (pin_index = 16, dir_index = 32; pin_index < 24;
+			++pin_index, ++dir_index) {
+		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_in[0-7] <- Di[32-39]
+	}
+
+	//top 25 input pins
+
+	dsp_pin_to_direct[24] = 4; //A[4-7] <- Di[4-7]
+	dsp_pin_to_direct[25] = 5;
+	dsp_pin_to_direct[26] = 6;
+	dsp_pin_to_direct[27] = 7;
+
+	dsp_pin_to_direct[28] = 4; //C[4-7] <- Di[4-7]
+	dsp_pin_to_direct[29] = 5;
+	dsp_pin_to_direct[30] = 6;
+	dsp_pin_to_direct[31] = 7;
+
+	dsp_pin_to_direct[32] = 20; //B[4-7] <- Di[20-23]
+	dsp_pin_to_direct[33] = 21;
+	dsp_pin_to_direct[34] = 22;
+	dsp_pin_to_direct[35] = 23;
+
+	dsp_pin_to_direct[36] = 20; //D[4-7] <- Di[20-23]
+	dsp_pin_to_direct[37] = 21;
+	dsp_pin_to_direct[38] = 22;
+	dsp_pin_to_direct[39] = 23;
+
+	for (pin_index = 40, dir_index = 40; pin_index < 48;
+			++pin_index, ++dir_index) {
+		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_in[8-15] <- Di[40-47]
+	}
+
+	dsp_pin_to_direct[48] = 64; //carry_in <- Di[64]
+
+	// right 24 input pins
+
+	dsp_pin_to_direct[49] = 8; //A[8-11] <- Di[8-11]
+	dsp_pin_to_direct[50] = 9;
+	dsp_pin_to_direct[51] = 10;
+	dsp_pin_to_direct[52] = 11;
+
+	dsp_pin_to_direct[53] = 8; //C[8-11] <- Di[8-11]
+	dsp_pin_to_direct[54] = 9;
+	dsp_pin_to_direct[55] = 10;
+	dsp_pin_to_direct[56] = 11;
+
+	dsp_pin_to_direct[57] = 24; //B[8-11] <- Di[24-27]
+	dsp_pin_to_direct[58] = 25;
+	dsp_pin_to_direct[59] = 26;
+	dsp_pin_to_direct[60] = 27;
+
+	dsp_pin_to_direct[61] = 24; //D[8-11] <- Di[24-27]
+	dsp_pin_to_direct[62] = 25;
+	dsp_pin_to_direct[63] = 26;
+	dsp_pin_to_direct[64] = 27;
+
+	for (pin_index = 65, dir_index = 48; pin_index < 73;
+			++pin_index, ++dir_index) {
+		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_in[16-23] <- Di[48-55]
+	}
+
+	//pin 73 is reset
+	dsp_pin_to_direct[73] = -1;
+	// bottom 24 input pins
+
+	dsp_pin_to_direct[74] = 12; //A[12-15] <- Di[12-15]
+	dsp_pin_to_direct[75] = 13;
+	dsp_pin_to_direct[76] = 14;
+	dsp_pin_to_direct[77] = 15;
+
+	dsp_pin_to_direct[78] = 12; //C[12-15] <- Di[12-15]
+	dsp_pin_to_direct[79] = 13;
+	dsp_pin_to_direct[80] = 14;
+	dsp_pin_to_direct[81] = 15;
+
+	dsp_pin_to_direct[82] = 28; //B[12-15] <- Di[28-31]
+	dsp_pin_to_direct[83] = 29;
+	dsp_pin_to_direct[84] = 30;
+	dsp_pin_to_direct[85] = 31;
+
+	dsp_pin_to_direct[86] = 28; //D[12-15] <- Di[28-31]
+	dsp_pin_to_direct[87] = 29;
+	dsp_pin_to_direct[88] = 30;
+	dsp_pin_to_direct[89] = 31;
+
+	for (pin_index = 90, dir_index = 56; pin_index < 98;
+			++pin_index, ++dir_index) {
+		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_in[24-31] <- Di[56-63]
+	}
+
+	// left 16 output pins
+	for (pin_index = 98, dir_index = 0; pin_index < 106;
+			++pin_index, ++dir_index)
+		dsp_pin_to_direct[pin_index] = dir_index; // Eout[0-7] -> Di[0-7]
+
+	for (pin_index = 106, dir_index = 32; pin_index < 113;
+			++pin_index, ++dir_index)
+		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_out[0-7] -> Di[32-39]
+
+	// top 16 output pins
+	for (pin_index = 114, dir_index = 8; pin_index < 122;
+			++pin_index, ++dir_index)
+		dsp_pin_to_direct[pin_index] = dir_index; // Eout[8-15] -> Di[8-15]
+
+	for (pin_index = 122, dir_index = 40; pin_index < 130;
+			++pin_index, ++dir_index)
+		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_out[8-15] -> Di[40-47]
+
+	//right 16 output pins
+	for (pin_index = 130, dir_index = 16; pin_index < 138;
+			++pin_index, ++dir_index)
+		dsp_pin_to_direct[pin_index] = dir_index; // Eout[16-23] -> Di[16-23]
+
+	for (pin_index = 138, dir_index = 48; pin_index < 146;
+			++pin_index, ++dir_index)
+		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_out[16-23] -> Di[48-55]
+
+	//bottom 17 output pins
+	for (pin_index = 146, dir_index = 24; pin_index < 154;
+			++pin_index, ++dir_index)
+		dsp_pin_to_direct[pin_index] = dir_index; // Eout[24-31] -> Di[24-31]
+
+	for (pin_index = 154, dir_index = 56; pin_index < 162;
+			++pin_index, ++dir_index)
+		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_out[24-31] -> Di[56-63]
+
+	dsp_pin_to_direct[162] = 64; // carry_out -> Di[64]
+
+	dsp_pin_to_direct[163] = -1;
+
+	/*for (pin_index = 0; pin_index < pins_per_dsp; ++pin_index) {
+		printf("pin %d to direct %d.\n", pin_index, dsp_pin_to_direct[pin_index]);
+	}
+
+	fflush(stdout);*/
 }
 
 static int count_num_smbs(int *max_num_dsp) {
 	int **pos;
-	int count, dsp_count, iblk, k, i, cstage, begin, bcount, tar_pos, dsp_tar_pos, nblk;
+	int count, dsp_count, iblk, k, i, cstage, begin, bcount, tar_pos,
+			dsp_tar_pos, nblk;
 	char* name;
 	struct s_hash *h_ptr;
 	boolean feasible;

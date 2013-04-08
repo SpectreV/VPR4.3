@@ -77,7 +77,8 @@ static void alloc_and_load_rr_graph(int **rr_node_indices, int *pin_to_opin,
 		enum e_route_type route_type,
 		struct s_det_routing_arch det_routing_arch,
 		t_seg_details *seg_details_x, t_seg_details *seg_details_y,
-		t_seg_details *seg_direct_x, t_seg_details *seg_direct_y);
+		t_seg_details *seg_direct_x, t_seg_details *seg_direct_y,
+		t_seg_details *seg_direct_dsp);
 
 static void build_rr_clb(int **rr_node_indices, int Fc_output,
 		int **clb_ipin_to_direct, int *** clb_opin_to_tracks,
@@ -88,7 +89,8 @@ static void build_rr_clb(int **rr_node_indices, int Fc_output,
 static void build_rr_dsp(int **rr_node_indices, int Fc_dsp,
 		int *****dsp_opin_to_tracks, int nodes_per_chan, int nodes_direct,
 		int i, int j, int delayless_switch, t_seg_details *seg_details_x,
-		t_seg_details *seg_details_y);
+		t_seg_details *seg_details_y, t_seg_details *seg_direct_dsp,
+		int cost_index_offset);
 
 static void build_rr_pads(int **rr_node_indices, int Fc_pad, int nodes_direct,
 		int **pads_to_tracks, int *pads_to_direct, int nodes_per_chan, int i,
@@ -206,7 +208,7 @@ void build_rr_graph(enum e_route_type route_type,
 	int **clb_ipin_to_direct;
 	int *pin_to_opin;
 	t_seg_details *seg_details_x, *seg_details_y; /* [0 .. nodes_per_chan-1] */
-	t_seg_details *seg_direct_x, *seg_direct_y; /* added by Wei */
+	t_seg_details *seg_direct_x, *seg_direct_y, *seg_direct_dsp; /* added by Wei */
 
 	nodes_per_clb = num_class + pins_per_clb;
 	nodes_per_pad = 4 * io_rat; /* SOURCE, SINK, OPIN, and IPIN */
@@ -247,6 +249,9 @@ void build_rr_graph(enum e_route_type route_type,
 				segment_inf, det_routing_arch.num_segment);
 
 		seg_direct_y = alloc_and_load_direct_details(max(nodes_direct, io_rat),
+				segment_inf, det_routing_arch.num_segment);
+
+		seg_direct_dsp = alloc_and_load_direct_dsp_details(num_dsp_direct,
 				segment_inf, det_routing_arch.num_segment);
 	}
 #ifdef DEBUG
@@ -320,7 +325,7 @@ void build_rr_graph(enum e_route_type route_type,
 		Fc_ratio = (float) Fc_output / (float) Fc_input;
 
 	if (Fc_input <= nodes_per_chan - 2
-			&& fabs(Fc_ratio - nint (Fc_ratio)) < .5 / (float) nodes_per_chan)
+			&& fabs(Fc_ratio - nint (Fc_ratio) ) < .5 / (float) nodes_per_chan)
 		perturb_ipin_switch_pattern = TRUE;
 	else
 		perturb_ipin_switch_pattern = FALSE;
@@ -359,7 +364,7 @@ void build_rr_graph(enum e_route_type route_type,
 			clb_ipin_to_direct, pads_to_tracks, tracks_to_pads, pads_to_direct,
 			Fc_output, Fc_input, Fc_pad, Fc_dsp, nodes_per_chan, nodes_direct,
 			route_type, det_routing_arch, seg_details_x, seg_details_y,
-			seg_direct_x, seg_direct_y);
+			seg_direct_x, seg_direct_y, seg_direct_dsp);
 	add_rr_graph_C_from_switches(timing_inf.C_ipin_cblock);
 
 	//nionio: related to cost, don't touch this?
@@ -458,7 +463,8 @@ static void alloc_and_load_rr_graph(int **rr_node_indices, int *pin_to_opin,
 		enum e_route_type route_type,
 		struct s_det_routing_arch det_routing_arch,
 		t_seg_details *seg_details_x, t_seg_details *seg_details_y,
-		t_seg_details *seg_direct_x, t_seg_details *seg_direct_y) {
+		t_seg_details *seg_direct_x, t_seg_details *seg_direct_y,
+		t_seg_details *seg_direct_dsp) {
 
 	/* Does the actual work of allocating the rr_graph and filling all the *
 	 * appropriate values.  Everything up to this was just a prelude!      */
@@ -471,7 +477,7 @@ static void alloc_and_load_rr_graph(int **rr_node_indices, int *pin_to_opin,
 	/* Allocate storage for the graph nodes.  Storage for the edges will be *
 	 * allocated as I fill in the graph.                                    */
 
-	if (rr_mem_chunk_list_head != NULL) {
+	if (rr_mem_chunk_list_head != NULL ) {
 		printf(
 				"Error in alloc_and_load_rr_graph:  rr_mem_chunk_list_head = %p.\n",
 				rr_mem_chunk_list_head);
@@ -523,7 +529,8 @@ static void alloc_and_load_rr_graph(int **rr_node_indices, int *pin_to_opin,
 				if (clb[i][j].x_off == 0 && clb[i][j].y_off == 0)
 					build_rr_dsp(rr_node_indices, Fc_dsp, dsp_opin_to_tracks,
 							nodes_per_chan, nodes_direct, i, j,
-							delayless_switch, seg_details_x, seg_details_y);
+							delayless_switch, seg_details_x, seg_details_y,
+							seg_direct_dsp, CHANX_COST_INDEX_START);
 				build_rr_xchan(rr_node_indices, route_type, tracks_to_clb_ipin,
 						tracks_to_pads, tracks_to_dsp_ipin, i, j,
 						nodes_per_chan, nodes_direct, io_rat, switch_block_type,
@@ -588,7 +595,7 @@ void free_rr_graph(void) {
 	 * a routing graph exists and can be freed.  Hence, you can call this   *
 	 * routine even if you're not sure of whether a rr_graph exists or not. */
 
-	if (rr_mem_chunk_list_head == NULL) /* Nothing to free. */
+	if (rr_mem_chunk_list_head == NULL ) /* Nothing to free. */
 		return;
 
 	free_chunk_memory(rr_mem_chunk_list_head); /* Frees ALL "chunked" data */
@@ -959,7 +966,8 @@ static void build_rr_clb(int **rr_node_indices, int Fc_output,
 static void build_rr_dsp(int **rr_node_indices, int Fc_dsp,
 		int *****dsp_opin_to_tracks, int nodes_per_chan, int nodes_direct,
 		int i, int j, int delayless_switch, t_seg_details *seg_details_x,
-		t_seg_details *seg_details_y) {
+		t_seg_details *seg_details_y, t_seg_details *seg_direct_dsp,
+		int cost_index_offset) {
 
 	/* Load up the rr_node structures for the clb at location (i,j).  I both  *
 	 * fill in fields that shouldn't change during the entire routing and     *
@@ -968,6 +976,7 @@ static void build_rr_dsp(int **rr_node_indices, int Fc_dsp,
 	int ipin, iclass, inode, pin_num, to_node, num_edges;
 	t_linked_edge *edge_list_head;
 	int x, y;
+	int top_dsp = 0, bot_dsp = 0;
 
 	/* SOURCES and SINKS first.   */
 
@@ -1043,8 +1052,14 @@ static void build_rr_dsp(int **rr_node_indices, int Fc_dsp,
 
 	/* Now do the pins.  */
 
+	if (clb[i][j + dsp_h].type == DSP)
+		top_dsp = 1;
+	if (clb[i][j - 1].type == DSP)
+		bot_dsp = 1;
+
 	for (ipin = 0; ipin < pins_per_dsp; ipin++) {
 		iclass = dsp_pin_class[ipin];
+
 		if (dsp_class_inf[iclass].type == DRIVER) { /* OPIN */
 			//printf("opin \n");
 			inode = get_rr_node_index(i, j, OPIN, ipin, nodes_per_chan,
@@ -1061,6 +1076,22 @@ static void build_rr_dsp(int **rr_node_indices, int Fc_dsp,
 							Fc_dsp, seg_details_x, seg_details_y,
 							&edge_list_head, nodes_per_chan, rr_node_indices);
 				}
+			if (top_dsp) {  // OPIN to top direct link
+				to_node = get_rr_node_index(i, j, DIREY,
+						dsp_pin_to_direct[ipin], nodes_per_chan, nodes_direct,
+						io_rat, rr_node_indices);
+				num_edges++;
+				edge_list_head = insert_in_edge_list(edge_list_head, to_node,
+						delayless_switch, &free_edge_list_head);
+			}
+			if (bot_dsp) {  // OPIN to bottom direct link
+				to_node = get_rr_node_index(i, j - dsp_h, DIREY,
+						dsp_pin_to_direct[ipin] + num_dsp_direct,
+						nodes_per_chan, nodes_direct, io_rat, rr_node_indices);
+				num_edges++;
+				edge_list_head = insert_in_edge_list(edge_list_head, to_node,
+						delayless_switch, &free_edge_list_head);
+			}
 			//printf("opin %d\n", ipin);
 			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
 
@@ -1101,6 +1132,79 @@ static void build_rr_dsp(int **rr_node_indices, int Fc_dsp,
 		rr_node[inode].R = 0;
 
 		rr_node[inode].ptc_num = ipin;
+	}
+
+	int idirect, seg_index;
+
+	if (top_dsp) {
+		for (idirect = 0; idirect < num_dsp_direct; idirect++) { //direct links from bottom dsp to top
+			inode = get_rr_node_index(i, j, DIREY, idirect, nodes_per_chan,
+					nodes_direct, io_rat, rr_node_indices);
+			num_edges = 0;
+			edge_list_head = NULL;
+			for (ipin = 0; ipin < pins_per_dsp; ++ipin) {
+				iclass = dsp_pin_class[ipin];
+				if (dsp_class_inf[iclass].type == RECEIVER
+						&& dsp_pin_to_direct[ipin] == idirect) {
+					num_edges++;
+					to_node = get_rr_node_index(i, j + dsp_h, IPIN, ipin,
+							nodes_per_chan, nodes_direct, io_rat,
+							rr_node_indices);
+					edge_list_head = insert_in_edge_list(edge_list_head,
+							to_node, delayless_switch, &free_edge_list_head);
+				}
+			}
+			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
+			seg_index = seg_direct_dsp[idirect].index;
+			rr_node[inode].cost_index = cost_index_offset + seg_index;
+			rr_node[inode].occ = 0;
+			rr_node[inode].capacity = 1;
+
+			rr_node[inode].xlow = i;
+			rr_node[inode].xhigh = i;
+			rr_node[inode].ylow = j;
+			rr_node[inode].yhigh = j;
+
+			rr_node[inode].R = seg_direct_dsp[idirect].Rmetal;
+			rr_node[inode].C = seg_direct_dsp[idirect].Cmetal;
+
+			rr_node[inode].ptc_num = idirect;
+			rr_node[inode].type = DIREY;
+		}
+		for (idirect = 0; idirect < num_dsp_direct; idirect++) { //direct links from top dsp to bottom
+			inode = get_rr_node_index(i, j, DIREY, idirect + num_dsp_direct,
+					nodes_per_chan, nodes_direct, io_rat, rr_node_indices);
+			num_edges = 0;
+			edge_list_head = NULL;
+			for (ipin = 0; ipin < pins_per_dsp; ++ipin) {
+				iclass = dsp_pin_class[ipin];
+				if (dsp_class_inf[iclass].type == RECEIVER
+						&& dsp_pin_to_direct[ipin] == idirect) {
+					num_edges++;
+					to_node = get_rr_node_index(i, j, IPIN, ipin,
+							nodes_per_chan, nodes_direct, io_rat,
+							rr_node_indices);
+					edge_list_head = insert_in_edge_list(edge_list_head,
+							to_node, delayless_switch, &free_edge_list_head);
+				}
+			}
+			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
+			seg_index = seg_direct_dsp[idirect].index;
+			rr_node[inode].cost_index = cost_index_offset + seg_index;
+			rr_node[inode].occ = 0;
+			rr_node[inode].capacity = 1;
+
+			rr_node[inode].xlow = i;
+			rr_node[inode].xhigh = i;
+			rr_node[inode].ylow = j;
+			rr_node[inode].yhigh = j;
+
+			rr_node[inode].R = seg_direct_dsp[idirect].Rmetal;
+			rr_node[inode].C = seg_direct_dsp[idirect].Cmetal;
+
+			rr_node[inode].ptc_num = idirect;
+			rr_node[inode].type = DIREY;
+		}
 	}
 }
 
@@ -1507,139 +1611,148 @@ static void build_rr_xdir(int **rr_node_indices, int **clb_ipin_to_direct,
 	int inode, itrack, seg_index, num_edges;
 	t_linked_edge *edge_list_head;
 
-	if ((i == 0) || (i == nx)) {
-		//nionio 7/11
-		//for (itrack=0; itrack<max(nodes_direct, io_rat); itrack++)
-		for (itrack = 0; itrack < max(nodes_direct, 2); itrack++) {
-			//connects to the right block
-			edge_list_head = NULL;
-			inode = get_rr_node_index(i, j, DIREX, itrack, nodes_per_chan,
-					nodes_direct, io_rat, rr_node_indices);
-			//printf("in build_rr_xdir to right: inode=%d \n", inode);
+	if (i <= nx && clb[i + 1][j].type != DSP) {
+		if ((i == 0) || (i == nx)) {
+			//nionio 7/11
+			//for (itrack=0; itrack<max(nodes_direct, io_rat); itrack++)
+			for (itrack = 0; itrack < max(nodes_direct, 2); itrack++) {
+				//connects to the right block
+				edge_list_head = NULL;
+				inode = get_rr_node_index(i, j, DIREX, itrack, nodes_per_chan,
+						nodes_direct, io_rat, rr_node_indices);
+				//printf("in build_rr_xdir to right: inode=%d \n", inode);
 
-			if (i == 0)
+				if (i == 0)
+					num_edges = get_direct_to_clb_ipin_edges(&edge_list_head,
+							i + 1, j, itrack, nodes_per_chan, nodes_direct,
+							io_rat, clb_ipin_to_direct, rr_node_indices,
+							wire_to_ipin_switch, 1);
+				else {
+					//nionio need to add for pad
+					num_edges = get_direct_to_pad_edges(&edge_list_head, i + 1,
+							j, itrack, nodes_per_chan, nodes_direct, io_rat,
+							pads_to_direct, rr_node_indices,
+							wire_to_ipin_switch);
+				}
+
+				alloc_and_load_edges_and_switches(inode, num_edges,
+						edge_list_head);
+				seg_index = seg_direct_x[itrack].index;
+				rr_node[inode].cost_index = cost_index_offset + seg_index;
+				rr_node[inode].occ = 0;
+				rr_node[inode].capacity = 1;
+
+				rr_node[inode].xlow = i;
+				rr_node[inode].xhigh = i;
+				rr_node[inode].ylow = j;
+				rr_node[inode].yhigh = j;
+
+				rr_node[inode].R = seg_direct_x[itrack].Rmetal;
+				rr_node[inode].C = seg_direct_x[itrack].Cmetal;
+
+				rr_node[inode].ptc_num = itrack;
+				rr_node[inode].type = DIREX;
+			}
+		} else {
+			for (itrack = 0; itrack < nodes_direct; itrack++) {
+				//connects to the right block
+				edge_list_head = NULL;
+				inode = get_rr_node_index(i, j, DIREX, itrack, nodes_per_chan,
+						nodes_direct, io_rat, rr_node_indices);
 				num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i + 1,
 						j, itrack, nodes_per_chan, nodes_direct, io_rat,
 						clb_ipin_to_direct, rr_node_indices,
-						wire_to_ipin_switch, 1);
-			else {
-				//nionio need to add for pad
-				num_edges = get_direct_to_pad_edges(&edge_list_head, i + 1, j,
-						itrack, nodes_per_chan, nodes_direct, io_rat,
-						pads_to_direct, rr_node_indices, wire_to_ipin_switch);
+						wire_to_ipin_switch, 0);
+				alloc_and_load_edges_and_switches(inode, num_edges,
+						edge_list_head);
+				seg_index = seg_direct_x[itrack].index;
+				rr_node[inode].cost_index = cost_index_offset + seg_index;
+				rr_node[inode].occ = 0;
+				rr_node[inode].capacity = 1;
+
+				rr_node[inode].xlow = i;
+				rr_node[inode].xhigh = i;
+				rr_node[inode].ylow = j;
+				rr_node[inode].yhigh = j;
+
+				rr_node[inode].R = seg_direct_x[itrack].Rmetal;
+				rr_node[inode].C = seg_direct_x[itrack].Cmetal;
+
+				rr_node[inode].ptc_num = itrack;
+				rr_node[inode].type = DIREX;
 			}
-
-			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
-			seg_index = seg_direct_x[itrack].index;
-			rr_node[inode].cost_index = cost_index_offset + seg_index;
-			rr_node[inode].occ = 0;
-			rr_node[inode].capacity = 1;
-
-			rr_node[inode].xlow = i;
-			rr_node[inode].xhigh = i;
-			rr_node[inode].ylow = j;
-			rr_node[inode].yhigh = j;
-
-			rr_node[inode].R = seg_direct_x[itrack].Rmetal;
-			rr_node[inode].C = seg_direct_x[itrack].Cmetal;
-
-			rr_node[inode].ptc_num = itrack;
-			rr_node[inode].type = DIREX;
 		}
-	} else {
-		for (itrack = 0; itrack < nodes_direct; itrack++) {
-			//connects to the right block
-			edge_list_head = NULL;
-			inode = get_rr_node_index(i, j, DIREX, itrack, nodes_per_chan,
-					nodes_direct, io_rat, rr_node_indices);
-			num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i + 1, j,
-					itrack, nodes_per_chan, nodes_direct, io_rat,
-					clb_ipin_to_direct, rr_node_indices, wire_to_ipin_switch,
-					0);
-			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
-			seg_index = seg_direct_x[itrack].index;
-			rr_node[inode].cost_index = cost_index_offset + seg_index;
-			rr_node[inode].occ = 0;
-			rr_node[inode].capacity = 1;
 
-			rr_node[inode].xlow = i;
-			rr_node[inode].xhigh = i;
-			rr_node[inode].ylow = j;
-			rr_node[inode].yhigh = j;
-
-			rr_node[inode].R = seg_direct_x[itrack].Rmetal;
-			rr_node[inode].C = seg_direct_x[itrack].Cmetal;
-
-			rr_node[inode].ptc_num = itrack;
-			rr_node[inode].type = DIREX;
-		}
-	}
-	if ((i == nx) || (i == 0)) {
-		//nionio 7/11
-		//for (itrack=0; itrack<max(nodes_direct, io_rat); itrack++)
-		for (itrack = 0; itrack < max(nodes_direct, 2); itrack++) {
-			//connects to my self
-			edge_list_head = NULL;
+		if ((i == nx) || (i == 0)) {
 			//nionio 7/11
-			/*inode = get_rr_node_index (i, j, DIREX, itrack+max(nodes_direct, io_rat), nodes_per_chan, nodes_direct, io_rat,
-			 rr_node_indices);*/
-			inode = get_rr_node_index(i, j, DIREX,
-					itrack + max(nodes_direct, 2), nodes_per_chan, nodes_direct,
-					io_rat, rr_node_indices);
+			//for (itrack=0; itrack<max(nodes_direct, io_rat); itrack++)
+			for (itrack = 0; itrack < max(nodes_direct, 2); itrack++) {
+				//connects to my self
+				edge_list_head = NULL;
+				//nionio 7/11
+				/*inode = get_rr_node_index (i, j, DIREX, itrack+max(nodes_direct, io_rat), nodes_per_chan, nodes_direct, io_rat,
+				 rr_node_indices);*/
+				inode = get_rr_node_index(i, j, DIREX,
+						itrack + max(nodes_direct, 2), nodes_per_chan,
+						nodes_direct, io_rat, rr_node_indices);
 
-			if (i == nx)
-				num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i, j,
-						itrack, nodes_per_chan, io_rat, nodes_direct,
-						clb_ipin_to_direct, rr_node_indices,
-						wire_to_ipin_switch, 1);
-			else {
-				//nionio needs to add for pad
-				num_edges = get_direct_to_pad_edges(&edge_list_head, i, j,
-						itrack, nodes_per_chan, nodes_direct, io_rat,
-						pads_to_direct, rr_node_indices, wire_to_ipin_switch);
+				if (i == nx)
+					num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i,
+							j, itrack, nodes_per_chan, io_rat, nodes_direct,
+							clb_ipin_to_direct, rr_node_indices,
+							wire_to_ipin_switch, 1);
+				else {
+					//nionio needs to add for pad
+					num_edges = get_direct_to_pad_edges(&edge_list_head, i, j,
+							itrack, nodes_per_chan, nodes_direct, io_rat,
+							pads_to_direct, rr_node_indices,
+							wire_to_ipin_switch);
+				}
+				//printf ("my num_edges=%d \n", num_edges);
+				alloc_and_load_edges_and_switches(inode, num_edges,
+						edge_list_head);
+				rr_node[inode].cost_index = cost_index_offset + seg_index;
+				rr_node[inode].occ = 0;
+				rr_node[inode].capacity = 1;
+
+				rr_node[inode].xlow = i;
+				rr_node[inode].xhigh = i;
+				rr_node[inode].ylow = j;
+				rr_node[inode].yhigh = j;
+
+				rr_node[inode].R = seg_direct_x[itrack].Rmetal;
+				rr_node[inode].C = seg_direct_x[itrack].Cmetal;
+
+				rr_node[inode].ptc_num = itrack;
+				rr_node[inode].type = DIREX;
 			}
-			//printf ("my num_edges=%d \n", num_edges);
-			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
-			rr_node[inode].cost_index = cost_index_offset + seg_index;
-			rr_node[inode].occ = 0;
-			rr_node[inode].capacity = 1;
+		} else {
+			for (itrack = 0; itrack < nodes_direct; itrack++) {
+				//connects to my self
+				edge_list_head = NULL;
+				inode = get_rr_node_index(i, j, DIREX, itrack + nodes_direct,
+						nodes_per_chan, nodes_direct, io_rat, rr_node_indices);
+				num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i, j,
+						itrack + nodes_direct, nodes_per_chan, nodes_direct,
+						io_rat, clb_ipin_to_direct, rr_node_indices,
+						wire_to_ipin_switch, 0);
+				alloc_and_load_edges_and_switches(inode, num_edges,
+						edge_list_head);
+				rr_node[inode].cost_index = cost_index_offset + seg_index;
+				rr_node[inode].occ = 0;
+				rr_node[inode].capacity = 1;
 
-			rr_node[inode].xlow = i;
-			rr_node[inode].xhigh = i;
-			rr_node[inode].ylow = j;
-			rr_node[inode].yhigh = j;
+				rr_node[inode].xlow = i;
+				rr_node[inode].xhigh = i;
+				rr_node[inode].ylow = j;
+				rr_node[inode].yhigh = j;
 
-			rr_node[inode].R = seg_direct_x[itrack].Rmetal;
-			rr_node[inode].C = seg_direct_x[itrack].Cmetal;
+				rr_node[inode].R = seg_direct_x[itrack].Rmetal;
+				rr_node[inode].C = seg_direct_x[itrack].Cmetal;
 
-			rr_node[inode].ptc_num = itrack;
-			rr_node[inode].type = DIREX;
-		}
-	} else {
-		for (itrack = 0; itrack < nodes_direct; itrack++) {
-			//connects to my self
-			edge_list_head = NULL;
-			inode = get_rr_node_index(i, j, DIREX, itrack + nodes_direct,
-					nodes_per_chan, nodes_direct, io_rat, rr_node_indices);
-			num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i, j,
-					itrack + nodes_direct, nodes_per_chan, nodes_direct, io_rat,
-					clb_ipin_to_direct, rr_node_indices, wire_to_ipin_switch,
-					0);
-			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
-			rr_node[inode].cost_index = cost_index_offset + seg_index;
-			rr_node[inode].occ = 0;
-			rr_node[inode].capacity = 1;
-
-			rr_node[inode].xlow = i;
-			rr_node[inode].xhigh = i;
-			rr_node[inode].ylow = j;
-			rr_node[inode].yhigh = j;
-
-			rr_node[inode].R = seg_direct_x[itrack].Rmetal;
-			rr_node[inode].C = seg_direct_x[itrack].Cmetal;
-
-			rr_node[inode].ptc_num = itrack;
-			rr_node[inode].type = DIREX;
+				rr_node[inode].ptc_num = itrack;
+				rr_node[inode].type = DIREX;
+			}
 		}
 	}
 }
@@ -1652,136 +1765,146 @@ static void build_rr_ydir(int **rr_node_indices, int **clb_ipin_to_direct,
 	int inode, itrack, seg_index, num_edges, new_itrack;
 	t_linked_edge *edge_list_head;
 
-	if ((j == 0) || (j == ny)) {
-		//nionio 7/11
-		//for (itrack=0; itrack<max(io_rat,nodes_direct); itrack++)
-		for (itrack = 0; itrack < max(2,nodes_direct); itrack++) {
-			edge_list_head = NULL;
-			inode = get_rr_node_index(i, j, DIREY, itrack, nodes_per_chan,
-					nodes_direct, io_rat, rr_node_indices);
-			//printf("in build_rr_ydir to up: inode=%d \n", inode);
-			if (j == 0)
-				num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i,
-						j + 1, itrack, nodes_per_chan, io_rat, nodes_direct,
-						clb_ipin_to_direct, rr_node_indices,
-						wire_to_ipin_switch, 1);
-			else {
-				//nionio added
-				num_edges = get_direct_to_pad_edges(&edge_list_head, i, j + 1,
-						itrack, nodes_per_chan, nodes_direct, io_rat,
-						pads_to_direct, rr_node_indices, wire_to_ipin_switch);
-			}
-			//printf ("my num_edges=%d \n", num_edges);
-			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
-			seg_index = seg_direct_y[itrack].index;
-			rr_node[inode].cost_index = cost_index_offset + seg_index;
-			rr_node[inode].occ = 0;
-			rr_node[inode].capacity = 1;
-
-			rr_node[inode].xlow = i;
-			rr_node[inode].xhigh = i;
-			rr_node[inode].ylow = j;
-			rr_node[inode].yhigh = j;
-
-			rr_node[inode].R = seg_direct_y[itrack].Rmetal;
-			rr_node[inode].C = seg_direct_y[itrack].Cmetal;
-
-			rr_node[inode].ptc_num = itrack;
-			rr_node[inode].type = DIREY;
-		}
-	} else {
-		for (itrack = 0; itrack < nodes_direct; itrack++) {
-			edge_list_head = NULL;
-			inode = get_rr_node_index(i, j, DIREY, itrack, nodes_per_chan,
-					nodes_direct, io_rat, rr_node_indices);
-			num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i, j + 1,
-					itrack + 2 * nodes_direct, nodes_per_chan, nodes_direct,
-					io_rat, clb_ipin_to_direct, rr_node_indices,
-					wire_to_ipin_switch, 0);
-
-			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
-			seg_index = seg_direct_y[itrack].index;
-			rr_node[inode].cost_index = cost_index_offset + seg_index;
-			rr_node[inode].occ = 0;
-			rr_node[inode].capacity = 1;
-
-			rr_node[inode].xlow = i;
-			rr_node[inode].xhigh = i;
-			rr_node[inode].ylow = j;
-			rr_node[inode].yhigh = j;
-
-			rr_node[inode].R = seg_direct_y[itrack].Rmetal;
-			rr_node[inode].C = seg_direct_y[itrack].Cmetal;
-
-			rr_node[inode].ptc_num = itrack;
-			rr_node[inode].type = DIREY;
-		}
-	}
-	if ((j == ny) || (j == 0)) {
-		//nionio 7/11
-		//for (itrack=0; itrack<max(io_rat,nodes_direct); itrack++)
-		for (itrack = 0; itrack < max(2,nodes_direct); itrack++) {
-			edge_list_head = NULL;
+	if (j <= ny && clb[i][j + 1].type != DSP) {
+		if ((j == 0) || (j == ny)) {
 			//nionio 7/11
-			/*inode = get_rr_node_index (i, j, DIREY, itrack+max(nodes_direct, io_rat), nodes_per_chan, nodes_direct, io_rat,  rr_node_indices);*/
-			inode = get_rr_node_index(i, j, DIREY, itrack + max(nodes_direct,2),
-					nodes_per_chan, nodes_direct, io_rat, rr_node_indices);
-			//printf("in build_rr_ydir to below: inode=%d \n", inode);
-			if (j == ny)
-				num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i, j,
-						itrack, nodes_per_chan, io_rat, nodes_direct,
-						clb_ipin_to_direct, rr_node_indices,
-						wire_to_ipin_switch, 1);
-			else {
-				//nionio added
-				num_edges = get_direct_to_pad_edges(&edge_list_head, i, j,
-						itrack, nodes_per_chan, nodes_direct, io_rat,
-						pads_to_direct, rr_node_indices, wire_to_ipin_switch);
+			//for (itrack=0; itrack<max(io_rat,nodes_direct); itrack++)
+			for (itrack = 0; itrack < max(2,nodes_direct); itrack++) {
+				edge_list_head = NULL;
+				inode = get_rr_node_index(i, j, DIREY, itrack, nodes_per_chan,
+						nodes_direct, io_rat, rr_node_indices);
+				//printf("in build_rr_ydir to up: inode=%d \n", inode);
+				if (j == 0)
+					num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i,
+							j + 1, itrack, nodes_per_chan, io_rat, nodes_direct,
+							clb_ipin_to_direct, rr_node_indices,
+							wire_to_ipin_switch, 1);
+				else {
+					//nionio added
+					num_edges = get_direct_to_pad_edges(&edge_list_head, i,
+							j + 1, itrack, nodes_per_chan, nodes_direct, io_rat,
+							pads_to_direct, rr_node_indices,
+							wire_to_ipin_switch);
+				}
+				//printf ("my num_edges=%d \n", num_edges);
+				alloc_and_load_edges_and_switches(inode, num_edges,
+						edge_list_head);
+				seg_index = seg_direct_y[itrack].index;
+				rr_node[inode].cost_index = cost_index_offset + seg_index;
+				rr_node[inode].occ = 0;
+				rr_node[inode].capacity = 1;
+
+				rr_node[inode].xlow = i;
+				rr_node[inode].xhigh = i;
+				rr_node[inode].ylow = j;
+				rr_node[inode].yhigh = j;
+
+				rr_node[inode].R = seg_direct_y[itrack].Rmetal;
+				rr_node[inode].C = seg_direct_y[itrack].Cmetal;
+
+				rr_node[inode].ptc_num = itrack;
+				rr_node[inode].type = DIREY;
 			}
-			//printf ("my num_edges=%d \n", num_edges);
-			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
-			rr_node[inode].cost_index = cost_index_offset + seg_index;
-			rr_node[inode].occ = 0;
-			rr_node[inode].capacity = 1;
+		} else {
+			for (itrack = 0; itrack < nodes_direct; itrack++) {
+				edge_list_head = NULL;
+				inode = get_rr_node_index(i, j, DIREY, itrack, nodes_per_chan,
+						nodes_direct, io_rat, rr_node_indices);
+				num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i,
+						j + 1, itrack + 2 * nodes_direct, nodes_per_chan,
+						nodes_direct, io_rat, clb_ipin_to_direct,
+						rr_node_indices, wire_to_ipin_switch, 0);
 
-			rr_node[inode].xlow = i;
-			rr_node[inode].xhigh = i;
-			rr_node[inode].ylow = j;
-			rr_node[inode].yhigh = j;
+				alloc_and_load_edges_and_switches(inode, num_edges,
+						edge_list_head);
+				seg_index = seg_direct_y[itrack].index;
+				rr_node[inode].cost_index = cost_index_offset + seg_index;
+				rr_node[inode].occ = 0;
+				rr_node[inode].capacity = 1;
 
-			rr_node[inode].R = seg_direct_y[itrack].Rmetal;
-			rr_node[inode].C = seg_direct_y[itrack].Cmetal;
+				rr_node[inode].xlow = i;
+				rr_node[inode].xhigh = i;
+				rr_node[inode].ylow = j;
+				rr_node[inode].yhigh = j;
 
-			rr_node[inode].ptc_num = itrack;
-			rr_node[inode].type = DIREY;
+				rr_node[inode].R = seg_direct_y[itrack].Rmetal;
+				rr_node[inode].C = seg_direct_y[itrack].Cmetal;
+
+				rr_node[inode].ptc_num = itrack;
+				rr_node[inode].type = DIREY;
+			}
 		}
-	} else {
-		for (itrack = 0; itrack < nodes_direct; itrack++) {
-			edge_list_head = NULL;
-			inode = get_rr_node_index(i, j, DIREY, itrack + nodes_direct,
-					nodes_per_chan, nodes_direct, io_rat, rr_node_indices);
-			//printf("in build_rr_ydir to below: inode=%d \n", inode);
-			num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i, j,
-					itrack + 3 * nodes_direct, nodes_per_chan, io_rat,
-					nodes_direct, clb_ipin_to_direct, rr_node_indices,
-					wire_to_ipin_switch, 0);
 
-			//printf ("my num_edges=%d \n", num_edges);
-			alloc_and_load_edges_and_switches(inode, num_edges, edge_list_head);
-			rr_node[inode].cost_index = cost_index_offset + seg_index;
-			rr_node[inode].occ = 0;
-			rr_node[inode].capacity = 1;
+		if ((j == ny) || (j == 0)) {
+			//nionio 7/11
+			//for (itrack=0; itrack<max(io_rat,nodes_direct); itrack++)
+			for (itrack = 0; itrack < max(2,nodes_direct); itrack++) {
+				edge_list_head = NULL;
+				//nionio 7/11
+				/*inode = get_rr_node_index (i, j, DIREY, itrack+max(nodes_direct, io_rat), nodes_per_chan, nodes_direct, io_rat,  rr_node_indices);*/
+				inode = get_rr_node_index(i, j, DIREY,
+						itrack + max(nodes_direct,2), nodes_per_chan,
+						nodes_direct, io_rat, rr_node_indices);
+				//printf("in build_rr_ydir to below: inode=%d \n", inode);
+				if (j == ny)
+					num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i,
+							j, itrack, nodes_per_chan, io_rat, nodes_direct,
+							clb_ipin_to_direct, rr_node_indices,
+							wire_to_ipin_switch, 1);
+				else {
+					//nionio added
+					num_edges = get_direct_to_pad_edges(&edge_list_head, i, j,
+							itrack, nodes_per_chan, nodes_direct, io_rat,
+							pads_to_direct, rr_node_indices,
+							wire_to_ipin_switch);
+				}
+				//printf ("my num_edges=%d \n", num_edges);
+				alloc_and_load_edges_and_switches(inode, num_edges,
+						edge_list_head);
+				rr_node[inode].cost_index = cost_index_offset + seg_index;
+				rr_node[inode].occ = 0;
+				rr_node[inode].capacity = 1;
 
-			rr_node[inode].xlow = i;
-			rr_node[inode].xhigh = i;
-			rr_node[inode].ylow = j;
-			rr_node[inode].yhigh = j;
+				rr_node[inode].xlow = i;
+				rr_node[inode].xhigh = i;
+				rr_node[inode].ylow = j;
+				rr_node[inode].yhigh = j;
 
-			rr_node[inode].R = seg_direct_y[itrack].Rmetal;
-			rr_node[inode].C = seg_direct_y[itrack].Cmetal;
+				rr_node[inode].R = seg_direct_y[itrack].Rmetal;
+				rr_node[inode].C = seg_direct_y[itrack].Cmetal;
 
-			rr_node[inode].ptc_num = itrack;
-			rr_node[inode].type = DIREY;
+				rr_node[inode].ptc_num = itrack;
+				rr_node[inode].type = DIREY;
+			}
+		} else {
+			for (itrack = 0; itrack < nodes_direct; itrack++) {
+				edge_list_head = NULL;
+				inode = get_rr_node_index(i, j, DIREY, itrack + nodes_direct,
+						nodes_per_chan, nodes_direct, io_rat, rr_node_indices);
+				//printf("in build_rr_ydir to below: inode=%d \n", inode);
+				num_edges = get_direct_to_clb_ipin_edges(&edge_list_head, i, j,
+						itrack + 3 * nodes_direct, nodes_per_chan, io_rat,
+						nodes_direct, clb_ipin_to_direct, rr_node_indices,
+						wire_to_ipin_switch, 0);
+
+				//printf ("my num_edges=%d \n", num_edges);
+				alloc_and_load_edges_and_switches(inode, num_edges,
+						edge_list_head);
+				rr_node[inode].cost_index = cost_index_offset + seg_index;
+				rr_node[inode].occ = 0;
+				rr_node[inode].capacity = 1;
+
+				rr_node[inode].xlow = i;
+				rr_node[inode].xhigh = i;
+				rr_node[inode].ylow = j;
+				rr_node[inode].yhigh = j;
+
+				rr_node[inode].R = seg_direct_y[itrack].Rmetal;
+				rr_node[inode].C = seg_direct_y[itrack].Cmetal;
+
+				rr_node[inode].ptc_num = itrack;
+				rr_node[inode].type = DIREY;
+			}
 		}
 	}
 }
@@ -1814,7 +1937,7 @@ void alloc_and_load_edges_and_switches(int inode, int num_edges,
 	list_ptr = edge_list_head;
 	i = 0;
 //printf("inode %d \n", inode);
-	while (list_ptr != NULL) {
+	while (list_ptr != NULL ) {
 		to_node = list_ptr->edge;
 		//printf("connect to to_node %d\n", to_node);
 		rr_node[inode].edges[i] = to_node;
@@ -1887,7 +2010,7 @@ static int *****alloc_and_load_dsp_pin_to_tracks(enum e_pin_type pin_type,
 
 //nionio added
 	if (nodes_per_chan == 0)
-		return NULL;
+		return NULL ;
 
 	int ***num_dir; /* [0...dsp_w-1][0...dsp_h-1][0..3] Number of *physical* pins on each clb side.      */
 	int ****dir_list; /* [0...dsp_w-1][0...dsp_h-1][0..3][0..pins_per_dsp-1] list of pins of correct type  *
@@ -2103,7 +2226,7 @@ static int ***alloc_and_load_clb_pin_to_tracks(enum e_pin_type pin_type,
 
 //nionio added
 	if (nodes_per_chan == 0)
-		return NULL;
+		return NULL ;
 
 	int *num_dir; /* [0..3] Number of *physical* pins on each clb side.      */
 	int **dir_list; /* [0..3][0..pins_per_clb-1] list of pins of correct type  *
@@ -2492,7 +2615,7 @@ static struct s_ivec ****alloc_and_load_tracks_to_dsp_ipin(int nodes_per_chan,
 
 //nionio added
 	if (nodes_per_chan == 0)
-		return NULL;
+		return NULL ;
 
 	int ipin, iside, itrack, iconn, ioff;
 	int x_off, y_off;
@@ -2512,7 +2635,7 @@ static struct s_ivec ****alloc_and_load_tracks_to_dsp_ipin(int nodes_per_chan,
 
 //nionio added
 	if (nodes_per_chan == 0)
-		return NULL;
+		return NULL ;
 
 	struct s_ivec ****tracks_to_dsp_ipin;
 
@@ -2621,7 +2744,7 @@ static struct s_ivec **alloc_and_load_tracks_to_clb_ipin(int nodes_per_chan,
 
 //nionio added
 	if (nodes_per_chan == 0)
-		return NULL;
+		return NULL ;
 
 	int ipin, iside, itrack, iconn, ioff, tr_side;
 
@@ -2640,7 +2763,7 @@ static struct s_ivec **alloc_and_load_tracks_to_clb_ipin(int nodes_per_chan,
 
 //nionio added
 	if (nodes_per_chan == 0)
-		return NULL;
+		return NULL ;
 
 	struct s_ivec **tracks_to_clb_ipin;
 
@@ -2733,7 +2856,7 @@ static int **alloc_and_load_pads_to_tracks(int nodes_per_chan, int Fc_pad) {
 
 //nionio added
 	if (nodes_per_chan == 0)
-		return NULL;
+		return NULL ;
 
 	int **pads_to_tracks;
 	float step_size;
@@ -2768,7 +2891,7 @@ static struct s_ivec *alloc_and_load_tracks_to_pads(int **pads_to_tracks,
 
 //nionio added
 	if (nodes_per_chan == 0)
-		return NULL;
+		return NULL ;
 
 	int itrack, ipad, i, iconn, ioff;
 	struct s_ivec *tracks_to_pads;

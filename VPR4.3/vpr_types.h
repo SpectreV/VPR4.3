@@ -399,7 +399,7 @@ enum e_Fc_type {
 	ABSOLUTE, FRACTIONAL
 };
 enum e_seg_type {
-	DIRECT, SEGMENT
+	DIRECT, SEGMENT, DIRECT_DSP
 };
 
 struct s_det_routing_arch {
