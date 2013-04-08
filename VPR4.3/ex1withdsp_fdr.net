@@ -1,0 +1,2655 @@
+stage 1
+
+.input rst
+pinlist: rst
+
+.input PI1[0]
+pinlist: PI1[0]
+
+.input PI1[1]
+pinlist: PI1[1]
+
+.input PI1[2]
+pinlist: PI1[2]
+
+.input PI1[3]
+pinlist: PI1[3]
+
+.input PI1[4]
+pinlist: PI1[4]
+
+.input PI1[5]
+pinlist: PI1[5]
+
+.input PI1[6]
+pinlist: PI1[6]
+
+.input PI1[7]
+pinlist: PI1[7]
+
+.input PI1[8]
+pinlist: PI1[8]
+
+.input PI1[9]
+pinlist: PI1[9]
+
+.input PI1[10]
+pinlist: PI1[10]
+
+.input PI1[11]
+pinlist: PI1[11]
+
+.input PI1[12]
+pinlist: PI1[12]
+
+.input PI1[13]
+pinlist: PI1[13]
+
+.input PI1[14]
+pinlist: PI1[14]
+
+.input PI1[15]
+pinlist: PI1[15]
+
+.input PI2[0]
+pinlist: PI2[0]
+
+.input PI2[1]
+pinlist: PI2[1]
+
+.input PI2[2]
+pinlist: PI2[2]
+
+.input PI2[3]
+pinlist: PI2[3]
+
+.input PI2[4]
+pinlist: PI2[4]
+
+.input PI2[5]
+pinlist: PI2[5]
+
+.input PI2[6]
+pinlist: PI2[6]
+
+.input PI2[7]
+pinlist: PI2[7]
+
+.input PI2[8]
+pinlist: PI2[8]
+
+.input PI2[9]
+pinlist: PI2[9]
+
+.input PI2[10]
+pinlist: PI2[10]
+
+.input PI2[11]
+pinlist: PI2[11]
+
+.input PI2[12]
+pinlist: PI2[12]
+
+.input PI2[13]
+pinlist: PI2[13]
+
+.input PI2[14]
+pinlist: PI2[14]
+
+.input PI2[15]
+pinlist: PI2[15]
+
+.global clk
+
+.input clk
+pinlist: clk
+
+.clb Block_0
+pinlist: state1 rst open open \
+open open open open \
+open open open open \
+open open open open \
+l1 reg3_out[0] state0 open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_1 0 1 open 16 open
+ffblock: 0 open 17 32
+ffblock: 1 ff_1 18 32
+ffblock: 2 ble_0 open 32
+
+.clb Block_2
+pinlist: state0 rst open open \
+open open open open \
+open open open open \
+open open open open \
+reg3_out[1] state1 open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 ff_1 1 open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 ff_1 17 32
+
+.clb Block_3
+pinlist: PI1[0] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[0] reg3_out[2] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_4
+pinlist: PI1[1] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[1] reg3_out[3] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_5
+pinlist: PI1[2] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[2] reg3_out[4] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_6
+pinlist: PI1[3] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[3] reg3_out[5] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_7
+pinlist: PI1[4] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[4] reg3_out[6] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_8
+pinlist: PI1[5] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[5] reg3_out[7] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_9
+pinlist: PI1[6] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[6] reg3_out[8] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_10
+pinlist: PI1[7] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[7] reg3_out[9] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_11
+pinlist: PI1[8] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[8] reg3_out[10] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_12
+pinlist: PI1[9] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[9] reg3_out[11] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_13
+pinlist: PI1[10] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[10] reg3_out[12] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_14
+pinlist: PI1[11] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[11] reg3_out[13] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_15
+pinlist: PI1[12] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[12] reg3_out[14] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_16
+pinlist: PI1[13] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[13] reg3_out[15] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_17
+pinlist: PI1[14] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[14] reg4_out[1] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_18
+pinlist: PI1[15] l1 open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[15] reg4_out[2] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_1
+pinlist: PI2[0] open open open \
+open open open open \
+open open open open \
+open open open open \
+l2 reg2_out[0] reg4_out[0] open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 ff_0 open open open open
+ffblock: 0 open 16 32
+ffblock: 1 ble_0 17 32
+ffblock: 2 open 18 32
+
+.clb Block_19
+pinlist: PI2[1] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[1] reg4_out[3] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_20
+pinlist: PI2[2] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[2] reg4_out[4] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_21
+pinlist: PI2[3] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[3] reg4_out[5] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_22
+pinlist: PI2[4] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[4] reg4_out[6] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_23
+pinlist: PI2[5] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[5] reg4_out[7] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_24
+pinlist: PI2[6] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[6] reg4_out[8] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_25
+pinlist: PI2[7] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[7] reg4_out[9] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_26
+pinlist: PI2[8] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[8] reg4_out[10] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_27
+pinlist: PI2[9] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[9] reg4_out[11] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_28
+pinlist: PI2[10] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[10] reg4_out[12] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_29
+pinlist: PI2[11] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[11] reg4_out[13] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_30
+pinlist: PI2[12] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[12] reg4_out[14] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_31
+pinlist: PI2[13] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[13] reg4_out[15] open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 open 17 32
+
+.clb Block_32
+pinlist: PI2[14] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[14] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+
+.clb Block_33
+pinlist: PI2[15] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+reg2_out[15] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 16 32
+
+.dsp DSP_Block_0
+pinlist: reg1_out[0] reg1_out[1] reg1_out[2] reg1_out[3] \
+reg2_out[0] reg2_out[1] reg2_out[2] reg2_out[3] \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[4] reg1_out[5] reg1_out[6] reg1_out[7] \
+reg2_out[4] reg2_out[5] reg2_out[6] reg2_out[7] \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open reg1_out[8] reg1_out[9] reg1_out[10] \
+reg1_out[11] reg2_out[8] reg2_out[9] reg2_out[10] \
+reg2_out[11] open open open \
+open open open open \
+open open open open \
+open open open open \
+open open reg1_out[12] reg1_out[13] \
+reg1_out[14] reg1_out[15] reg2_out[12] reg2_out[13] \
+reg2_out[14] reg2_out[15] open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+.dsp DSP_Block_1
+pinlist: reg3_out[0] reg3_out[1] reg3_out[2] reg3_out[3] \
+reg4_out[0] reg4_out[1] reg4_out[2] reg4_out[3] \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+reg3_out[4] reg3_out[5] reg3_out[6] reg3_out[7] \
+reg4_out[4] reg4_out[5] reg4_out[6] reg4_out[7] \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open reg3_out[8] reg3_out[9] reg3_out[10] \
+reg3_out[11] reg4_out[8] reg4_out[9] reg4_out[10] \
+reg4_out[11] open open open \
+open open open open \
+open open open open \
+open open open open \
+open open reg3_out[12] reg3_out[13] \
+reg3_out[14] reg3_out[15] reg4_out[12] reg4_out[13] \
+reg4_out[14] reg4_out[15] open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+.dsp DSP_Block_2
+pinlist: reg1_out[0] reg1_out[1] reg1_out[2] reg1_out[3] \
+reg2_out[0] reg2_out[1] reg2_out[2] reg2_out[3] \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+reg1_out[4] reg1_out[5] reg1_out[6] reg1_out[7] \
+reg2_out[4] reg2_out[5] reg2_out[6] reg2_out[7] \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open reg1_out[8] reg1_out[9] reg1_out[10] \
+reg1_out[11] reg2_out[8] reg2_out[9] reg2_out[10] \
+reg2_out[11] open open open \
+open open open open \
+open open open open \
+open open open open \
+open open reg1_out[12] reg1_out[13] \
+reg1_out[14] reg1_out[15] reg2_out[12] reg2_out[13] \
+reg2_out[14] reg2_out[15] open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+stage 2
+
+.input rst
+pinlist: rst
+
+.global clk
+
+.input clk
+pinlist: clk
+
+.clb Block_1
+pinlist: state0 state1 rst open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 2 open open open
+ffblock: 0 ble_0 open 32
+ffblock: 1 ff_1 open 32
+
+.clb Block_0
+pinlist: state1 rst open open \
+open open open open \
+open open open open \
+open open open open \
+state0 open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_1 0 1 open open open
+ffblock: 0 ble_0 open 32
+ffblock: 1 ff_1 16 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_2
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+state1 open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+ffblock: 1 open 16 32
+
+.clb Block_3
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_4
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_5
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_6
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_7
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_8
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_9
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_10
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_11
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_12
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_13
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_14
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_15
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_16
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_17
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_18
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_19
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_20
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_21
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_22
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_23
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_24
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_25
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_26
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_27
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_28
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_29
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_30
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_31
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_32
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_33
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.dsp DSP_Block_0
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+.dsp DSP_Block_1
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+.dsp DSP_Block_2
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+stage 3
+
+.input rst
+pinlist: rst
+
+.global clk
+
+.input clk
+pinlist: clk
+
+.clb Block_0
+pinlist: rst open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 ff_1 0 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_1
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+ffblock: 1 ff_1 open 32
+
+.clb Block_2
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_3
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_4
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_5
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_6
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_7
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_8
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_9
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_10
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_11
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_12
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_13
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_14
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_15
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_16
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_17
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_18
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_19
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_20
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_21
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_22
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_23
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_24
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_25
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_26
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_27
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_28
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_29
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_30
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_31
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_32
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.clb Block_33
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+ffblock: 0 ff_0 open 32
+
+.dsp DSP_Block_0
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+.dsp DSP_Block_1
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+.dsp DSP_Block_2
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+stage 4
+
+.output PO[0]
+pinlist: PO[0]
+
+.output PO[1]
+pinlist: PO[1]
+
+.output PO[2]
+pinlist: PO[2]
+
+.output PO[3]
+pinlist: PO[3]
+
+.output PO[4]
+pinlist: PO[4]
+
+.output PO[5]
+pinlist: PO[5]
+
+.output PO[6]
+pinlist: PO[6]
+
+.output PO[7]
+pinlist: PO[7]
+
+.output PO[8]
+pinlist: PO[8]
+
+.output PO[9]
+pinlist: PO[9]
+
+.output PO[10]
+pinlist: PO[10]
+
+.output PO[11]
+pinlist: PO[11]
+
+.output PO[12]
+pinlist: PO[12]
+
+.output PO[13]
+pinlist: PO[13]
+
+.output PO[14]
+pinlist: PO[14]
+
+.output PO[15]
+pinlist: PO[15]
+
+.global clk
+
+.input clk
+pinlist: clk
+
+.clb Block_0
+pinlist: mul_out[0] open open open \
+open open open open \
+open open open open \
+open open open open \
+state0 l3 open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 ff_1 open open open open
+ffblock: 0 ble_0 16 32
+ffblock: 1 ff_0 17 32
+ffblock: 2 ff_2 open 32
+
+.clb Block_2
+pinlist: mul_out[1] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ble_0 open 32
+ffblock: 1 ff_0 open 32
+
+.clb Block_3
+pinlist: mul_out[2] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_4
+pinlist: mul_out[3] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_5
+pinlist: mul_out[4] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_6
+pinlist: mul_out[5] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_7
+pinlist: mul_out[6] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_8
+pinlist: mul_out[7] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_9
+pinlist: mul_out[8] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_10
+pinlist: mul_out[9] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_11
+pinlist: mul_out[10] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_12
+pinlist: mul_out[11] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_13
+pinlist: mul_out[12] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_14
+pinlist: mul_out[13] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_15
+pinlist: mul_out[14] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_16
+pinlist: mul_out[15] l3 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_1
+pinlist: add1_out[0] open open open \
+open open open open \
+open open open open \
+open open open open \
+l2 open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 ff_0 open open open open
+ffblock: 0 ff_0 16 32
+ffblock: 1 ff_1 open 32
+ffblock: 2 ble_0 open 32
+
+.clb Block_17
+pinlist: add1_out[1] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_18
+pinlist: add1_out[2] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_19
+pinlist: add1_out[3] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_20
+pinlist: add1_out[4] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_21
+pinlist: add1_out[5] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_22
+pinlist: add1_out[6] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_23
+pinlist: add1_out[7] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_24
+pinlist: add1_out[8] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_25
+pinlist: add1_out[9] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_26
+pinlist: add1_out[10] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_27
+pinlist: add1_out[11] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_28
+pinlist: add1_out[12] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_29
+pinlist: add1_out[13] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_30
+pinlist: add1_out[14] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_31
+pinlist: add1_out[15] l2 open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open open open
+ffblock: 0 ff_0 open 32
+ffblock: 1 ble_0 open 32
+
+.clb Block_32
+pinlist: add2_out[0] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[0] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open 16 open
+ffblock: 0 ff_0 open 32
+
+.clb Block_33
+pinlist: add2_out[1] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[1] open open open \
+open open open open \
+open open open open \
+open open open open \
+clk
+subblock: sub_0 0 1 open open 16 open
+ffblock: 0 ff_0 open 32
+
+.clb Block_34
+pinlist: add2_out[2] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[2] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_35
+pinlist: add2_out[3] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[3] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_36
+pinlist: add2_out[4] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[4] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_37
+pinlist: add2_out[5] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[5] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_38
+pinlist: add2_out[6] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[6] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_39
+pinlist: add2_out[7] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[7] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_40
+pinlist: add2_out[8] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[8] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_41
+pinlist: add2_out[9] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[9] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_42
+pinlist: add2_out[10] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[10] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_43
+pinlist: add2_out[11] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[11] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_44
+pinlist: add2_out[12] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[12] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_45
+pinlist: add2_out[13] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[13] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_46
+pinlist: add2_out[14] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[14] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.clb Block_47
+pinlist: add2_out[15] state0 open open \
+open open open open \
+open open open open \
+open open open open \
+PO[15] open open open \
+open open open open \
+open open open open \
+open open open open \
+open
+subblock: sub_0 0 1 open open 16 open
+
+.dsp DSP_Block_0
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open add1_out[0] add1_out[1] \
+add1_out[2] add1_out[3] add1_out[4] add1_out[5] \
+add1_out[6] add1_out[7] open open \
+open open open open \
+open open add1_out[8] add1_out[9] \
+add1_out[10] add1_out[11] add1_out[12] add1_out[13] \
+add1_out[14] add1_out[15] open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+.dsp DSP_Block_1
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open add2_out[0] add2_out[1] \
+add2_out[2] add2_out[3] add2_out[4] add2_out[5] \
+add2_out[6] add2_out[7] open open \
+open open open open \
+open open add2_out[8] add2_out[9] \
+add2_out[10] add2_out[11] add2_out[12] add2_out[13] \
+add2_out[14] add2_out[15] open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
+.dsp DSP_Block_2
+pinlist: open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open mul_out[0] mul_out[1] \
+mul_out[2] mul_out[3] mul_out[4] mul_out[5] \
+mul_out[6] mul_out[7] open open \
+open open open open \
+open open mul_out[8] mul_out[9] \
+mul_out[10] mul_out[11] mul_out[12] mul_out[13] \
+mul_out[14] mul_out[15] open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open open \
+open open open \
+clk
+
