@@ -77,6 +77,10 @@ void check_route(enum e_route_type route_type, int num_switch,
 
 	for (inet = 0; inet < num_nets; inet++) {
 
+		if(inet == 292) {
+			inet = 292;
+		}
+
 		if (is_global[inet]) /* Skip global nets. */
 			continue;
 
@@ -132,7 +136,7 @@ void check_route(enum e_route_type route_type, int num_switch,
 
 			else {
 				//printf("check here prev_node %d, inode %d\n", prev_node, inode);
-				if (prev_node == 1731 && inode == 1704)
+				if (prev_node == 2649 && inode == 2715)
 					connects = check_adjacent(prev_node, inode);
 				connects = check_adjacent(prev_node, inode);
 				//printf("connects %d\n", connects);
@@ -708,6 +712,8 @@ static int pin_and_chan_adjacent(int pin_node, int chan_node) {
 					}
 				}
 			}
+		} else if (chan_type == DIREX || chan_type == DIREY) {
+			num_adj++;
 		}
 	}
 

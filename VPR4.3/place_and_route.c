@@ -165,8 +165,7 @@ void place_and_route(enum e_operation operation,
 			success = TRUE;
 			for (istage = 1; istage <= num_stage; istage++) {
 				current_stage = istage;
-				if (is_folding)
-					printf("Routing in stage: %d", istage);
+				printf("Routing in stage: %d", istage);
 				folding_success = try_route(width_fac, router_opts,
 						det_routing_arch, segment_inf, timing_inf, net_slack,
 						net_delay, chan_width_dist, clb_opins_used_locally);
@@ -182,6 +181,7 @@ void place_and_route(enum e_operation operation,
 					success = FALSE;
 					exit(1);
 				} else {
+					printf("Routing in stage: %d\n", istage);
 					check_route(router_opts.route_type,
 							det_routing_arch.num_switch,
 							clb_opins_used_locally);
@@ -284,6 +284,9 @@ static int binary_search_place_and_route(struct s_placer_opts placer_opts,
 	final = -1;
 
 	while (final == -1) {
+		if(current == 8) {
+			current = 8;
+		}
 		fflush(stdout);
 		//#ifdef VERBOSE
 		printf("low, high, current %d %d %d\n", low, high, current);
@@ -313,12 +316,16 @@ static int binary_search_place_and_route(struct s_placer_opts placer_opts,
 		else {
 			success = TRUE;
 			for (istage = 1; istage <= num_stage; istage++) {
+				printf("Routing Stage %d:\n", istage);
 				current_stage = istage;
 				folding_success = try_route(current, router_opts,
 						det_routing_arch, segment_inf, timing_inf, net_slack,
 						net_delay, chan_width_dist, clb_opins_used_locally);
-				if (!folding_success)
+				if (!folding_success) {
 					success = FALSE;
+					printf("Routing Failed in Stage %d.\n", istage);
+					break;
+				}
 			}
 		}
 
@@ -465,6 +472,10 @@ static int binary_search_place_and_route(struct s_placer_opts placer_opts,
 	} else {
 		for (istage = 1; istage <= num_stage; istage++) {
 			current_stage = istage;
+			if(istage == 20) {
+				istage = 20;
+			}
+			printf("Routing stage check: %d\n", istage);
 			check_route(router_opts.route_type, det_routing_arch.num_switch,
 					clb_opins_used_locally);
 

@@ -1495,6 +1495,8 @@ static void alloc_dsp_pin_to_direct() {
 			++pin_index, ++dir_index) {
 		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_in[0-7] <- Di[32-39]
 	}
+	
+	
 
 	//top 25 input pins
 
@@ -1581,45 +1583,47 @@ static void alloc_dsp_pin_to_direct() {
 		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_in[24-31] <- Di[56-63]
 	}
 
+	dsp_pin_to_direct[98] = -1;
+
 	// left 16 output pins
-	for (pin_index = 98, dir_index = 0; pin_index < 106;
+	for (pin_index = 99, dir_index = 0; pin_index < 107;
 			++pin_index, ++dir_index)
 		dsp_pin_to_direct[pin_index] = dir_index; // Eout[0-7] -> Di[0-7]
 
-	for (pin_index = 106, dir_index = 32; pin_index < 113;
+	for (pin_index = 107, dir_index = 32; pin_index < 115;
 			++pin_index, ++dir_index)
 		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_out[0-7] -> Di[32-39]
 
 	// top 16 output pins
-	for (pin_index = 114, dir_index = 8; pin_index < 122;
+	for (pin_index = 115, dir_index = 8; pin_index < 123;
 			++pin_index, ++dir_index)
 		dsp_pin_to_direct[pin_index] = dir_index; // Eout[8-15] -> Di[8-15]
 
-	for (pin_index = 122, dir_index = 40; pin_index < 130;
+	for (pin_index = 123, dir_index = 40; pin_index < 131;
 			++pin_index, ++dir_index)
 		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_out[8-15] -> Di[40-47]
 
 	//right 16 output pins
-	for (pin_index = 130, dir_index = 16; pin_index < 138;
+	for (pin_index = 131, dir_index = 16; pin_index < 139;
 			++pin_index, ++dir_index)
 		dsp_pin_to_direct[pin_index] = dir_index; // Eout[16-23] -> Di[16-23]
 
-	for (pin_index = 138, dir_index = 48; pin_index < 146;
+	for (pin_index = 139, dir_index = 48; pin_index < 147;
 			++pin_index, ++dir_index)
 		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_out[16-23] -> Di[48-55]
 
 	//bottom 17 output pins
-	for (pin_index = 146, dir_index = 24; pin_index < 154;
+	for (pin_index = 147, dir_index = 24; pin_index < 155;
 			++pin_index, ++dir_index)
 		dsp_pin_to_direct[pin_index] = dir_index; // Eout[24-31] -> Di[24-31]
 
-	for (pin_index = 154, dir_index = 56; pin_index < 162;
+	for (pin_index = 155, dir_index = 56; pin_index < 163;
 			++pin_index, ++dir_index)
 		dsp_pin_to_direct[pin_index] = dir_index; // Ecas_out[24-31] -> Di[56-63]
 
-	dsp_pin_to_direct[162] = 64; // carry_out -> Di[64]
+	dsp_pin_to_direct[163] = 64; // carry_out -> Di[64]
 
-	dsp_pin_to_direct[163] = -1;
+	dsp_pin_to_direct[164] = -1;
 
 	/*for (pin_index = 0; pin_index < pins_per_dsp; ++pin_index) {
 		printf("pin %d to direct %d.\n", pin_index, dsp_pin_to_direct[pin_index]);

@@ -1,1913 +1,377 @@
 
 For folding stage: 1
-Node: 0  INPAD_SOURCE Block #0 (clk) at (9, 0)
-T_arr: 0  T_req: 1.32777e-09  Tdel: 0
+Node: 2  INPAD_SOURCE Block #1 (clk) at (2, 17)
+T_arr: 0  T_req: 1.15336e-09  Tdel: 0
 
-Node: 1  INPAD_OPIN Block #0 (clk) at (9, 0)
+Node: 3  INPAD_OPIN Block #1 (clk) at (2, 17)
 Pin: 0 
-T_arr: 0  T_req: 1.32777e-09  Tdel: 0
-Net to next node: #0 (clk).  Pins on net: 65.
+T_arr: 0  T_req: 1.15336e-09  Tdel: 0
+Net to next node: #1 (clk).  Pins on net: 83.
 
-Node: 4  CLB_IPIN Block #1 (Block_0) at (10, 7)
+Node: 7  CLB_IPIN Block #2 (Block_1) at (8, 6)
 Pin: 32 
-T_arr: 0  T_req: 1.32777e-09  Tdel: 0
+T_arr: 0  T_req: 1.15336e-09  Tdel: 0
 
-Node: 10  IFF_SOURCE Block #1 (Block_0) at (10, 7)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 1.32777e-09  Tdel: 0
-
-Node: 9  FF_OPIN Block #1 (Block_0) at (10, 7)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 1.32777e-09  Tdel: 1.6e-10
-
-Node: 3  CLB_OPIN Block #1 (Block_0) at (10, 7)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.48777e-09  Tdel: 7.00708e-11
-Net to next node: #2 (regy_out[0]).  Pins on net: 2.
-
-Node: 15  CLB_IPIN Block #2 (Block_1) at (10, 6)
-Pin: 0 
-T_arr: 2.30071e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 18  SUBBLK_IPIN Block #2 (Block_1) at (10, 6)
-Subblock #0 Pin: 0 
-T_arr: 2.30071e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 20  SUBBLK_OPIN Block #2 (Block_1) at (10, 6)
-Subblock #0 Pin: 4 
-T_arr: 5.45071e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 33  FF_IPIN Block #2 (Block_1) at (10, 6)
-Flipflop #3 Pin: 0 
-T_arr: 5.45071e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 35  IFF_SINK Block #2 (Block_1) at (10, 6)
-Flipflop #3 
-T_arr: 5.45071e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 7.00708e-11 (s)
-
-For folding stage: 2
-Node: 346  INPAD_SOURCE Block #65 (clk) at (9, 0)
-T_arr: 0  T_req: 6.84285e-10  Tdel: 0
-
-Node: 347  INPAD_OPIN Block #65 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 6.84285e-10  Tdel: 0
-Net to next node: #3 (clk).  Pins on net: 65.
-
-Node: 366  CLB_IPIN Block #67 (Block_47) at (1, 5)
-Pin: 32 
-T_arr: 0  T_req: 6.84285e-10  Tdel: 0
-
-Node: 373  IFF_SOURCE Block #67 (Block_47) at (1, 5)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 6.84285e-10  Tdel: 0
-
-Node: 372  FF_OPIN Block #67 (Block_47) at (1, 5)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 6.84285e-10  Tdel: 1.6e-10
-
-Node: 365  CLB_OPIN Block #67 (Block_47) at (1, 5)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 8.44285e-10  Tdel: 7.13556e-10
-Net to next node: #4 (PO[1]).  Pins on net: 2.
-
-Node: 348  CLB_IPIN Block #66 (Block_34) at (10, 8)
-Pin: 0 
-T_arr: 8.73556e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 353  SUBBLK_IPIN Block #66 (Block_34) at (10, 8)
-Subblock #0 Pin: 1 
-T_arr: 8.73556e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 355  SUBBLK_OPIN Block #66 (Block_34) at (10, 8)
-Subblock #0 Pin: 4 
-T_arr: 1.18856e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 360  FF_IPIN Block #66 (Block_34) at (10, 8)
-Flipflop #1 Pin: 0 
-T_arr: 1.18856e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 362  IFF_SINK Block #66 (Block_34) at (10, 8)
-Flipflop #1 
-T_arr: 1.18856e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 7.13556e-10 (s)
-
-For folding stage: 3
-Node: 703  INPAD_SOURCE Block #130 (clk) at (9, 0)
-T_arr: 0  T_req: 8.1359e-10  Tdel: 0
-
-Node: 704  INPAD_OPIN Block #130 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 8.1359e-10  Tdel: 0
-Net to next node: #7 (clk).  Pins on net: 66.
-
-Node: 720  CLB_IPIN Block #132 (Block_51) at (2, 1)
-Pin: 32 
-T_arr: 0  T_req: 8.1359e-10  Tdel: 0
-
-Node: 727  IFF_SOURCE Block #132 (Block_51) at (2, 1)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 8.1359e-10  Tdel: 0
-
-Node: 726  FF_OPIN Block #132 (Block_51) at (2, 1)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 8.1359e-10  Tdel: 1.6e-10
-
-Node: 719  CLB_OPIN Block #132 (Block_51) at (2, 1)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.7359e-10  Tdel: 5.84251e-10
-Net to next node: #8 (PO[2]).  Pins on net: 3.
-
-Node: 705  CLB_IPIN Block #131 (Block_35) at (9, 1)
-Pin: 0 
-T_arr: 7.44251e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 710  SUBBLK_IPIN Block #131 (Block_35) at (9, 1)
-Subblock #0 Pin: 1 
-T_arr: 7.44251e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 712  SUBBLK_OPIN Block #131 (Block_35) at (9, 1)
-Subblock #0 Pin: 4 
-T_arr: 1.05925e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 713  FF_IPIN Block #131 (Block_35) at (9, 1)
-Flipflop #0 Pin: 0 
-T_arr: 1.05925e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 716  IFF_SINK Block #131 (Block_35) at (9, 1)
-Flipflop #0 
-T_arr: 1.05925e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 5.84251e-10 (s)
-
-For folding stage: 4
-Node: 1115  INPAD_SOURCE Block #196 (clk) at (9, 0)
-T_arr: 0  T_req: 8.2429e-10  Tdel: 0
-
-Node: 1116  INPAD_OPIN Block #196 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 8.2429e-10  Tdel: 0
-Net to next node: #41 (clk).  Pins on net: 65.
-
-Node: 1391  CLB_IPIN Block #248 (Block_51) at (2, 1)
-Pin: 32 
-T_arr: 0  T_req: 8.2429e-10  Tdel: 0
-
-Node: 1393  IFF_SOURCE Block #248 (Block_51) at (2, 1)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 8.2429e-10  Tdel: 0
-
-Node: 1392  FF_OPIN Block #248 (Block_51) at (2, 1)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 8.2429e-10  Tdel: 1.6e-10
-
-Node: 1390  CLB_OPIN Block #248 (Block_51) at (2, 1)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.8429e-10  Tdel: 5.73551e-10
-Net to next node: #43 (data_cmp1_t_3).  Pins on net: 3.
-
-Node: 1130  CLB_IPIN Block #198 (Block_59) at (10, 3)
-Pin: 1 
-T_arr: 7.33551e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 1135  SUBBLK_IPIN Block #198 (Block_59) at (10, 3)
-Subblock #0 Pin: 2 
-T_arr: 7.33551e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 1136  SUBBLK_OPIN Block #198 (Block_59) at (10, 3)
-Subblock #0 Pin: 4 
-T_arr: 1.04855e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 1137  FF_IPIN Block #198 (Block_59) at (10, 3)
-Flipflop #0 Pin: 0 
-T_arr: 1.04855e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 1140  IFF_SINK Block #198 (Block_59) at (10, 3)
-Flipflop #0 
-T_arr: 1.04855e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 5.73551e-10 (s)
-
-For folding stage: 5
-Node: 1452  INPAD_SOURCE Block #261 (clk) at (9, 0)
-T_arr: 0  T_req: 9.07345e-10  Tdel: 0
-
-Node: 1453  INPAD_OPIN Block #261 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 9.07345e-10  Tdel: 0
-Net to next node: #45 (clk).  Pins on net: 64.
-
-Node: 1661  CLB_IPIN Block #298 (Block_35) at (9, 1)
-Pin: 32 
-T_arr: 0  T_req: 9.07345e-10  Tdel: 0
-
-Node: 1663  IFF_SOURCE Block #298 (Block_35) at (9, 1)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 9.07345e-10  Tdel: 0
-
-Node: 1662  FF_OPIN Block #298 (Block_35) at (9, 1)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 9.07345e-10  Tdel: 1.6e-10
-
-Node: 1660  CLB_OPIN Block #298 (Block_35) at (9, 1)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.06735e-09  Tdel: 4.90496e-10
-Net to next node: #50 (data_cmp1_c[2]).  Pins on net: 2.
-
-Node: 1479  CLB_IPIN Block #264 (Block_0) at (10, 7)
-Pin: 1 
-T_arr: 6.50496e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 1484  SUBBLK_IPIN Block #264 (Block_0) at (10, 7)
-Subblock #0 Pin: 2 
-T_arr: 6.50496e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 1486  SUBBLK_OPIN Block #264 (Block_0) at (10, 7)
-Subblock #0 Pin: 4 
-T_arr: 9.65496e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 1487  FF_IPIN Block #264 (Block_0) at (10, 7)
-Flipflop #0 Pin: 0 
-T_arr: 9.65496e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 1489  IFF_SINK Block #264 (Block_0) at (10, 7)
-Flipflop #0 
-T_arr: 9.65496e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 4.90496e-10 (s)
-
-For folding stage: 6
-Node: 1790  INPAD_SOURCE Block #325 (clk) at (9, 0)
-T_arr: 0  T_req: 1.01741e-09  Tdel: 0
-
-Node: 1791  INPAD_OPIN Block #325 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 1.01741e-09  Tdel: 0
-Net to next node: #52 (clk).  Pins on net: 60.
-
-Node: 1969  CLB_IPIN Block #355 (Block_28) at (10, 9)
-Pin: 32 
-T_arr: 0  T_req: 1.01741e-09  Tdel: 0
-
-Node: 1972  IFF_SOURCE Block #355 (Block_28) at (10, 9)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 1.01741e-09  Tdel: 0
-
-Node: 1971  FF_OPIN Block #355 (Block_28) at (10, 9)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 1.01741e-09  Tdel: 1.6e-10
-
-Node: 1968  CLB_OPIN Block #355 (Block_28) at (10, 9)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.17741e-09  Tdel: 6.95435e-10
-Net to next node: #69 (PO[26]).  Pins on net: 2.
-
-Node: 2153  (null) Block #384 (DSP_Block_0) at (3, 6)
-Pin: 55 
-T_arr: 8.55435e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 2165  (null) Block #384 (DSP_Block_0) at (3, 6)
-Pin: -1 
-T_arr: 8.55435e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 8  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 1.6e-10 (s)  Total net delay: 6.95435e-10 (s)
-
-For folding stage: 7
-Node: 2166  INPAD_SOURCE Block #385 (clk) at (9, 0)
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 2167  INPAD_OPIN Block #385 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-Net to next node: #88 (clk).  Pins on net: 59.
-
-Node: 2242  CLB_IPIN Block #397 (Block_9) at (9, 4)
-Pin: 32 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 2244  IFF_SOURCE Block #397 (Block_9) at (9, 4)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 2243  FF_OPIN Block #397 (Block_9) at (9, 4)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 1.6e-10
-
-Node: 2241  CLB_OPIN Block #397 (Block_9) at (9, 4)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.4177e-09  Tdel: 1.40142e-10
-Net to next node: #90 (data_cmp1_t_6).  Pins on net: 3.
-
-Node: 2181  CLB_IPIN Block #387 (Block_33) at (8, 3)
-Pin: 1 
-T_arr: 3.00142e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 2186  SUBBLK_IPIN Block #387 (Block_33) at (8, 3)
-Subblock #0 Pin: 2 
-T_arr: 3.00142e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 2187  SUBBLK_OPIN Block #387 (Block_33) at (8, 3)
-Subblock #0 Pin: 4 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 2188  FF_IPIN Block #387 (Block_33) at (8, 3)
-Flipflop #0 Pin: 0 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 2191  IFF_SINK Block #387 (Block_33) at (8, 3)
-Flipflop #0 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 1.40142e-10 (s)
-
-For folding stage: 8
-Node: 2473  INPAD_SOURCE Block #444 (clk) at (9, 0)
-T_arr: 0  T_req: 6.3399e-10  Tdel: 0
-
-Node: 2474  INPAD_OPIN Block #444 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 6.3399e-10  Tdel: 0
-Net to next node: #92 (clk).  Pins on net: 58.
-
-Node: 2659  CLB_IPIN Block #478 (Block_33) at (8, 3)
-Pin: 32 
-T_arr: 0  T_req: 6.3399e-10  Tdel: 0
-
-Node: 2661  IFF_SOURCE Block #478 (Block_33) at (8, 3)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 6.3399e-10  Tdel: 0
-
-Node: 2660  FF_OPIN Block #478 (Block_33) at (8, 3)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 6.3399e-10  Tdel: 1.6e-10
-
-Node: 2658  CLB_OPIN Block #478 (Block_33) at (8, 3)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 7.9399e-10  Tdel: 7.6385e-10
-Net to next node: #94 (data_cmp1_t_7).  Pins on net: 3.
-
-Node: 2488  CLB_IPIN Block #446 (Block_10) at (2, 9)
-Pin: 1 
-T_arr: 9.2385e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 2493  SUBBLK_IPIN Block #446 (Block_10) at (2, 9)
-Subblock #0 Pin: 2 
-T_arr: 9.2385e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 2494  SUBBLK_OPIN Block #446 (Block_10) at (2, 9)
-Subblock #0 Pin: 4 
-T_arr: 1.23885e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 2495  FF_IPIN Block #446 (Block_10) at (2, 9)
-Flipflop #0 Pin: 0 
-T_arr: 1.23885e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 2498  IFF_SINK Block #446 (Block_10) at (2, 9)
-Flipflop #0 
-T_arr: 1.23885e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 7.6385e-10 (s)
-
-For folding stage: 9
-Node: 2775  INPAD_SOURCE Block #502 (clk) at (9, 0)
-T_arr: 0  T_req: 8.44054e-10  Tdel: 0
-
-Node: 2776  INPAD_OPIN Block #502 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 8.44054e-10  Tdel: 0
-Net to next node: #96 (clk).  Pins on net: 57.
-
-Node: 2854  CLB_IPIN Block #513 (Block_10) at (2, 9)
-Pin: 32 
-T_arr: 0  T_req: 8.44054e-10  Tdel: 0
-
-Node: 2856  IFF_SOURCE Block #513 (Block_10) at (2, 9)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 8.44054e-10  Tdel: 0
-
-Node: 2855  FF_OPIN Block #513 (Block_10) at (2, 9)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 8.44054e-10  Tdel: 1.6e-10
-
-Node: 2853  CLB_OPIN Block #513 (Block_10) at (2, 9)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.00405e-09  Tdel: 5.53787e-10
-Net to next node: #98 (data_cmp1_t_8).  Pins on net: 3.
-
-Node: 2790  CLB_IPIN Block #504 (Block_11) at (8, 9)
-Pin: 1 
-T_arr: 7.13787e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 2795  SUBBLK_IPIN Block #504 (Block_11) at (8, 9)
-Subblock #0 Pin: 2 
-T_arr: 7.13787e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 2796  SUBBLK_OPIN Block #504 (Block_11) at (8, 9)
-Subblock #0 Pin: 4 
-T_arr: 1.02879e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 2797  FF_IPIN Block #504 (Block_11) at (8, 9)
-Flipflop #0 Pin: 0 
-T_arr: 1.02879e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 2800  IFF_SINK Block #504 (Block_11) at (8, 9)
-Flipflop #0 
-T_arr: 1.02879e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 5.53787e-10 (s)
-
-For folding stage: 10
-Node: 3077  INPAD_SOURCE Block #559 (clk) at (9, 0)
-T_arr: 0  T_req: 7.37411e-10  Tdel: 0
-
-Node: 3078  INPAD_OPIN Block #559 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.37411e-10  Tdel: 0
-Net to next node: #103 (clk).  Pins on net: 53.
-
-Node: 3082  CLB_IPIN Block #560 (Block_41) at (9, 11)
-Pin: 32 
-T_arr: 0  T_req: 7.37411e-10  Tdel: 0
-
-Node: 3089  IFF_SOURCE Block #560 (Block_41) at (9, 11)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.37411e-10  Tdel: 0
-
-Node: 3088  FF_OPIN Block #560 (Block_41) at (9, 11)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.37411e-10  Tdel: 1.6e-10
-
-Node: 3081  CLB_OPIN Block #560 (Block_41) at (9, 11)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 8.97411e-10  Tdel: 6.6043e-10
-Net to next node: #106 (regy_out[9]).  Pins on net: 2.
-
-Node: 3091  CLB_IPIN Block #561 (Block_12) at (2, 8)
-Pin: 0 
-T_arr: 8.2043e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 3095  SUBBLK_IPIN Block #561 (Block_12) at (2, 8)
-Subblock #0 Pin: 0 
-T_arr: 8.2043e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 3098  SUBBLK_OPIN Block #561 (Block_12) at (2, 8)
-Subblock #0 Pin: 4 
-T_arr: 1.13543e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 3099  FF_IPIN Block #561 (Block_12) at (2, 8)
-Flipflop #0 Pin: 0 
-T_arr: 1.13543e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 3102  IFF_SINK Block #561 (Block_12) at (2, 8)
-Flipflop #0 
-T_arr: 1.13543e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.6043e-10 (s)
-
-For folding stage: 11
-Node: 3354  INPAD_SOURCE Block #612 (clk) at (9, 0)
-T_arr: 0  T_req: 5.73999e-10  Tdel: 0
-
-Node: 3355  INPAD_OPIN Block #612 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 5.73999e-10  Tdel: 0
-Net to next node: #107 (clk).  Pins on net: 52.
-
-Node: 3359  CLB_IPIN Block #613 (Block_42) at (10, 10)
-Pin: 32 
-T_arr: 0  T_req: 5.73999e-10  Tdel: 0
-
-Node: 3366  IFF_SOURCE Block #613 (Block_42) at (10, 10)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 5.73999e-10  Tdel: 0
-
-Node: 3365  FF_OPIN Block #613 (Block_42) at (10, 10)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 5.73999e-10  Tdel: 1.6e-10
-
-Node: 3358  CLB_OPIN Block #613 (Block_42) at (10, 10)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 7.33999e-10  Tdel: 8.23842e-10
-Net to next node: #110 (regy_out[10]).  Pins on net: 2.
-
-Node: 3368  CLB_IPIN Block #614 (Block_13) at (1, 4)
-Pin: 0 
-T_arr: 9.83842e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 3372  SUBBLK_IPIN Block #614 (Block_13) at (1, 4)
-Subblock #0 Pin: 0 
-T_arr: 9.83842e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 3375  SUBBLK_OPIN Block #614 (Block_13) at (1, 4)
-Subblock #0 Pin: 4 
-T_arr: 1.29884e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 3376  FF_IPIN Block #614 (Block_13) at (1, 4)
-Flipflop #0 Pin: 0 
-T_arr: 1.29884e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 3379  IFF_SINK Block #614 (Block_13) at (1, 4)
-Flipflop #0 
-T_arr: 1.29884e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 8.23842e-10 (s)
-
-For folding stage: 12
-Node: 3626  INPAD_SOURCE Block #664 (clk) at (9, 0)
-T_arr: 0  T_req: 8.83524e-10  Tdel: 0
-
-Node: 3627  INPAD_OPIN Block #664 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 8.83524e-10  Tdel: 0
-Net to next node: #111 (clk).  Pins on net: 51.
-
-Node: 3702  CLB_IPIN Block #676 (Block_13) at (1, 4)
-Pin: 32 
-T_arr: 0  T_req: 8.83524e-10  Tdel: 0
-
-Node: 3704  IFF_SOURCE Block #676 (Block_13) at (1, 4)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 8.83524e-10  Tdel: 0
-
-Node: 3703  FF_OPIN Block #676 (Block_13) at (1, 4)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 8.83524e-10  Tdel: 1.6e-10
-
-Node: 3701  CLB_OPIN Block #676 (Block_13) at (1, 4)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.04352e-09  Tdel: 5.14316e-10
-Net to next node: #113 (data_cmp1_t_11).  Pins on net: 3.
-
-Node: 3629  CLB_IPIN Block #665 (Block_43) at (1, 10)
-Pin: 1 
-T_arr: 6.74316e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 3634  SUBBLK_IPIN Block #665 (Block_43) at (1, 10)
-Subblock #0 Pin: 2 
-T_arr: 6.74316e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 3635  SUBBLK_OPIN Block #665 (Block_43) at (1, 10)
-Subblock #0 Pin: 4 
-T_arr: 9.89316e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 3636  FF_IPIN Block #665 (Block_43) at (1, 10)
-Flipflop #0 Pin: 0 
-T_arr: 9.89316e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 3639  IFF_SINK Block #665 (Block_43) at (1, 10)
-Flipflop #0 
-T_arr: 9.89316e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 5.14316e-10 (s)
-
-For folding stage: 13
-Node: 3893  INPAD_SOURCE Block #715 (clk) at (9, 0)
-T_arr: 0  T_req: 8.1359e-10  Tdel: 0
-
-Node: 3894  INPAD_OPIN Block #715 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 8.1359e-10  Tdel: 0
-Net to next node: #115 (clk).  Pins on net: 50.
-
-Node: 3910  CLB_IPIN Block #717 (Block_15) at (9, 5)
-Pin: 32 
-T_arr: 0  T_req: 8.1359e-10  Tdel: 0
-
-Node: 3917  IFF_SOURCE Block #717 (Block_15) at (9, 5)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 8.1359e-10  Tdel: 0
-
-Node: 3916  FF_OPIN Block #717 (Block_15) at (9, 5)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 8.1359e-10  Tdel: 1.6e-10
-
-Node: 3909  CLB_OPIN Block #717 (Block_15) at (9, 5)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.7359e-10  Tdel: 5.84251e-10
-Net to next node: #116 (PO[12]).  Pins on net: 2.
-
-Node: 3895  CLB_IPIN Block #716 (Block_3) at (2, 5)
-Pin: 0 
-T_arr: 7.44251e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 3900  SUBBLK_IPIN Block #716 (Block_3) at (2, 5)
-Subblock #0 Pin: 1 
-T_arr: 7.44251e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 3902  SUBBLK_OPIN Block #716 (Block_3) at (2, 5)
-Subblock #0 Pin: 4 
-T_arr: 1.05925e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 3903  FF_IPIN Block #716 (Block_3) at (2, 5)
-Flipflop #0 Pin: 0 
-T_arr: 1.05925e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 3906  IFF_SINK Block #716 (Block_3) at (2, 5)
-Flipflop #0 
-T_arr: 1.05925e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 5.84251e-10 (s)
-
-For folding stage: 14
-Node: 4160  INPAD_SOURCE Block #765 (clk) at (9, 0)
-T_arr: 0  T_req: 6.97953e-10  Tdel: 0
-
-Node: 4161  INPAD_OPIN Block #765 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 6.97953e-10  Tdel: 0
-Net to next node: #122 (clk).  Pins on net: 46.
-
-Node: 4236  CLB_IPIN Block #777 (Block_15) at (9, 5)
-Pin: 32 
-T_arr: 0  T_req: 6.97953e-10  Tdel: 0
-
-Node: 4238  IFF_SOURCE Block #777 (Block_15) at (9, 5)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 6.97953e-10  Tdel: 0
-
-Node: 4237  FF_OPIN Block #777 (Block_15) at (9, 5)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 6.97953e-10  Tdel: 1.6e-10
-
-Node: 4235  CLB_OPIN Block #777 (Block_15) at (9, 5)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 8.57953e-10  Tdel: 6.99888e-10
-Net to next node: #124 (data_cmp1_t_13).  Pins on net: 3.
-
-Node: 4175  CLB_IPIN Block #767 (Block_16) at (2, 11)
-Pin: 1 
-T_arr: 8.59888e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 4180  SUBBLK_IPIN Block #767 (Block_16) at (2, 11)
-Subblock #0 Pin: 2 
-T_arr: 8.59888e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 4181  SUBBLK_OPIN Block #767 (Block_16) at (2, 11)
-Subblock #0 Pin: 4 
-T_arr: 1.17489e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 4182  FF_IPIN Block #767 (Block_16) at (2, 11)
-Flipflop #0 Pin: 0 
-T_arr: 1.17489e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 4185  IFF_SINK Block #767 (Block_16) at (2, 11)
-Flipflop #0 
-T_arr: 1.17489e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.99888e-10 (s)
-
-For folding stage: 15
-Node: 4402  INPAD_SOURCE Block #811 (clk) at (9, 0)
-T_arr: 0  T_req: 1.04183e-09  Tdel: 0
-
-Node: 4403  INPAD_OPIN Block #811 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 1.04183e-09  Tdel: 0
-Net to next node: #126 (clk).  Pins on net: 45.
-
-Node: 4419  CLB_IPIN Block #813 (Block_17) at (4, 11)
-Pin: 32 
-T_arr: 0  T_req: 1.04183e-09  Tdel: 0
-
-Node: 4426  IFF_SOURCE Block #813 (Block_17) at (4, 11)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 1.04183e-09  Tdel: 0
-
-Node: 4425  FF_OPIN Block #813 (Block_17) at (4, 11)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 1.04183e-09  Tdel: 1.6e-10
-
-Node: 4418  CLB_OPIN Block #813 (Block_17) at (4, 11)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.20183e-09  Tdel: 3.56016e-10
-Net to next node: #127 (PO[14]).  Pins on net: 2.
-
-Node: 4404  CLB_IPIN Block #812 (Block_45) at (6, 11)
-Pin: 0 
-T_arr: 5.16016e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 4409  SUBBLK_IPIN Block #812 (Block_45) at (6, 11)
-Subblock #0 Pin: 1 
-T_arr: 5.16016e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 4411  SUBBLK_OPIN Block #812 (Block_45) at (6, 11)
-Subblock #0 Pin: 4 
-T_arr: 8.31016e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 4412  FF_IPIN Block #812 (Block_45) at (6, 11)
-Flipflop #0 Pin: 0 
-T_arr: 8.31016e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 4415  IFF_SINK Block #812 (Block_45) at (6, 11)
-Flipflop #0 
-T_arr: 8.31016e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 3.56016e-10 (s)
-
-For folding stage: 16
-Node: 4639  INPAD_SOURCE Block #856 (clk) at (9, 0)
-T_arr: 0  T_req: 9.76265e-10  Tdel: 0
-
-Node: 4640  INPAD_OPIN Block #856 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 9.76265e-10  Tdel: 0
-Net to next node: #130 (clk).  Pins on net: 44.
-
-Node: 4715  CLB_IPIN Block #868 (Block_17) at (4, 11)
-Pin: 32 
-T_arr: 0  T_req: 9.76265e-10  Tdel: 0
-
-Node: 4717  IFF_SOURCE Block #868 (Block_17) at (4, 11)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 9.76265e-10  Tdel: 0
-
-Node: 4716  FF_OPIN Block #868 (Block_17) at (4, 11)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 9.76265e-10  Tdel: 1.6e-10
-
-Node: 4714  CLB_OPIN Block #868 (Block_17) at (4, 11)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.13627e-09  Tdel: 4.21576e-10
-Net to next node: #132 (data_cmp1_t_15).  Pins on net: 3.
-
-Node: 4654  CLB_IPIN Block #858 (Block_18) at (2, 10)
-Pin: 1 
-T_arr: 5.81576e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 4659  SUBBLK_IPIN Block #858 (Block_18) at (2, 10)
-Subblock #0 Pin: 2 
-T_arr: 5.81576e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 4660  SUBBLK_OPIN Block #858 (Block_18) at (2, 10)
-Subblock #0 Pin: 4 
-T_arr: 8.96576e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 4661  FF_IPIN Block #858 (Block_18) at (2, 10)
-Flipflop #0 Pin: 0 
-T_arr: 8.96576e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 4664  IFF_SINK Block #858 (Block_18) at (2, 10)
-Flipflop #0 
-T_arr: 8.96576e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 4.21576e-10 (s)
-
-For folding stage: 17
-Node: 4871  INPAD_SOURCE Block #900 (clk) at (9, 0)
-T_arr: 0  T_req: 7.58343e-10  Tdel: 0
-
-Node: 4872  INPAD_OPIN Block #900 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.58343e-10  Tdel: 0
-Net to next node: #134 (clk).  Pins on net: 43.
-
-Node: 5024  CLB_IPIN Block #926 (Block_44) at (3, 11)
-Pin: 32 
-T_arr: 0  T_req: 7.58343e-10  Tdel: 0
-
-Node: 5026  IFF_SOURCE Block #926 (Block_44) at (3, 11)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.58343e-10  Tdel: 0
-
-Node: 5025  FF_OPIN Block #926 (Block_44) at (3, 11)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.58343e-10  Tdel: 1.6e-10
-
-Node: 5023  CLB_OPIN Block #926 (Block_44) at (3, 11)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.18343e-10  Tdel: 6.39498e-10
-Net to next node: #138 (data_cmp1_c[13]).  Pins on net: 2.
-
-Node: 4897  CLB_IPIN Block #903 (Block_3) at (2, 5)
-Pin: 0 
-T_arr: 7.99498e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 4902  SUBBLK_IPIN Block #903 (Block_3) at (2, 5)
-Subblock #0 Pin: 1 
-T_arr: 7.99498e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 4905  SUBBLK_OPIN Block #903 (Block_3) at (2, 5)
-Subblock #0 Pin: 4 
-T_arr: 1.1145e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 4906  FF_IPIN Block #903 (Block_3) at (2, 5)
-Flipflop #0 Pin: 0 
-T_arr: 1.1145e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 4909  IFF_SINK Block #903 (Block_3) at (2, 5)
-Flipflop #0 
-T_arr: 1.1145e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.39498e-10 (s)
-
-For folding stage: 18
-Node: 5103  INPAD_SOURCE Block #943 (clk) at (9, 0)
-T_arr: 0  T_req: 5.74756e-10  Tdel: 0
-
-Node: 5104  INPAD_OPIN Block #943 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 5.74756e-10  Tdel: 0
-Net to next node: #141 (clk).  Pins on net: 39.
-
-Node: 5120  CLB_IPIN Block #945 (Block_20) at (2, 2)
-Pin: 32 
-T_arr: 0  T_req: 5.74756e-10  Tdel: 0
-
-Node: 5127  IFF_SOURCE Block #945 (Block_20) at (2, 2)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 5.74756e-10  Tdel: 0
-
-Node: 5126  FF_OPIN Block #945 (Block_20) at (2, 2)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 5.74756e-10  Tdel: 1.6e-10
-
-Node: 5119  CLB_OPIN Block #945 (Block_20) at (2, 2)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 7.34756e-10  Tdel: 8.23085e-10
-Net to next node: #142 (PO[17]).  Pins on net: 2.
-
-Node: 5105  CLB_IPIN Block #944 (Block_48) at (8, 8)
-Pin: 0 
-T_arr: 9.83085e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 5110  SUBBLK_IPIN Block #944 (Block_48) at (8, 8)
-Subblock #0 Pin: 1 
-T_arr: 9.83085e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 5112  SUBBLK_OPIN Block #944 (Block_48) at (8, 8)
-Subblock #0 Pin: 4 
-T_arr: 1.29808e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5113  FF_IPIN Block #944 (Block_48) at (8, 8)
-Flipflop #0 Pin: 0 
-T_arr: 1.29808e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5116  IFF_SINK Block #944 (Block_48) at (8, 8)
-Flipflop #0 
-T_arr: 1.29808e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 8.23085e-10 (s)
-
-For folding stage: 19
-Node: 5315  INPAD_SOURCE Block #982 (clk) at (9, 0)
-T_arr: 0  T_req: 7.68024e-10  Tdel: 0
-
-Node: 5316  INPAD_OPIN Block #982 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.68024e-10  Tdel: 0
-Net to next node: #148 (clk).  Pins on net: 35.
-
-Node: 5332  CLB_IPIN Block #984 (Block_21) at (8, 4)
-Pin: 32 
-T_arr: 0  T_req: 7.68024e-10  Tdel: 0
-
-Node: 5339  IFF_SOURCE Block #984 (Block_21) at (8, 4)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.68024e-10  Tdel: 0
-
-Node: 5338  FF_OPIN Block #984 (Block_21) at (8, 4)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.68024e-10  Tdel: 1.6e-10
-
-Node: 5331  CLB_OPIN Block #984 (Block_21) at (8, 4)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.28024e-10  Tdel: 6.29817e-10
-Net to next node: #149 (PO[18]).  Pins on net: 2.
-
-Node: 5317  CLB_IPIN Block #983 (Block_49) at (2, 7)
-Pin: 0 
-T_arr: 7.89817e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 5322  SUBBLK_IPIN Block #983 (Block_49) at (2, 7)
-Subblock #0 Pin: 1 
-T_arr: 7.89817e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 5324  SUBBLK_OPIN Block #983 (Block_49) at (2, 7)
-Subblock #0 Pin: 4 
-T_arr: 1.10482e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5325  FF_IPIN Block #983 (Block_49) at (2, 7)
-Flipflop #0 Pin: 0 
-T_arr: 1.10482e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5328  IFF_SINK Block #983 (Block_49) at (2, 7)
-Flipflop #0 
-T_arr: 1.10482e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.29817e-10 (s)
-
-For folding stage: 20
-Node: 5502  INPAD_SOURCE Block #1017 (clk) at (9, 0)
-T_arr: 0  T_req: 7.8024e-10  Tdel: 0
-
-Node: 5503  INPAD_OPIN Block #1017 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.8024e-10  Tdel: 0
-Net to next node: #152 (clk).  Pins on net: 34.
-
-Node: 5519  CLB_IPIN Block #1019 (Block_22) at (2, 4)
-Pin: 32 
-T_arr: 0  T_req: 7.8024e-10  Tdel: 0
-
-Node: 5526  IFF_SOURCE Block #1019 (Block_22) at (2, 4)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.8024e-10  Tdel: 0
-
-Node: 5525  FF_OPIN Block #1019 (Block_22) at (2, 4)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.8024e-10  Tdel: 1.6e-10
-
-Node: 5518  CLB_OPIN Block #1019 (Block_22) at (2, 4)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.4024e-10  Tdel: 6.176e-10
-Net to next node: #153 (PO[19]).  Pins on net: 2.
-
-Node: 5504  CLB_IPIN Block #1018 (Block_50) at (8, 1)
-Pin: 0 
-T_arr: 7.776e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 5509  SUBBLK_IPIN Block #1018 (Block_50) at (8, 1)
-Subblock #0 Pin: 1 
-T_arr: 7.776e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 5511  SUBBLK_OPIN Block #1018 (Block_50) at (8, 1)
-Subblock #0 Pin: 4 
-T_arr: 1.0926e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5512  FF_IPIN Block #1018 (Block_50) at (8, 1)
-Flipflop #0 Pin: 0 
-T_arr: 1.0926e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5515  IFF_SINK Block #1018 (Block_50) at (8, 1)
-Flipflop #0 
-T_arr: 1.0926e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.176e-10 (s)
-
-For folding stage: 21
-Node: 5684  INPAD_SOURCE Block #1051 (clk) at (9, 0)
-T_arr: 0  T_req: 6.14214e-10  Tdel: 0
-
-Node: 5685  INPAD_OPIN Block #1051 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 6.14214e-10  Tdel: 0
-Net to next node: #156 (clk).  Pins on net: 33.
-
-Node: 5748  CLB_IPIN Block #1059 (Block_22) at (2, 4)
-Pin: 32 
-T_arr: 0  T_req: 6.14214e-10  Tdel: 0
-
-Node: 5750  IFF_SOURCE Block #1059 (Block_22) at (2, 4)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 6.14214e-10  Tdel: 0
-
-Node: 5749  FF_OPIN Block #1059 (Block_22) at (2, 4)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 6.14214e-10  Tdel: 1.6e-10
-
-Node: 5747  CLB_OPIN Block #1059 (Block_22) at (2, 4)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 7.74214e-10  Tdel: 7.83626e-10
-Net to next node: #158 (data_cmp1_t_20).  Pins on net: 3.
-
-Node: 5687  CLB_IPIN Block #1052 (Block_6) at (8, 10)
-Pin: 1 
-T_arr: 9.43627e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 5692  SUBBLK_IPIN Block #1052 (Block_6) at (8, 10)
-Subblock #0 Pin: 2 
-T_arr: 9.43627e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 5693  SUBBLK_OPIN Block #1052 (Block_6) at (8, 10)
-Subblock #0 Pin: 4 
-T_arr: 1.25863e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5694  FF_IPIN Block #1052 (Block_6) at (8, 10)
-Flipflop #0 Pin: 0 
-T_arr: 1.25863e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5697  IFF_SINK Block #1052 (Block_6) at (8, 10)
-Flipflop #0 
-T_arr: 1.25863e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 7.83626e-10 (s)
-
-For folding stage: 22
-Node: 5866  INPAD_SOURCE Block #1084 (clk) at (9, 0)
-T_arr: 0  T_req: 7.35433e-10  Tdel: 0
-
-Node: 5867  INPAD_OPIN Block #1084 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.35433e-10  Tdel: 0
-Net to next node: #163 (clk).  Pins on net: 29.
-
-Node: 5927  CLB_IPIN Block #1093 (Block_23) at (2, 6)
-Pin: 32 
-T_arr: 0  T_req: 7.35433e-10  Tdel: 0
-
-Node: 5929  IFF_SOURCE Block #1093 (Block_23) at (2, 6)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.35433e-10  Tdel: 0
-
-Node: 5928  FF_OPIN Block #1093 (Block_23) at (2, 6)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.35433e-10  Tdel: 1.6e-10
-
-Node: 5926  CLB_OPIN Block #1093 (Block_23) at (2, 6)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 8.95433e-10  Tdel: 6.62408e-10
-Net to next node: #165 (data_cmp1_t_21).  Pins on net: 3.
-
-Node: 5881  CLB_IPIN Block #1086 (Block_24) at (7, 11)
-Pin: 1 
-T_arr: 8.22408e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 5886  SUBBLK_IPIN Block #1086 (Block_24) at (7, 11)
-Subblock #0 Pin: 2 
-T_arr: 8.22408e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 5887  SUBBLK_OPIN Block #1086 (Block_24) at (7, 11)
-Subblock #0 Pin: 4 
-T_arr: 1.13741e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5888  FF_IPIN Block #1086 (Block_24) at (7, 11)
-Flipflop #0 Pin: 0 
-T_arr: 1.13741e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 5891  IFF_SINK Block #1086 (Block_24) at (7, 11)
-Flipflop #0 
-T_arr: 1.13741e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.62408e-10 (s)
-
-For folding stage: 23
-Node: 6023  INPAD_SOURCE Block #1113 (clk) at (9, 0)
-T_arr: 0  T_req: 9.07345e-10  Tdel: 0
-
-Node: 6024  INPAD_OPIN Block #1113 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 9.07345e-10  Tdel: 0
-Net to next node: #167 (clk).  Pins on net: 28.
-
-Node: 6084  CLB_IPIN Block #1122 (Block_24) at (7, 11)
-Pin: 32 
-T_arr: 0  T_req: 9.07345e-10  Tdel: 0
-
-Node: 6086  IFF_SOURCE Block #1122 (Block_24) at (7, 11)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 9.07345e-10  Tdel: 0
-
-Node: 6085  FF_OPIN Block #1122 (Block_24) at (7, 11)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 9.07345e-10  Tdel: 1.6e-10
-
-Node: 6083  CLB_OPIN Block #1122 (Block_24) at (7, 11)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.06735e-09  Tdel: 4.90496e-10
-Net to next node: #169 (data_cmp1_t_22).  Pins on net: 3.
-
-Node: 6026  CLB_IPIN Block #1114 (Block_53) at (11, 8)
-Pin: 1 
-T_arr: 6.50496e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 6031  SUBBLK_IPIN Block #1114 (Block_53) at (11, 8)
-Subblock #0 Pin: 2 
-T_arr: 6.50496e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 6032  SUBBLK_OPIN Block #1114 (Block_53) at (11, 8)
-Subblock #0 Pin: 4 
-T_arr: 9.65496e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6033  FF_IPIN Block #1114 (Block_53) at (11, 8)
-Flipflop #0 Pin: 0 
-T_arr: 9.65496e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6036  IFF_SINK Block #1114 (Block_53) at (11, 8)
-Flipflop #0 
-T_arr: 9.65496e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 4.90496e-10 (s)
-
-For folding stage: 24
-Node: 6175  INPAD_SOURCE Block #1141 (clk) at (9, 0)
-T_arr: 0  T_req: 9.67399e-10  Tdel: 0
-
-Node: 6176  INPAD_OPIN Block #1141 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 9.67399e-10  Tdel: 0
-Net to next node: #171 (clk).  Pins on net: 27.
-
-Node: 6192  CLB_IPIN Block #1143 (Block_55) at (9, 6)
-Pin: 32 
-T_arr: 0  T_req: 9.67399e-10  Tdel: 0
-
-Node: 6199  IFF_SOURCE Block #1143 (Block_55) at (9, 6)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 9.67399e-10  Tdel: 0
-
-Node: 6198  FF_OPIN Block #1143 (Block_55) at (9, 6)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 9.67399e-10  Tdel: 1.6e-10
-
-Node: 6191  CLB_OPIN Block #1143 (Block_55) at (9, 6)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.1274e-09  Tdel: 4.30441e-10
-Net to next node: #172 (PO[23]).  Pins on net: 2.
-
-Node: 6177  CLB_IPIN Block #1142 (Block_54) at (9, 2)
-Pin: 0 
-T_arr: 5.90441e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 6182  SUBBLK_IPIN Block #1142 (Block_54) at (9, 2)
-Subblock #0 Pin: 1 
-T_arr: 5.90441e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 6184  SUBBLK_OPIN Block #1142 (Block_54) at (9, 2)
-Subblock #0 Pin: 4 
-T_arr: 9.05441e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6185  FF_IPIN Block #1142 (Block_54) at (9, 2)
-Flipflop #0 Pin: 0 
-T_arr: 9.05441e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6188  IFF_SINK Block #1142 (Block_54) at (9, 2)
-Flipflop #0 
-T_arr: 9.05441e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 4.30441e-10 (s)
-
-For folding stage: 25
-Node: 6322  INPAD_SOURCE Block #1168 (clk) at (9, 0)
-T_arr: 0  T_req: 7.74132e-10  Tdel: 0
-
-Node: 6323  INPAD_OPIN Block #1168 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.74132e-10  Tdel: 0
-Net to next node: #175 (clk).  Pins on net: 26.
-
-Node: 6339  CLB_IPIN Block #1170 (Block_26) at (1, 8)
-Pin: 32 
-T_arr: 0  T_req: 7.74132e-10  Tdel: 0
-
-Node: 6346  IFF_SOURCE Block #1170 (Block_26) at (1, 8)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.74132e-10  Tdel: 0
-
-Node: 6345  FF_OPIN Block #1170 (Block_26) at (1, 8)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.74132e-10  Tdel: 1.6e-10
-
-Node: 6338  CLB_OPIN Block #1170 (Block_26) at (1, 8)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.34132e-10  Tdel: 6.23709e-10
-Net to next node: #176 (PO[24]).  Pins on net: 2.
-
-Node: 6324  CLB_IPIN Block #1169 (Block_8) at (9, 8)
-Pin: 0 
-T_arr: 7.83709e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 6329  SUBBLK_IPIN Block #1169 (Block_8) at (9, 8)
-Subblock #0 Pin: 1 
-T_arr: 7.83709e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 6331  SUBBLK_OPIN Block #1169 (Block_8) at (9, 8)
-Subblock #0 Pin: 4 
-T_arr: 1.09871e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6332  FF_IPIN Block #1169 (Block_8) at (9, 8)
-Flipflop #0 Pin: 0 
-T_arr: 1.09871e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6335  IFF_SINK Block #1169 (Block_8) at (9, 8)
-Flipflop #0 
-T_arr: 1.09871e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.23709e-10 (s)
-
-For folding stage: 26
-Node: 6469  INPAD_SOURCE Block #1194 (clk) at (9, 0)
-T_arr: 0  T_req: 6.84148e-10  Tdel: 0
-
-Node: 6470  INPAD_OPIN Block #1194 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 6.84148e-10  Tdel: 0
-Net to next node: #182 (clk).  Pins on net: 22.
-
-Node: 6530  CLB_IPIN Block #1203 (Block_26) at (1, 8)
-Pin: 32 
-T_arr: 0  T_req: 6.84148e-10  Tdel: 0
-
-Node: 6532  IFF_SOURCE Block #1203 (Block_26) at (1, 8)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 6.84148e-10  Tdel: 0
-
-Node: 6531  FF_OPIN Block #1203 (Block_26) at (1, 8)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 6.84148e-10  Tdel: 1.6e-10
-
-Node: 6529  CLB_OPIN Block #1203 (Block_26) at (1, 8)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 8.44148e-10  Tdel: 7.13692e-10
-Net to next node: #184 (data_cmp1_t_25).  Pins on net: 3.
-
-Node: 6484  CLB_IPIN Block #1196 (Block_27) at (11, 6)
-Pin: 1 
-T_arr: 8.73692e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 6489  SUBBLK_IPIN Block #1196 (Block_27) at (11, 6)
-Subblock #0 Pin: 2 
-T_arr: 8.73692e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 6490  SUBBLK_OPIN Block #1196 (Block_27) at (11, 6)
-Subblock #0 Pin: 4 
-T_arr: 1.18869e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6491  FF_IPIN Block #1196 (Block_27) at (11, 6)
-Flipflop #0 Pin: 0 
-T_arr: 1.18869e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6494  IFF_SINK Block #1196 (Block_27) at (11, 6)
-Flipflop #0 
-T_arr: 1.18869e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 7.13692e-10 (s)
-
-For folding stage: 27
-Node: 6591  INPAD_SOURCE Block #1216 (clk) at (9, 0)
-T_arr: 0  T_req: 1.11756e-09  Tdel: 0
-
-Node: 6592  INPAD_OPIN Block #1216 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 1.11756e-09  Tdel: 0
-Net to next node: #186 (clk).  Pins on net: 21.
-
-Node: 6652  CLB_IPIN Block #1225 (Block_27) at (11, 6)
-Pin: 32 
-T_arr: 0  T_req: 1.11756e-09  Tdel: 0
-
-Node: 6654  IFF_SOURCE Block #1225 (Block_27) at (11, 6)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 1.11756e-09  Tdel: 0
-
-Node: 6653  FF_OPIN Block #1225 (Block_27) at (11, 6)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 1.11756e-09  Tdel: 1.6e-10
-
-Node: 6651  CLB_OPIN Block #1225 (Block_27) at (11, 6)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.27756e-09  Tdel: 2.80283e-10
-Net to next node: #188 (data_cmp1_t_26).  Pins on net: 3.
-
-Node: 6606  CLB_IPIN Block #1218 (Block_28) at (10, 9)
-Pin: 1 
-T_arr: 4.40283e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 6611  SUBBLK_IPIN Block #1218 (Block_28) at (10, 9)
-Subblock #0 Pin: 2 
-T_arr: 4.40283e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 6612  SUBBLK_OPIN Block #1218 (Block_28) at (10, 9)
-Subblock #0 Pin: 4 
-T_arr: 7.55283e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6613  FF_IPIN Block #1218 (Block_28) at (10, 9)
-Flipflop #0 Pin: 0 
-T_arr: 7.55283e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6616  IFF_SINK Block #1218 (Block_28) at (10, 9)
-Flipflop #0 
-T_arr: 7.55283e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 2.80283e-10 (s)
-
-For folding stage: 28
-Node: 6708  INPAD_SOURCE Block #1237 (clk) at (9, 0)
-T_arr: 0  T_req: 1.04749e-09  Tdel: 0
-
-Node: 6709  INPAD_OPIN Block #1237 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 1.04749e-09  Tdel: 0
-Net to next node: #190 (clk).  Pins on net: 20.
-
-Node: 6769  CLB_IPIN Block #1246 (Block_28) at (10, 9)
-Pin: 32 
-T_arr: 0  T_req: 1.04749e-09  Tdel: 0
-
-Node: 6771  IFF_SOURCE Block #1246 (Block_28) at (10, 9)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 1.04749e-09  Tdel: 0
-
-Node: 6770  FF_OPIN Block #1246 (Block_28) at (10, 9)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 1.04749e-09  Tdel: 1.6e-10
-
-Node: 6768  CLB_OPIN Block #1246 (Block_28) at (10, 9)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.20749e-09  Tdel: 3.50354e-10
-Net to next node: #192 (data_cmp1_t_27).  Pins on net: 3.
-
-Node: 6723  CLB_IPIN Block #1239 (Block_29) at (8, 6)
-Pin: 1 
-T_arr: 5.10354e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 6728  SUBBLK_IPIN Block #1239 (Block_29) at (8, 6)
-Subblock #0 Pin: 2 
-T_arr: 5.10354e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 6729  SUBBLK_OPIN Block #1239 (Block_29) at (8, 6)
-Subblock #0 Pin: 4 
-T_arr: 8.25354e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6730  FF_IPIN Block #1239 (Block_29) at (8, 6)
-Flipflop #0 Pin: 0 
-T_arr: 8.25354e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6733  IFF_SINK Block #1239 (Block_29) at (8, 6)
-Flipflop #0 
-T_arr: 8.25354e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 3.50354e-10 (s)
-
-For folding stage: 29
-Node: 6820  INPAD_SOURCE Block #1257 (clk) at (9, 0)
-T_arr: 0  T_req: 7.74132e-10  Tdel: 0
-
-Node: 6821  INPAD_OPIN Block #1257 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.74132e-10  Tdel: 0
-Net to next node: #194 (clk).  Pins on net: 19.
-
-Node: 6825  CLB_IPIN Block #1258 (Block_7) at (1, 6)
-Pin: 32 
-T_arr: 0  T_req: 7.74132e-10  Tdel: 0
-
-Node: 6832  IFF_SOURCE Block #1258 (Block_7) at (1, 6)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.74132e-10  Tdel: 0
-
-Node: 6831  FF_OPIN Block #1258 (Block_7) at (1, 6)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.74132e-10  Tdel: 1.6e-10
-
-Node: 6824  CLB_OPIN Block #1258 (Block_7) at (1, 6)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.34132e-10  Tdel: 6.23709e-10
-Net to next node: #197 (regy_out[28]).  Pins on net: 2.
-
-Node: 6834  CLB_IPIN Block #1259 (Block_30) at (8, 5)
-Pin: 0 
-T_arr: 7.83709e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 6838  SUBBLK_IPIN Block #1259 (Block_30) at (8, 5)
-Subblock #0 Pin: 0 
-T_arr: 7.83709e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 6841  SUBBLK_OPIN Block #1259 (Block_30) at (8, 5)
-Subblock #0 Pin: 4 
-T_arr: 1.09871e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6842  FF_IPIN Block #1259 (Block_30) at (8, 5)
-Flipflop #0 Pin: 0 
-T_arr: 1.09871e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6845  IFF_SINK Block #1259 (Block_30) at (8, 5)
-Flipflop #0 
-T_arr: 1.09871e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.23709e-10 (s)
-
-For folding stage: 30
-Node: 6932  INPAD_SOURCE Block #1276 (clk) at (9, 0)
-T_arr: 0  T_req: 7.04061e-10  Tdel: 0
-
-Node: 6933  INPAD_OPIN Block #1276 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.04061e-10  Tdel: 0
-Net to next node: #201 (clk).  Pins on net: 15.
-
-Node: 6993  CLB_IPIN Block #1285 (Block_30) at (8, 5)
-Pin: 32 
-T_arr: 0  T_req: 7.04061e-10  Tdel: 0
-
-Node: 6995  IFF_SOURCE Block #1285 (Block_30) at (8, 5)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.04061e-10  Tdel: 0
-
-Node: 6994  FF_OPIN Block #1285 (Block_30) at (8, 5)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.04061e-10  Tdel: 1.6e-10
-
-Node: 6992  CLB_OPIN Block #1285 (Block_30) at (8, 5)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 8.64061e-10  Tdel: 6.9378e-10
-Net to next node: #203 (data_cmp1_t_29).  Pins on net: 3.
-
-Node: 6947  CLB_IPIN Block #1278 (Block_31) at (1, 2)
-Pin: 1 
-T_arr: 8.5378e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 6952  SUBBLK_IPIN Block #1278 (Block_31) at (1, 2)
-Subblock #0 Pin: 2 
-T_arr: 8.5378e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 6953  SUBBLK_OPIN Block #1278 (Block_31) at (1, 2)
-Subblock #0 Pin: 4 
-T_arr: 1.16878e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6954  FF_IPIN Block #1278 (Block_31) at (1, 2)
-Flipflop #0 Pin: 0 
-T_arr: 1.16878e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 6957  IFF_SINK Block #1278 (Block_31) at (1, 2)
-Flipflop #0 
-T_arr: 1.16878e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.9378e-10 (s)
-
-For folding stage: 31
-Node: 7019  INPAD_SOURCE Block #1291 (clk) at (9, 0)
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 7020  INPAD_OPIN Block #1291 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-Net to next node: #205 (clk).  Pins on net: 14.
-
-Node: 7080  CLB_IPIN Block #1300 (Block_31) at (1, 2)
-Pin: 32 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 7082  IFF_SOURCE Block #1300 (Block_31) at (1, 2)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 7081  FF_OPIN Block #1300 (Block_31) at (1, 2)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 1.6e-10
-
-Node: 7079  CLB_OPIN Block #1300 (Block_31) at (1, 2)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.4177e-09  Tdel: 1.40142e-10
-Net to next node: #207 (data_cmp1_t_30).  Pins on net: 3.
-
-Node: 7022  CLB_IPIN Block #1292 (Block_61) at (2, 3)
-Pin: 1 
-T_arr: 3.00142e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 7027  SUBBLK_IPIN Block #1292 (Block_61) at (2, 3)
-Subblock #0 Pin: 2 
-T_arr: 3.00142e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 7028  SUBBLK_OPIN Block #1292 (Block_61) at (2, 3)
-Subblock #0 Pin: 4 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7029  FF_IPIN Block #1292 (Block_61) at (2, 3)
-Flipflop #0 Pin: 0 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7032  IFF_SINK Block #1292 (Block_61) at (2, 3)
-Flipflop #0 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 1.40142e-10 (s)
-
-For folding stage: 32
-Node: 7101  INPAD_SOURCE Block #1305 (clk) at (9, 0)
-T_arr: 0  T_req: 7.43519e-10  Tdel: 0
-
-Node: 7102  INPAD_OPIN Block #1305 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.43519e-10  Tdel: 0
-Net to next node: #209 (clk).  Pins on net: 13.
-
-Node: 7162  CLB_IPIN Block #1314 (Block_32) at (1, 3)
-Pin: 32 
-T_arr: 0  T_req: 7.43519e-10  Tdel: 0
-
-Node: 7164  IFF_SOURCE Block #1314 (Block_32) at (1, 3)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.43519e-10  Tdel: 0
-
-Node: 7163  FF_OPIN Block #1314 (Block_32) at (1, 3)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.43519e-10  Tdel: 1.6e-10
-
-Node: 7161  CLB_OPIN Block #1314 (Block_32) at (1, 3)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.03519e-10  Tdel: 6.54321e-10
-Net to next node: #211 (data_cmp1_t_31).  Pins on net: 3.
-
-Node: 7116  CLB_IPIN Block #1307 (Block_40) at (10, 5)
-Pin: 1 
-T_arr: 8.14321e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 7121  SUBBLK_IPIN Block #1307 (Block_40) at (10, 5)
-Subblock #0 Pin: 2 
-T_arr: 8.14321e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 7122  SUBBLK_OPIN Block #1307 (Block_40) at (10, 5)
-Subblock #0 Pin: 4 
-T_arr: 1.12932e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7123  FF_IPIN Block #1307 (Block_40) at (10, 5)
-Flipflop #0 Pin: 0 
-T_arr: 1.12932e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7126  IFF_SINK Block #1307 (Block_40) at (10, 5)
-Flipflop #0 
-T_arr: 1.12932e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.54321e-10 (s)
-
-For folding stage: 33
-Node: 7180  INPAD_SOURCE Block #1319 (clk) at (9, 0)
-T_arr: 0  T_req: 7.54219e-10  Tdel: 0
-
-Node: 7181  INPAD_OPIN Block #1319 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.54219e-10  Tdel: 0
-Net to next node: #214 (clk).  Pins on net: 12.
-
-Node: 7246  CLB_IPIN Block #1329 (Block_62) at (10, 4)
-Pin: 32 
-T_arr: 0  T_req: 7.54219e-10  Tdel: 0
-
-Node: 7248  IFF_SOURCE Block #1329 (Block_62) at (10, 4)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 7.54219e-10  Tdel: 0
-
-Node: 7247  FF_OPIN Block #1329 (Block_62) at (10, 4)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 7.54219e-10  Tdel: 1.6e-10
-
-Node: 7245  CLB_OPIN Block #1329 (Block_62) at (10, 4)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 9.14219e-10  Tdel: 6.43621e-10
-Net to next node: #217 (data_cmp1_c[31]).  Pins on net: 2.
-
-Node: 7201  CLB_IPIN Block #1321 (Block_7) at (1, 6)
-Pin: 2 
-T_arr: 8.03622e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 7206  SUBBLK_IPIN Block #1321 (Block_7) at (1, 6)
-Subblock #0 Pin: 3 
-T_arr: 8.03622e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 7207  SUBBLK_OPIN Block #1321 (Block_7) at (1, 6)
-Subblock #0 Pin: 4 
-T_arr: 1.11862e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7208  FF_IPIN Block #1321 (Block_7) at (1, 6)
-Flipflop #0 Pin: 0 
-T_arr: 1.11862e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7211  IFF_SINK Block #1321 (Block_7) at (1, 6)
-Flipflop #0 
-T_arr: 1.11862e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.43621e-10 (s)
-
-For folding stage: 34
-Node: 7254  INPAD_SOURCE Block #1332 (clk) at (9, 0)
-T_arr: 0  T_req: 8.44203e-10  Tdel: 0
-
-Node: 7255  INPAD_OPIN Block #1332 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 8.44203e-10  Tdel: 0
-Net to next node: #219 (clk).  Pins on net: 9.
-
-Node: 7300  CLB_IPIN Block #1337 (Block_7) at (1, 6)
-Pin: 32 
-T_arr: 0  T_req: 8.44203e-10  Tdel: 0
-
-Node: 7302  IFF_SOURCE Block #1337 (Block_7) at (1, 6)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 8.44203e-10  Tdel: 0
-
-Node: 7301  FF_OPIN Block #1337 (Block_7) at (1, 6)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 8.44203e-10  Tdel: 1.6e-10
-
-Node: 7299  CLB_OPIN Block #1337 (Block_7) at (1, 6)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.0042e-09  Tdel: 5.53638e-10
-Net to next node: #222 (data_cmp1_d_8).  Pins on net: 2.
-
-Node: 7279  CLB_IPIN Block #1334 (Block_2) at (8, 7)
-Pin: 2 
-T_arr: 7.13638e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 7284  SUBBLK_IPIN Block #1334 (Block_2) at (8, 7)
-Subblock #0 Pin: 3 
-T_arr: 7.13638e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 7285  SUBBLK_OPIN Block #1334 (Block_2) at (8, 7)
-Subblock #0 Pin: 4 
-T_arr: 1.02864e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7286  FF_IPIN Block #1334 (Block_2) at (8, 7)
-Flipflop #0 Pin: 0 
-T_arr: 1.02864e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7289  IFF_SINK Block #1334 (Block_2) at (8, 7)
-Flipflop #0 
-T_arr: 1.02864e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 5.53638e-10 (s)
-
-For folding stage: 35
-Node: 7315  INPAD_SOURCE Block #1341 (clk) at (9, 0)
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 7316  INPAD_OPIN Block #1341 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-Net to next node: #223 (clk).  Pins on net: 6.
-
-Node: 7346  CLB_IPIN Block #1344 (Block_2) at (8, 7)
-Pin: 32 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 7348  IFF_SOURCE Block #1344 (Block_2) at (8, 7)
-Flipflop #0 Pin: 2 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 0
-
-Node: 7347  FF_OPIN Block #1344 (Block_2) at (8, 7)
-Flipflop #0 Pin: 1 
-T_arr: 0  T_req: 1.2577e-09  Tdel: 1.6e-10
-
-Node: 7345  CLB_OPIN Block #1344 (Block_2) at (8, 7)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 1.4177e-09  Tdel: 1.40142e-10
-Net to next node: #224 (data_cmp1_d_10).  Pins on net: 2.
-
-Node: 7317  CLB_IPIN Block #1342 (Block_0) at (10, 7)
-Pin: 0 
-T_arr: 3.00142e-10  T_req: 1.55784e-09  Tdel: 0
-
-Node: 7321  SUBBLK_IPIN Block #1342 (Block_0) at (10, 7)
-Subblock #0 Pin: 1 
-T_arr: 3.00142e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 7323  SUBBLK_OPIN Block #1342 (Block_0) at (10, 7)
-Subblock #0 Pin: 4 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7324  FF_IPIN Block #1342 (Block_0) at (10, 7)
-Flipflop #0 Pin: 0 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7327  IFF_SINK Block #1342 (Block_0) at (10, 7)
-Flipflop #0 
-T_arr: 6.15142e-10  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 1.40142e-10 (s)
-
-For folding stage: 36
-Node: 7358  INPAD_SOURCE Block #1348 (clk) at (9, 0)
-T_arr: 0  T_req: 7.43519e-10  Tdel: 0
-
-Node: 7359  INPAD_OPIN Block #1348 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 7.43519e-10  Tdel: 0
-Net to next node: #227 (clk).  Pins on net: 6.
-
-Node: 7363  CLB_IPIN Block #1349 (Block_1) at (10, 6)
-Pin: 32 
-T_arr: 0  T_req: 7.43519e-10  Tdel: 0
-
-Node: 7374  IFF_SOURCE Block #1349 (Block_1) at (10, 6)
+Node: 17  IFF_SOURCE Block #2 (Block_1) at (8, 6)
 Flipflop #1 Pin: 2 
-T_arr: 0  T_req: 7.43519e-10  Tdel: 0
+T_arr: 0  T_req: 1.15336e-09  Tdel: 0
 
-Node: 7373  FF_OPIN Block #1349 (Block_1) at (10, 6)
+Node: 16  FF_OPIN Block #2 (Block_1) at (8, 6)
 Flipflop #1 Pin: 1 
-T_arr: 0  T_req: 7.43519e-10  Tdel: 1.6e-10
+T_arr: 0  T_req: 1.15336e-09  Tdel: 1.6e-10
 
-Node: 7361  CLB_OPIN Block #1349 (Block_1) at (10, 6)
+Node: 5  CLB_OPIN Block #2 (Block_1) at (8, 6)
 Pin: 16 
-T_arr: 1.6e-10  T_req: 9.03519e-10  Tdel: 6.54321e-10
-Net to next node: #229 (ctrl_STATE[1]).  Pins on net: 4.
+T_arr: 1.6e-10  T_req: 1.31336e-09  Tdel: 2.80283e-10
+Net to next node: #3 (PAULIN_STATE[0]).  Pins on net: 4.
 
-Node: 7395  CLB_IPIN Block #1351 (Block_3) at (2, 5)
-Pin: 1 
-T_arr: 8.14321e-10  T_req: 1.55784e-09  Tdel: 0
+Node: 55  CLB_IPIN Block #5 (Block_3) at (9, 9)
+Pin: 0 
+T_arr: 4.40283e-10  T_req: 1.59364e-09  Tdel: 0
 
-Node: 7400  SUBBLK_IPIN Block #1351 (Block_3) at (2, 5)
-Subblock #0 Pin: 1 
-T_arr: 8.14321e-10  T_req: 1.55784e-09  Tdel: 3.15e-10
+Node: 60  SUBBLK_IPIN Block #5 (Block_3) at (9, 9)
+Subblock #0 Pin: 0 
+T_arr: 4.40283e-10  T_req: 1.59364e-09  Tdel: 3.15e-10
 
-Node: 7403  SUBBLK_OPIN Block #1351 (Block_3) at (2, 5)
+Node: 63  SUBBLK_OPIN Block #5 (Block_3) at (9, 9)
 Subblock #0 Pin: 4 
-T_arr: 1.12932e-09  T_req: 1.87284e-09  Tdel: 0
+T_arr: 7.55283e-10  T_req: 1.90864e-09  Tdel: 1.6e-10
 
-Node: 7404  FF_IPIN Block #1351 (Block_3) at (2, 5)
-Flipflop #1 Pin: 0 
-T_arr: 1.12932e-09  T_req: 1.87284e-09  Tdel: 0
+Node: 58  CLB_OPIN Block #5 (Block_3) at (9, 9)
+Pin: 16 
+T_arr: 9.15283e-10  T_req: 2.06864e-09  Tdel: 8.54261e-10
+Net to next node: #5 (l6).  Pins on net: 3.
 
-Node: 7406  IFF_SINK Block #1351 (Block_3) at (2, 5)
-Flipflop #1 
-T_arr: 1.12932e-09  T_req: 1.87284e-09  
+Node: 452  (null) Block #82 (DSP_Block_2) at (3, 11)
+Pin: 98 
+T_arr: 1.76954e-09  T_req: 2.9229e-09  Tdel: 0
 
-
-Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
-Global nets on crit. path: 1.
-Total logic delay: 4.75e-10 (s)  Total net delay: 6.54321e-10 (s)
-
-For folding stage: 37
-Node: 8306  (null) Block #1483 (DSP_Block_0) at (3, 6)
+Node: 455  „*­û Block #82 (DSP_Block_2) at (3, 11)
 Pin: -1 
-T_arr: 0  T_req: -1.11022e-16  Tdel: 2.93874e-39
-
-Node: 8285  (null) Block #1483 (DSP_Block_0) at (3, 6)
-Pin: 118 
-T_arr: 2.93874e-39  T_req: -1.11022e-16  Tdel: 1.55784e-09
-
-Node: 7693  CLB_IPIN Block #1431 (Block_15) at (9, 5)
-Pin: 1 
-T_arr: 1.55784e-09  T_req: 1.55784e-09  Tdel: 0
-
-Node: 7697  SUBBLK_IPIN Block #1431 (Block_15) at (9, 5)
-Subblock #0 Pin: 1 
-T_arr: 1.55784e-09  T_req: 1.55784e-09  Tdel: 3.15e-10
-
-Node: 7699  SUBBLK_OPIN Block #1431 (Block_15) at (9, 5)
-Subblock #0 Pin: 4 
-T_arr: 1.87284e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7700  FF_IPIN Block #1431 (Block_15) at (9, 5)
-Flipflop #0 Pin: 0 
-T_arr: 1.87284e-09  T_req: 1.87284e-09  Tdel: 0
-
-Node: 7702  IFF_SINK Block #1431 (Block_15) at (9, 5)
-Flipflop #0 
-T_arr: 1.87284e-09  T_req: 1.87284e-09  
-
-
-Tnodes on crit. path: 7  Non-global nets on crit. path: 0.
-Global nets on crit. path: 0.
-Total logic delay: 1.87284e-09 (s)  Total net delay: 0 (s)
-
-For folding stage: 38
-Node: 8372  INPAD_SOURCE Block #1516 (clk) at (9, 0)
-T_arr: 0  T_req: 4.27901e-10  Tdel: 0
-
-Node: 8373  INPAD_OPIN Block #1516 (clk) at (9, 0)
-Pin: 0 
-T_arr: 0  T_req: 4.27901e-10  Tdel: 0
-Net to next node: #362 (clk).  Pins on net: 65.
-
-Node: 8813  CLB_IPIN Block #1561 (Block_3) at (2, 5)
-Pin: 32 
-T_arr: 0  T_req: 4.27901e-10  Tdel: 0
-
-Node: 8822  IFF_SOURCE Block #1561 (Block_3) at (2, 5)
-Flipflop #1 Pin: 2 
-T_arr: 0  T_req: 4.27901e-10  Tdel: 0
-
-Node: 8821  FF_OPIN Block #1561 (Block_3) at (2, 5)
-Flipflop #1 Pin: 1 
-T_arr: 0  T_req: 4.27901e-10  Tdel: 1.6e-10
-
-Node: 8812  CLB_OPIN Block #1561 (Block_3) at (2, 5)
-Pin: 16 
-T_arr: 1.6e-10  T_req: 5.87901e-10  Tdel: 7.39939e-10
-Net to next node: #363 (l1).  Pins on net: 33.
-
-Node: 8463  CLB_IPIN Block #1525 (Block_11) at (8, 9)
-Pin: 0 
-T_arr: 8.99939e-10  T_req: 1.32784e-09  Tdel: 0
-
-Node: 8467  SUBBLK_IPIN Block #1525 (Block_11) at (8, 9)
-Subblock #0 Pin: 1 
-T_arr: 8.99939e-10  T_req: 1.32784e-09  Tdel: 3.15e-10
-
-Node: 8468  SUBBLK_OPIN Block #1525 (Block_11) at (8, 9)
-Subblock #0 Pin: 4 
-T_arr: 1.21494e-09  T_req: 1.64284e-09  Tdel: 1.6e-10
-
-Node: 8464  CLB_OPIN Block #1525 (Block_11) at (8, 9)
-Pin: 16 
-T_arr: 1.37494e-09  T_req: 1.80284e-09  Tdel: 0
-Net to next node: #338 (PO[8]).  Pins on net: 2.
-
-Node: 8324  OUTPAD_IPIN Block #1492 (PO[8]) at (11, 12)
-Pin: 0 
-T_arr: 1.37494e-09  T_req: 1.80284e-09  Tdel: 7e-11
-
-Node: 8325  OUTPAD_SINK Block #1492 (PO[8]) at (11, 12)
-T_arr: 1.44494e-09  T_req: 1.87284e-09  
+T_arr: 1.76954e-09  T_req: 2.9229e-09  
 
 
 Tnodes on crit. path: 12  Non-global nets on crit. path: 2.
 Global nets on crit. path: 1.
-Total logic delay: 7.05e-10 (s)  Total net delay: 7.39939e-10 (s)
+Total logic delay: 6.35e-10 (s)  Total net delay: 1.13454e-09 (s)
+
+For folding stage: 2
+Node: 460  INPAD_SOURCE Block #84 (clk) at (2, 17)
+T_arr: 0  T_req: -4.16334e-17  Tdel: 0
+
+Node: 461  INPAD_OPIN Block #84 (clk) at (2, 17)
+Pin: 0 
+T_arr: 0  T_req: -4.16334e-17  Tdel: 0
+Net to next node: #6 (clk).  Pins on net: 84.
+
+Node: 900  CLB_IPIN Block #117 (Block_2) at (8, 9)
+Pin: 32 
+T_arr: 0  T_req: -4.16334e-17  Tdel: 0
+
+Node: 911  IFF_SOURCE Block #117 (Block_2) at (8, 9)
+Flipflop #1 Pin: 2 
+T_arr: 0  T_req: -4.16334e-17  Tdel: 0
+
+Node: 910  FF_OPIN Block #117 (Block_2) at (8, 9)
+Flipflop #1 Pin: 1 
+T_arr: 0  T_req: -4.16334e-17  Tdel: 1.6e-10
+
+Node: 899  CLB_OPIN Block #117 (Block_2) at (8, 9)
+Pin: 18 
+T_arr: 1.6e-10  T_req: 1.6e-10  Tdel: 8.86724e-10
+Net to next node: #60 (m5).  Pins on net: 16.
+
+Node: 1074  CLB_IPIN Block #130 (Block_46) at (2, 4)
+Pin: 0 
+T_arr: 1.04672e-09  T_req: 1.04672e-09  Tdel: 0
+
+Node: 1079  SUBBLK_IPIN Block #130 (Block_46) at (2, 4)
+Subblock #0 Pin: 0 
+T_arr: 1.04672e-09  T_req: 1.04672e-09  Tdel: 3.15e-10
+
+Node: 1082  SUBBLK_OPIN Block #130 (Block_46) at (2, 4)
+Subblock #0 Pin: 4 
+T_arr: 1.36172e-09  T_req: 1.36172e-09  Tdel: 1.6e-10
+
+Node: 1077  CLB_OPIN Block #130 (Block_46) at (2, 4)
+Pin: 16 
+T_arr: 1.52172e-09  T_req: 1.52172e-09  Tdel: 1.40118e-09
+Net to next node: #86 (mux11_out[13]).  Pins on net: 2.
+
+Node: 1301  (null) Block #165 (DSP_Block_1) at (12, 11)
+Pin: 75 
+T_arr: 2.9229e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 1306  „*­û Block #165 (DSP_Block_1) at (12, 11)
+Pin: -1 
+T_arr: 2.9229e-09  T_req: 2.9229e-09  
+
+
+Tnodes on crit. path: 12  Non-global nets on crit. path: 2.
+Global nets on crit. path: 1.
+Total logic delay: 6.35e-10 (s)  Total net delay: 2.2879e-09 (s)
+
+For folding stage: 3
+Node: 1361  INPAD_SOURCE Block #168 (clk) at (2, 17)
+T_arr: 0  T_req: 2.645e-10  Tdel: 0
+
+Node: 1362  INPAD_OPIN Block #168 (clk) at (2, 17)
+Pin: 0 
+T_arr: 0  T_req: 2.645e-10  Tdel: 0
+Net to next node: #91 (clk).  Pins on net: 85.
+
+Node: 1369  CLB_IPIN Block #169 (Block_4) at (9, 6)
+Pin: 32 
+T_arr: 0  T_req: 2.645e-10  Tdel: 0
+
+Node: 1379  IFF_SOURCE Block #169 (Block_4) at (9, 6)
+Flipflop #1 Pin: 2 
+T_arr: 0  T_req: 2.645e-10  Tdel: 0
+
+Node: 1378  FF_OPIN Block #169 (Block_4) at (9, 6)
+Flipflop #1 Pin: 1 
+T_arr: 0  T_req: 2.645e-10  Tdel: 1.6e-10
+
+Node: 1367  CLB_OPIN Block #169 (Block_4) at (9, 6)
+Pin: 18 
+T_arr: 1.6e-10  T_req: 4.245e-10  Tdel: 7.46582e-10
+Net to next node: #96 (m6).  Pins on net: 16.
+
+Node: 1525  CLB_IPIN Block #181 (Block_44) at (1, 5)
+Pin: 0 
+T_arr: 9.06582e-10  T_req: 1.17108e-09  Tdel: 0
+
+Node: 1530  SUBBLK_IPIN Block #181 (Block_44) at (1, 5)
+Subblock #0 Pin: 0 
+T_arr: 9.06582e-10  T_req: 1.17108e-09  Tdel: 3.15e-10
+
+Node: 1533  SUBBLK_OPIN Block #181 (Block_44) at (1, 5)
+Subblock #0 Pin: 4 
+T_arr: 1.22158e-09  T_req: 1.48608e-09  Tdel: 1.6e-10
+
+Node: 1527  CLB_OPIN Block #181 (Block_44) at (1, 5)
+Pin: 16 
+T_arr: 1.38158e-09  T_req: 1.64608e-09  Tdel: 1.27682e-09
+Net to next node: #132 (mux6_out[12]).  Pins on net: 2.
+
+Node: 2260  (null) Block #249 (DSP_Block_0) at (12, 6)
+Pin: 74 
+T_arr: 2.6584e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 2270  „*­û Block #249 (DSP_Block_0) at (12, 6)
+Pin: -1 
+T_arr: 2.6584e-09  T_req: 2.9229e-09  
+
+
+Tnodes on crit. path: 12  Non-global nets on crit. path: 2.
+Global nets on crit. path: 1.
+Total logic delay: 6.35e-10 (s)  Total net delay: 2.0234e-09 (s)
+
+For folding stage: 4
+Node: 2346  INPAD_SOURCE Block #254 (clk) at (2, 17)
+T_arr: 0  T_req: 1.38705e-09  Tdel: 0
+
+Node: 2347  INPAD_OPIN Block #254 (clk) at (2, 17)
+Pin: 0 
+T_arr: 0  T_req: 1.38705e-09  Tdel: 0
+Net to next node: #224 (clk).  Pins on net: 85.
+
+Node: 2675  CLB_IPIN Block #306 (Block_52) at (8, 15)
+Pin: 32 
+T_arr: 0  T_req: 1.38705e-09  Tdel: 0
+
+Node: 2678  IFF_SOURCE Block #306 (Block_52) at (8, 15)
+Flipflop #0 Pin: 2 
+T_arr: 0  T_req: 1.38705e-09  Tdel: 0
+
+Node: 2677  FF_OPIN Block #306 (Block_52) at (8, 15)
+Flipflop #0 Pin: 1 
+T_arr: 0  T_req: 1.38705e-09  Tdel: 1.6e-10
+
+Node: 2674  CLB_OPIN Block #306 (Block_52) at (8, 15)
+Pin: 16 
+T_arr: 1.6e-10  T_req: 1.54705e-09  Tdel: 1.37585e-09
+Net to next node: #231 (reg4_out[11]).  Pins on net: 2.
+
+Node: 2849  (null) Block #337 (DSP_Block_3) at (3, 6)
+Pin: 52 
+T_arr: 1.53585e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 2856  „*­û Block #337 (DSP_Block_3) at (3, 6)
+Pin: -1 
+T_arr: 1.53585e-09  T_req: 2.9229e-09  
+
+
+Tnodes on crit. path: 8  Non-global nets on crit. path: 1.
+Global nets on crit. path: 1.
+Total logic delay: 1.6e-10 (s)  Total net delay: 1.37585e-09 (s)
+
+For folding stage: 5
+Node: 2862  INPAD_SOURCE Block #340 (clk) at (2, 17)
+T_arr: 0  T_req: 2.02748e-09  Tdel: 0
+
+Node: 2863  INPAD_OPIN Block #340 (clk) at (2, 17)
+Pin: 0 
+T_arr: 0  T_req: 2.02748e-09  Tdel: 0
+Net to next node: #245 (clk).  Pins on net: 85.
+
+Node: 2907  CLB_IPIN Block #343 (Block_1) at (8, 6)
+Pin: 32 
+T_arr: 0  T_req: 2.02748e-09  Tdel: 0
+
+Node: 2918  IFF_SOURCE Block #343 (Block_1) at (8, 6)
+Flipflop #1 Pin: 2 
+T_arr: 0  T_req: 2.02748e-09  Tdel: 0
+
+Node: 2917  FF_OPIN Block #343 (Block_1) at (8, 6)
+Flipflop #1 Pin: 1 
+T_arr: 0  T_req: 2.02748e-09  Tdel: 1.6e-10
+
+Node: 2905  CLB_OPIN Block #343 (Block_1) at (8, 6)
+Pin: 16 
+T_arr: 1.6e-10  T_req: 2.18748e-09  Tdel: 4.20425e-10
+Net to next node: #246 (PAULIN_STATE[0]).  Pins on net: 3.
+
+Node: 2864  CLB_IPIN Block #341 (Block_3) at (9, 9)
+Pin: 0 
+T_arr: 5.80425e-10  T_req: 2.6079e-09  Tdel: 0
+
+Node: 2867  SUBBLK_IPIN Block #341 (Block_3) at (9, 9)
+Subblock #0 Pin: 0 
+T_arr: 5.80425e-10  T_req: 2.6079e-09  Tdel: 3.15e-10
+
+Node: 2869  SUBBLK_OPIN Block #341 (Block_3) at (9, 9)
+Subblock #0 Pin: 4 
+T_arr: 8.95425e-10  T_req: 2.9229e-09  Tdel: 0
+
+Node: 2878  FF_IPIN Block #341 (Block_3) at (9, 9)
+Flipflop #2 Pin: 0 
+T_arr: 8.95425e-10  T_req: 2.9229e-09  Tdel: 0
+
+Node: 2880  IFF_SINK Block #341 (Block_3) at (9, 9)
+Flipflop #2 
+T_arr: 8.95425e-10  T_req: 2.9229e-09  
+
+
+Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
+Global nets on crit. path: 1.
+Total logic delay: 4.75e-10 (s)  Total net delay: 4.20425e-10 (s)
+
+For folding stage: 6
+Node: 4266  † ­û Block #523 (DSP_Block_1) at (12, 11)
+Pin: -1 
+T_arr: 0  T_req: 1.12305e-09  Tdel: 0
+
+Node: 4261  (null) Block #523 (DSP_Block_1) at (12, 11)
+Pin: 119 
+T_arr: 0  T_req: 1.12305e-09  Tdel: 1.48485e-09
+
+Node: 3542  CLB_IPIN Block #454 (Block_31) at (1, 9)
+Pin: 1 
+T_arr: 1.48485e-09  T_req: 2.6079e-09  Tdel: 0
+
+Node: 3545  SUBBLK_IPIN Block #454 (Block_31) at (1, 9)
+Subblock #0 Pin: 1 
+T_arr: 1.48485e-09  T_req: 2.6079e-09  Tdel: 3.15e-10
+
+Node: 3546  SUBBLK_OPIN Block #454 (Block_31) at (1, 9)
+Subblock #0 Pin: 4 
+T_arr: 1.79985e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 3551  FF_IPIN Block #454 (Block_31) at (1, 9)
+Flipflop #1 Pin: 0 
+T_arr: 1.79985e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 3553  IFF_SINK Block #454 (Block_31) at (1, 9)
+Flipflop #1 
+T_arr: 1.79985e-09  T_req: 2.9229e-09  
+
+
+Tnodes on crit. path: 7  Non-global nets on crit. path: 0.
+Global nets on crit. path: 0.
+Total logic delay: 1.79985e-09 (s)  Total net delay: 0 (s)
+
+For folding stage: 7
+Node: 5366  † ­û Block #640 (DSP_Block_0) at (12, 6)
+Pin: -1 
+T_arr: 0  T_req: 1.18036e-09  Tdel: 0
+
+Node: 5361  (null) Block #640 (DSP_Block_0) at (12, 6)
+Pin: 119 
+T_arr: 0  T_req: 1.18036e-09  Tdel: 1.42754e-09
+
+Node: 4746  CLB_IPIN Block #587 (Block_69) at (1, 3)
+Pin: 1 
+T_arr: 1.42754e-09  T_req: 2.6079e-09  Tdel: 0
+
+Node: 4749  SUBBLK_IPIN Block #587 (Block_69) at (1, 3)
+Subblock #0 Pin: 1 
+T_arr: 1.42754e-09  T_req: 2.6079e-09  Tdel: 3.15e-10
+
+Node: 4750  SUBBLK_OPIN Block #587 (Block_69) at (1, 3)
+Subblock #0 Pin: 4 
+T_arr: 1.74254e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 4755  FF_IPIN Block #587 (Block_69) at (1, 3)
+Flipflop #1 Pin: 0 
+T_arr: 1.74254e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 4757  IFF_SINK Block #587 (Block_69) at (1, 3)
+Flipflop #1 
+T_arr: 1.74254e-09  T_req: 2.9229e-09  
+
+
+Tnodes on crit. path: 7  Non-global nets on crit. path: 0.
+Global nets on crit. path: 0.
+Total logic delay: 1.74254e-09 (s)  Total net delay: 0 (s)
+
+For folding stage: 8
+Node: 5403  INPAD_SOURCE Block #658 (clk) at (2, 17)
+T_arr: 0  T_req: 1.41493e-09  Tdel: 0
+
+Node: 5404  INPAD_OPIN Block #658 (clk) at (2, 17)
+Pin: 0 
+T_arr: 0  T_req: 1.41493e-09  Tdel: 0
+Net to next node: #401 (clk).  Pins on net: 83.
+
+Node: 5407  CLB_IPIN Block #659 (Block_3) at (9, 9)
+Pin: 32 
+T_arr: 0  T_req: 1.41493e-09  Tdel: 0
+
+Node: 5416  IFF_SOURCE Block #659 (Block_3) at (9, 9)
+Flipflop #1 Pin: 2 
+T_arr: 0  T_req: 1.41493e-09  Tdel: 0
+
+Node: 5415  FF_OPIN Block #659 (Block_3) at (9, 9)
+Flipflop #1 Pin: 1 
+T_arr: 0  T_req: 1.41493e-09  Tdel: 1.6e-10
+
+Node: 5406  CLB_OPIN Block #659 (Block_3) at (9, 9)
+Pin: 17 
+T_arr: 1.6e-10  T_req: 1.57493e-09  Tdel: 1.03297e-09
+Net to next node: #402 (l1).  Pins on net: 16.
+
+Node: 5551  CLB_IPIN Block #671 (Block_69) at (1, 3)
+Pin: 0 
+T_arr: 1.19297e-09  T_req: 2.6079e-09  Tdel: 0
+
+Node: 5554  SUBBLK_IPIN Block #671 (Block_69) at (1, 3)
+Subblock #0 Pin: 0 
+T_arr: 1.19297e-09  T_req: 2.6079e-09  Tdel: 3.15e-10
+
+Node: 5556  SUBBLK_OPIN Block #671 (Block_69) at (1, 3)
+Subblock #0 Pin: 4 
+T_arr: 1.50797e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 5557  FF_IPIN Block #671 (Block_69) at (1, 3)
+Flipflop #0 Pin: 0 
+T_arr: 1.50797e-09  T_req: 2.9229e-09  Tdel: 0
+
+Node: 5560  IFF_SINK Block #671 (Block_69) at (1, 3)
+Flipflop #0 
+T_arr: 1.50797e-09  T_req: 2.9229e-09  
+
+
+Tnodes on crit. path: 11  Non-global nets on crit. path: 1.
+Global nets on crit. path: 1.
+Total logic delay: 4.75e-10 (s)  Total net delay: 1.03297e-09 (s)
